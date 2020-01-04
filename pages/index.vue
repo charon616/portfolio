@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <div id="page-wrap">
-      <div id="first-view">
+      <div class="first-view">
+        <img src="/work/work13.gif"/>
+        <div class="first-view__txt">
+          <h1>PORTFOLIO</h1>
+          <p>KIHO Karin</p>
+        </div>
+        <!-- <MyCanvas /> -->
         <!-- <iframe
             title="p5.js demo"
             src="https://nnamm.com/_creativecoding/180924/demo1.html"
@@ -37,7 +43,7 @@
               </div>
             </nuxt-link>
           </div>
-          <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button">View All <i class="fas fa-long-arrow-alt-right"></i></nuxt-link>
+          <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button">View All</nuxt-link>
         </div>
 
         <PagetopComponent />
@@ -49,18 +55,20 @@
 </template>
 
 <script>
+  import MyCanvas from '~/components/MyCanvas.vue'
   import PagetopComponent from '~/components/PagetopComponent.vue';
-  import jsonfile from '~/assets/work/works.js';
+  import jsonfile from '~/assets/work/works.json';
 
   export default {
     components: {
-      PagetopComponent,
+      MyCanvas,
+      PagetopComponent
     },
-
     data() {
       return {
         scrollY: 0,
         scrollTimer: 0,
+        radius: 50,
         images: [],
         jsondata: jsonfile,
         items: [{
@@ -120,60 +128,67 @@
             id: '08'
           },
           {
+            title: '苗村研究室OpenHouse2020',
+            url: require('~/assets/work/work27.png'),
+            period: '2019',
+            category: 'Web',
+            id: '09'
+          },
+          {
             title: 'unlock',
             url: require('~/assets/work/work9.png'),
             period: '2019',
             category: 'App UI',
-            id: '09'
+            id: '10'
           },
           {
             title: 'yumemo',
             url: require('~/assets/work/work10.png'),
             period: '2018',
             category: 'App UI',
-            id: '10'
+            id: '11'
           },
-          // {
-          //   title: 'YAC2018',
-          //   url: require('~/assets/work/work11.png'),
-          //   period: '2018',
-          //   category: 'Banner',
-          //   id: '11'
-          // },
+          {
+            title: 'YAC2018',
+            url: require('~/assets/work/work11.png'),
+            period: '2018',
+            category: 'Banner',
+            id: '12'
+          },
           {
             title: 'AMPM',
             url: require('~/assets/work/work12.png'),
             period: '2018',
             category: 'Animation',
-            id: '11'
+            id: '13'
           },
           {
             title: 'UmeeT',
             url: require('~/assets/work/work23.png'),
             period: '2017',
             category: 'Logo',
-            id: '12'
+            id: '14'
           },
           {
             title: 'NUTONE',
             url: require('~/assets/work/work24.png'),
             period: '2019',
             category: 'Logo / Web',
-            id: '13'
+            id: '15'
           },
           {
             title: 'ROBOXER',
             url: require('~/assets/work/work25.png'),
             period: '2019',
             category: 'Logo',
-            id: '14'
+            id: '16'
           },
           {
             title: 'OUR Shurijo',
             url: require('~/assets/work/work26.png'),
             period: '2019',
             category: 'Logo',
-            id: '15'
+            id: '17'
           },
         ],
         items_square: [{
@@ -181,70 +196,70 @@
             url: require('~/assets/work/work15.png'),
             period: '2018',
             category: 'Logo',
-            id: '16'
+            id: '18'
           },
           {
             title: 'Code for Univ',
             url: require('~/assets/work/work16.png'),
             period: '2019',
             category: 'Logo',
-            id: '17'
+            id: '19'
           },
           {
             title: 'MindHack',
             url: require('~/assets/work/work17.png'),
             period: '2019',
             category: 'Logo',
-            id: '18'
+            id: '20'
           },
           {
             title: 'Rainer',
             url: require('~/assets/work/work18.png'),
             period: '2019',
             category: 'Logo',
-            id: '19'
+            id: '21'
           },
           {
             title: 'Living Roots',
             url: require('~/assets/work/work19.png'),
             period: '2019',
             category: 'Logo',
-            id: '20'
+            id: '22'
           },
           {
             title: 'きたすばる',
             url: require('~/assets/work/work20.png'),
             period: '2019',
             category: 'Logo',
-            id: '21'
+            id: '23'
           },
           {
             title: '東武東上線沿線サミット',
             url: require('~/assets/work/work21.png'),
             period: '2019',
             category: 'Logo',
-            id: '22'
+            id: '24'
           },
           {
             title: '周南工場夜景',
             url: require('~/assets/work/work22.png'),
             period: '2019',
             category: 'Logo',
-            id: '23'
+            id: '25'
           },
           {
             title: 'GIF',
             url: require('~/assets/work/work13.gif'),
             period: '2018',
             category: 'GIF Animation',
-            id: '24'
+            id: '26'
           },
           {
             title: 'Illustration',
             url: require('~/assets/work/work14.jpg'),
             period: '2018-2019',
             category: 'Illustration',
-            id: '25'
+            id: '27'
           },
         ],
       }
@@ -312,7 +327,7 @@
   }
 }
 
-#first-view{
+.first-view{
   position: absolute;
   left: 0;
   top: 0;
@@ -324,25 +339,31 @@
   color: rgb(237, 168, 179);
   background-color: $main-color;
 
-  h1 {
+  &__txt{
+    color: white;
     text-align: center;
+    text-shadow:2px 2px 3px $sub-color;
     position: absolute;
-    top: 25%;
-    left: 80%;
+    top: 50%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 300px;
-    white-space: nowrap;
+    h1{
+      font-size: 2.4em;
+      letter-spacing: 0.2em;
+    }
+    p{
+      font-size: 1.2em;
+    }
+
   }
 
-  p {
-    text-align: center;
+  img{
     position: absolute;
-    top: 70%;
-    left: 20%;
+    width: 400px;
+    height: auto;
+    top: 50%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: 200px;
-    white-space: nowrap;
-    transition: all .4s;
   }
 
 }
@@ -472,46 +493,42 @@
   }
 
   &__button{
+    position: relative;
     padding: 16px 0;
-    text-align: center;  
+    border: 2px solid $sub-color;
     font-size: 1.5em; 
     font-weight: bold;
     border-radius: $radius-size;
-
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 0;
     width: 100%;
     margin: 8px;
-    background: rgba(0, 0, 0, 0);
-    border: 2px solid $sub-color;
-    color: $sub-color;
-    position: relative;
-    z-index: 0;
-    box-sizing: border-box;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
     &::before{
-      content: "";
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
       bottom: 0;
-      background-color: $sub-color;
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+      left: 0;
       z-index: -1;
-      box-sizing: border-box;
+      content: '';
+      background-color: $sub-color;
+      transform-origin: left top;
+      transform:  scale(0, 1);
       transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
-      pointer-events: none;
     }
     &:hover{
-      // background: $sub-color;
       color: $main-color;
       transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
       &::before{
-          -webkit-transform: translateY(0);
-          transform: translateY(0);
-          transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
-      }
+        transform-origin: left top;
+        transform:  scale(1, 1);
+        transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+      }      
     }
   }
 }
@@ -526,6 +543,10 @@
 
 @media screen and (max-width: 1024px) {
   $main-content-width: 100vw;
+  .first-view{
+    margin-left: 0;
+    width: 100%;
+  }
   .works{
     width: 100%;
     .work{
@@ -559,6 +580,11 @@
 }
 
 @media screen and (max-width: 480px) {
+  .first-view{
+    img{
+      width: 100%;
+    }
+  }
   .works {
     display: -webkit-flex;
     display: flex;

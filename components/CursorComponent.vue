@@ -20,6 +20,19 @@ export default {
   },
   mounted() {
     window.addEventListener('mousemove', this.mouse);
+
+    let stalker = document.getElementById('cursor-stalker');
+    // const linkElem = document.querySelectorAll('nuxt-link');
+    const linkElem = document.getElementsByTagName("a");
+    console.log(linkElem);
+    for (let i = 0; i < linkElem.length; i++) {
+      linkElem[i].addEventListener('mouseover', function (e) {
+        stalker.classList.add('hov_');
+      });
+      linkElem[i].addEventListener('mouseout', function (e) {
+        stalker.classList.remove('hov_');
+      });
+    }
   },
 
   methods: {
@@ -65,7 +78,7 @@ export default {
     }
     &__stalker{
         border-radius: 50%;
-        background-color: rgba(75, 75, 75, 0.5);
+        background-color: rgba(50, 50, 50, 0.25);
         position: fixed;
         top: -6px; 
         left: -6px;
@@ -80,8 +93,7 @@ export default {
           left: -32px;   
           width: 64px;
           height: 64px;
-          transition: .5s;
-          background: rgba(255, 0, 0, 0.4);
+          transition: .3s;
         }
     }
 }

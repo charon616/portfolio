@@ -19,16 +19,20 @@
           <!-- <p>
             大学のフリーペーパー制作サークルでデザインを始め、いつの間にか夢中に。大学院では将来の人間のコミュニケーションのあり方や新しいエンターテイメントの可能性を探りつつ、先端芸術的な表現のためのスキルや知識を身に付けたい。
           </p> -->
-          <!-- <h3>Skill</h3>
-          <p>
-            Illustrator/Photoshop/XD/InDesign/After Effects/Processing<br />
-            HTML/CSS/JavaScript/C++/openFrameworks/Python/Unity
-          </p> -->
+          <!-- <h3>Skill</h3> -->
+          <p class="space">Design --- グラフィック全般。特にエディトリアル、UI。</p>
+          <p>Programming --- C++、Python、Unity、Webフロント系言語など。
+          </p>
+          <p>Research --- HCI、視線計測、デザインツールなど。</p>
 
           <p class="space">karinkiho616 [at] g.ecc.u-tokyo.ac.jp</p>
+          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button">
+            <i class="fab fa-facebook"></i>
+          </a>
           <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button">
             <i class="fab fa-instagram"></i>
           </a>
+          <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja">GIF MAGAZINE</a>
           </div>
         </div>
       </div>
@@ -40,6 +44,14 @@
 
 <style scoped lang="scss">
 @import "~assets/scss/variables";
+
+.simple-link{
+  display: block;
+  text-decoration: underline;
+  &:hover{
+    color: $accent-color;
+  }
+}
 
 .profile-illust{
   width: 100%;
@@ -88,6 +100,14 @@
 
   &:hover{
     color: #CF2E92;
+  }
+}
+.btn-facebook{
+  font-size: 2.0em;
+  transition: all .3s ease-out;
+
+  &:hover{
+    color: #1877f2;
   }
 }
 

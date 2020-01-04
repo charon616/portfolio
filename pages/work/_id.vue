@@ -10,7 +10,8 @@
             <p>#{{ $route.params.id }}</p>
           </div>
           <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ jsondata.items[stringToNum($route.params.id-1)].description }} </p>
-          <a v-if="jsondata.items[stringToNum($route.params.id-1)].link == ''" class="link-button" v-bind:href="jsondata.items[stringToNum($route.params.id-1)].link">{{ jsondata.items[stringToNum($route.params.id-1)].link_txt }}</a>
+          <br/>
+          <a v-if="jsondata.items[stringToNum($route.params.id-1)].link != null" class="link-button" v-bind:href="jsondata.items[stringToNum($route.params.id-1)].link">{{ jsondata.items[stringToNum($route.params.id-1)].link_txt }}</a>
         </div>
 
 
@@ -18,7 +19,7 @@
           <swiper-slide v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index'>
             <img class="work-detail__img" :src="link"/>
           </swiper-slide>
-          <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" class="swiper-pagination"  slot="pagination"></div>
+          <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" class="swiper-pagination swiper-pagination-black"  slot="pagination"></div>
           <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
           <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-next" class="swiper-button-next swiper-button-white swiper-custom-button"></div>
         </swiper>
@@ -29,7 +30,7 @@
 
         <div class="work-detail__move-page">
           <nuxt-link :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="work-detail__move-page__button"><i class="fas fa-long-arrow-alt-left"></i> PREV</nuxt-link>
-          <p>#{{ $route.params.id }} / 25</p>
+          <p>#{{ $route.params.id }} / 27</p>
           <nuxt-link :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }" class="work-detail__move-page__button">NEXT <i class="fas fa-long-arrow-alt-right"></i></nuxt-link>
         </div>
       </div>
@@ -76,11 +77,11 @@ export default {
       if(Number(id)-1 != 0){
         return ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        return 25;
+        return 27;
       }
     },
     calcNextId: function(id){
-      if(Number(id) == 25){
+      if(Number(id) == 27){
         return '01';
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );
@@ -110,6 +111,7 @@ export default {
       width: 36%;
       height: 90vh;
       text-align: justify;
+      position: relative;
       
       &__title{
         font-size: 2.4em;
@@ -190,6 +192,10 @@ export default {
     
   }
   .swiper-button-next{
+  }
+
+  .swiper-pagination-bullet-active{
+    background: #ffd700;
   }
 
   @media screen and (max-width: 1024px) {

@@ -88,49 +88,44 @@ body{
 }
 
 .link-button {
-  padding: 16px;
-  margin: 16px 0;
-  text-align: center;
+  position: relative;
+  padding: 8px 32px;
+  border: 2px solid $sub-color;
   font-weight: bold;
   border-radius: $radius-size;
-
-  width: 100%;
-  background: rgba(0, 0, 0, 0);
-  border: 2px solid $sub-color;
-  color: $sub-color;
-  position: relative;
-  z-index: 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   box-sizing: border-box;
+  z-index: 0;
+  margin: auto;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background-color: $sub-color;
-  //   -webkit-transform: translateY(-100%);
-  //   transform: translateY(-100%);
-  //   z-index: -1;
-  //   box-sizing: border-box;
-  //   transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
-  //   pointer-events: none;
-  // }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background-color: $sub-color;
+    transform-origin: left top;
+    transform: scale(0, 1);
+    transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  }
 
-  // &:hover {
-  //   // background: $sub-color;
-  //   color: $main-color;
-  //   transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  &:hover {
+    color: $main-color;
+    transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
 
-  //   &::before {
-  //     -webkit-transform: translateY(0);
-  //     transform: translateY(0);
-  //     transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
-  //   }
-  // }
+    &::before {
+      transform-origin: left top;
+      transform: scale(1, 1);
+      transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {

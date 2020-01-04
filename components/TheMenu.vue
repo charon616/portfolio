@@ -22,7 +22,7 @@
       </transition>
       <transition name="fade">
         <div class="sm-menu__items" v-show="menu">
-          <nuxt-link class="sm-menu__items__item" to="/#first-view">TOP</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" to="/">TOP</nuxt-link>
           <nuxt-link class="sm-menu__items__item" to="/#work">WORK</nuxt-link>
           <nuxt-link class="sm-menu__items__item" to="/about">ABOUT</nuxt-link>
         </div>
