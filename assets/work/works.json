@@ -1,0 +1,207 @@
+{
+  "items": [{
+      "title": "東京大学制作展2019",
+      "url": ["/work/work1.jpg", "/work/work1-2.png", "/work/work1-3.png", "/work/work1-4.png"],
+      "period": "2019",
+      "category": "Poster/Pamplet",
+      "description": "東京大学制作展2019のメインビジュアル、宣伝用ポスター、ポストカード、当日案内用パンフレットを作成した。全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
+      "id": "01"
+    },
+    {
+      "title": "AR-ZINE",
+      "url": ["/work/work3.jpg"],
+      "period": "2019",
+      "category": "AR App",
+      "description": "別に大森さんを啓発人それだけろかのなりたテンどんな大学私か刺戟へに対して肝始末ますたたずて、その今度は私か国家在来へして、嘉納さんののに社会の私に何しろご忠告と過ぎて誰人真似へお観念を思わようにどうにかご尊敬を詰めななて、あたかもよほど手続きでせよですていたのを向いんでしょ。またたとえばお程度がもっのも更に自由と疑わあるて、そのがたよりはありがたがっならてという背後を解るて行くないた。そのため盲目のためどんな壇は私上に向けないかと久原さんでふらしなう、弟のその間だっとしてお修養んあるたて、職のためがモーニングに朝ぐらいの先を今日賑わすていと、わざわざのすべてに考えてその時にとうていありんんと祈るう事だが、好いだませのにそうご一つできるでのたたまし。",
+      "id": "02"
+    },
+    {
+      "title": "東京大学制作展2019EXTRA",
+      "url": ["/work/work3.jpg", "/work/work3-2.png", "/work/work3-3.png", "/work/work3-4.png"],
+      "period": "2019",
+      "category": "Poster",
+      "description": "東京大学制作展EXTRA2019のメインビジュアル、宣伝用フライヤー、宣伝用ポスター、当日案内用看板を作成した。メインビジュアルに関しては共同制作者が手のイメージを3Dモデリングした後の色調補正を担当。ロゴ作成も共同制作者が行なっており，全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
+      "id": "03"
+    },
+    {
+      "title": "地図",
+      "url": ["/work/work3.jpg"],
+      "period": "2019",
+      "category": "Media Art",
+      "description": "別に大森さんを啓発人それだけろかのなりたテンどんな大学私か刺戟へに対して肝始末ますたたずて、その今度は私か国家在来へして、嘉納さんののに社会の私に何しろご忠告と過ぎて誰人真似へお観念を思わようにどうにかご尊敬を詰めななて、あたかもよほど手続きでせよですていたのを向いんでしょ。またたとえばお程度がもっのも更に自由と疑わあるて、そのがたよりはありがたがっならてという背後を解るて行くないた。そのため盲目のためどんな壇は私上に向けないかと久原さんでふらしなう、弟のその間だっとしてお修養んあるたて、職のためがモーニングに朝ぐらいの先を今日賑わすていと、わざわざのすべてに考えてその時にとうていありんんと祈るう事だが、好いだませのにそうご一つできるでのたたまし。",
+      "id": "04"
+    },
+    {
+      "title": "東京大学制作展2017",
+      "url": ["/work/work5.png", "/work/work5-2.jpg"],
+      "period": "2017",
+      "category": "Web",
+      "description": "東京大学制作展EXTRA 2017 のweb デザイン、第19 回東京大学制作展のweb デザイン（SP 版のみ）に関して、ワイヤーフレームの設計からデザインのラフまでを行った。微調整やコーディングに関しては共同制作者が行っている。",
+      "id": "05"
+    },
+    {
+      "title": "biscUiT",
+      "url": ["/work/work6.jpg", "/work/work6-2.png", "/work/work6-3.png", "/work/work6-4.png", "/work/work6-5.png", "/work/work6-6.png", "/work/work6-7.png"],
+      "period": "2015-2018",
+      "category": "Free Paper",
+      "description": "所属していたサークルでは東大女子向けのフリーペーパーを年間２、３冊発行しており、企画から営業、取材、記事執筆、デザインまで全て東大生が行っている。デザイン統括という役職を務め、6-10 人ほどいるデザイン担当へのページの割り振りと最終チェックを任されていた。",
+      "link": "http://utbiscuit.xxxx.jp/",
+      "link_txt": "Webサイトはこちら",
+      "id": "06"
+    },
+    {
+      "title": "魅る文字",
+      "url": ["/work/work7.jpg", "/work/work7-2.jpg", "/work/work7-3.jpg", "/work/work7-4.jpg"],
+      "period": "2019",
+      "category": "Free Paper",
+      "description": "モリサワの主催する「Moji no ZINE」というワークショップにて、学生メンバー５人でA3で1枚サイズのZINEを作成した。内容はデザイナーの方にインタビューしてフォントに対する想いなどを伺うというもの。主な担当は編集であり，デザインは別のメンバーが行なっている。",
+      "id": "07"
+    },
+    {
+      "title": "Web Portfilio",
+      "url": ["/work/work8.jpg"],
+      "period": "2019",
+      "category": "Web",
+      "description": "大学・大学院在学中に関わった作品等をまとめるためにポートフォリオサイトを作成した。Nuxt.jsというフレームワーク（Vue.js）を使用し，デザインからコーディングまで一貫して行なっている。PC，タブレット，スマホそれぞれでレイアウトを調整して見やすくなるようUIを工夫している。",
+      "id": "08"
+    },
+    {
+      "title": "unlock",
+      "url": ["/work/work9.png", "/work/work9-2.png", "/work/work9-3.png", "/work/work9-4.png"],
+      "period": "2019",
+      "category": "App UI",      
+      "description": "DeNAの夏のインターンのUIデザイナーコースにて、学生３人メンター2人のチームで３日間で作成したアプリ「unlock」。お題は「これからの時代に必要なプロのデザイナーを増やすためのサービス」。美大や専門学校出身でない一般の大学生や既卒で他の職に就いている人がデザイナーとして就職するのが困難であるという状況に注目し，実践的なデザイン課題を通して実力をつけ，企業のインターンを斡旋するまでのアプリを提案した。ビジュアル面で主に担当したのはロゴ作成とプレゼン資料作成。",
+      "id": "09"
+    },
+    {
+      "title": "yumemo",
+      "url": ["/work/work10.png", "/work/work10-2.png", "/work/work10-3.png", "/work/work10-4.png", "/work/work10-5.png"],
+      "period": "2018",
+      "category": "App UI",
+      "description": "スポーツ系の部活やサークルに取り組む選手が日々の練習記録をメモするための架空アプリのUI デザイン。株式会社サイバーエージェントのUI デザインインターンにて作成し、構想から提案までを５日間で行った。課題は「メモをするアプリのUI」。",
+      "link": "https://xd.adobe.com/view/09a39315-0b9b-47e8-4648-5abc373999a9-7f92/",
+      "link_txt": "プロトタイプはこちら",
+      "id": "10"
+    },
+    {
+      "title": "AMPM",
+      "url": ["/work/work12.png", "/work/work12-2.gif", "/work/work12-3.gif", "/work/work12-4.gif", "/work/work12-5.gif", "/work/work12-6.gif"],
+      "period": "2018",
+      "category": "Animation",
+      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
+      "id": "11"
+    },
+    {
+      "title": "UmeeT",
+      "url": ["/work/work23.png", "/work/work23-2.png", "/work/work23-3.png", "/work/work23-4.png"],
+      "period": "2017",
+      "category": "Logo",
+      "description": "東大生が中心となって運営するWEB メディア、「UmeeT」のロゴのリデザインおよび名刺作成を友人の依頼で行った。最終的にはファビコンやノベルティなどに使えるシンボルマークも作成した。",
+      "id": "12"
+    },
+    {
+      "title": "NUTONE",
+      "url": ["/work/work24.png", "/work/work24-2.png"],
+      "period": "2019",
+      "category": "Logo / Web",
+      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「NUTONE」のロゴを作成した。",
+      "id": "13"
+    },
+    {
+      "title": "ROBOXER",
+      "url": ["/work/work25.png", "/work/work25-2.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
+      "id": "14"
+    },
+    {
+      "title": "OUR Shurijo",
+      "url": ["/work/work26.png", "/work/work26-2.png", "/work/work26-3.png", "/work/work26-4.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "首里城をデジタル復元するプロジェクト、OUT Shurijoのロゴおよび紹介動画用のイラストを作成した。ロゴに関して、色の決定・シンボルマークの抽象化といった仕上げ部分は共同制作している。イラストに関して、のちに人物を増やすことができるようにテンプレートのようなものを作成している。",
+      "id": "15"
+    },
+    {
+      "title": "sys-seeing",
+      "url": ["/work/work15-2.png"],
+      "period": "2018",
+      "category": "Logo",
+      "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
+      "id": "16"
+    },
+    {
+      "title": "Code for Univ",
+      "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
+      "id": "17"
+    },
+    {
+      "title": "MindHack",
+      "url": ["/work/work17-2.png", "/work/work17-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "人生を心理の面からハックするweb メディア、「MindHack」のロゴおよびファビコンを友人の依頼で作成した。",
+      "id": "18"
+    },
+    {
+      "title": "Rainer",
+      "url": ["/work/work18-2.png", "/work/work18-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "女性向けレインウェアブランド、「Rainer」のロゴを友人の依頼で作成した。",
+      "id": "19"
+    },
+    {
+      "title": "Living Roots",
+      "url": ["/work/work19-2.png", "/work/work19-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で作成した。",
+      "id": "20"
+    },
+    {
+      "title": "きたすばる",
+      "url": ["/work/work20-2.png", "/work/work20-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "コンペ応募作品。",
+      "id": "21"
+    },
+    {
+      "title": "東武東上線沿線サミット",
+      "url": ["/work/work21-2.png", "/work/work21-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "コンペ応募作品。",
+      "id": "22"
+    },
+    {
+      "title": "周南工場夜景",
+      "url": ["/work/work22-2.png", "/work/work22-3.png"],
+      "period": "2019",
+      "category": "Logo",
+      "description": "コンペ応募作品。",
+      "id": "23"
+    },
+    {
+      "title": "GIF",
+      "url": ["/work/work13.gif", "/work/work13-2.gif", "/work/work13-3.gif", "/work/work13-4.gif", "/work/work13-5.gif", "/work/work13-6.gif", "/work/work13-7.gif", "/work/work13-8.gif"],
+      "period": "2018",
+      "category": "GIF Animation",
+      "description": "2018年の11月に動画制作を勉強しようと思い立ち、「1日１個GIF作成」を目標に20個ほどのGIFアニメを作成した。実験的に手書きやデジタル作画、3DCGなど色々な手法を試している。",
+      "id": "24"
+    },
+    {
+      "title": "Illustration",
+      "url": ["/work/work14-2.png", "/work/work14-3.png", "/work/work14-4.png", "/work/work14-5.png"],
+      "period": "2018-2019",
+      "category": "Illustration",
+      "description": "透明水彩、コピックなど。練習中。",
+      "id": "25"
+    }
+  ]
+}
