@@ -50,7 +50,6 @@
 
 <script>
   import PagetopComponent from '~/components/PagetopComponent.vue';
-  import axios from 'axios';
   import jsonfile from '~/assets/work/works.js';
 
   export default {
