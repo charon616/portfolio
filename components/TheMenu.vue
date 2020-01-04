@@ -228,8 +228,10 @@ export default {
 
         position: relative;
         width: 50px;
-        height: 36px;
+        height: 40px;
         z-index: 1;
+        background: rgba(0, 0, 0, 0);
+        border: 0;
 
         span{
           position: absolute;
@@ -243,7 +245,7 @@ export default {
             top: 0;
           }
           &:nth-of-type(2) {
-            top: 16px;
+            top: 18.5px;
           }
           &:nth-of-type(3) {
             bottom: 0;
@@ -301,15 +303,15 @@ export default {
     }
 
     .sm-menu__trigger.active span:nth-of-type(1) {
-      -webkit-transform: translateY(16px) rotate(-45deg);
-      transform: translateY(16px) rotate(-45deg);
+      -webkit-transform: translateY(17px) rotate(-45deg);
+      transform: translateY(18.5px) rotate(-45deg);
     }
     .sm-menu__trigger.active span:nth-of-type(2) {
       opacity: 0;
     }
     .sm-menu__trigger.active span:nth-of-type(3) {
-      -webkit-transform: translateY(-16px) rotate(45deg);
-      transform: translateY(-16px) rotate(45deg);
+      -webkit-transform: translateY(-17px) rotate(45deg);
+      transform: translateY(-18.5px) rotate(45deg);
     }
   }
 </style>

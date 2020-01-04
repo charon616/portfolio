@@ -142,7 +142,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      z-index: 100;
+      z-index: 90;
       &__button{
         &:hover{
           i{
@@ -224,7 +224,7 @@ export default {
         flex-direction: column;
         justify-content: space-around;
         &__button{
-          background-color: $bg-color;
+          // background-color: $bg-color;
           border: 2px solid $sub-color;
           border-radius: 4px;
           padding: 8px 16px;
