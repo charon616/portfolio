@@ -80,7 +80,7 @@
           },
           {
             title: 'AR-ZINE',
-            url: require('~/assets/work/work3.jpg'),
+            url: require('~/assets/work/work2.png'),
             period: '2019',
             category: 'AR App',
             id: '02'
@@ -93,8 +93,8 @@
             id: '03'
           },
           {
-            title: '地図',
-            url: require('~/assets/work/work3.jpg'),
+            title: '存在を積み上げる地図',
+            url: require('~/assets/work/work4.jpg'),
             period: '2019',
             category: 'Media Art',
             id: '04'
