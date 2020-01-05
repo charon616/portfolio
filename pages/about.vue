@@ -26,7 +26,7 @@
           <p>Research --- HCI、視線計測、デザインツールなど。</p>
 
           <p class="space">karinkiho616 [at] g.ecc.u-tokyo.ac.jp</p>
-          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button">
+          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" role="button">
             <i class="fab fa-facebook"></i>
           </a>
           <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button">
