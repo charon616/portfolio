@@ -261,6 +261,13 @@
             category: 'Illustration',
             id: '27'
           },
+          {
+            title: '名刺',
+            url: require('~/assets/work/work28.png'),
+            period: '2019',
+            category: 'Printing',
+            id: '28'
+          },
         ],
       }
     }
