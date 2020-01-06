@@ -2,10 +2,13 @@
   <div class="container">
     <div id="page-wrap">
       <div class="first-view">
-        <img src="/work/work13.gif"/>
+        <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
+        <div v-for="n of 8" :key="n">
+          <img class="first-view__bg" src="/title3.svg"/>
+          <img class="first-view__bg" src="/title2.svg"/>
+        </div>
         <div class="first-view__txt">
-          <h1>PORTFOLIO</h1>
-          <p>KIHO Karin</p>
+          <h1>KIHO Karin</h1>
         </div>
         <!-- <MyCanvas /> -->
         <!-- <iframe
@@ -345,11 +348,34 @@
   z-index: 0;
   color: rgb(237, 168, 179);
   background-color: $main-color;
+  object-fit: cover;
+  overflow: hidden;
+
+  &__img{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__bg{
+    // position: absolute;
+    width: 100%;
+    height: auto;
+    transform: rotateZ(-10deg) translateY(-50%);
+    // top: 50%;
+    // left: 50%;
+    // transform: translateX(-50%) translateY(-50%);
+  }
 
   &__txt{
     color: white;
+    background-color: $sub-color;
+    padding: 8px 16px;
     text-align: center;
-    text-shadow:2px 2px 3px $sub-color;
+    // text-shadow:2px 2px 3px $sub-color;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -362,15 +388,6 @@
       font-size: 1.2em;
     }
 
-  }
-
-  img{
-    position: absolute;
-    width: 400px;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
   }
 
 }
@@ -590,6 +607,10 @@
   .first-view{
     img{
       width: 100%;
+    }
+    &__bg{
+      opacity: 0.5;
+
     }
   }
   .works {
