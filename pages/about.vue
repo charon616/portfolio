@@ -33,6 +33,7 @@
             <i class="fab fa-instagram"></i>
           </a>
           <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja">GIF MAGAZINE</a>
+          <a class="simple-link" href="https://pin.it/z3obxmhah4juvm">Pinterest</a>
           </div>
         </div>
       </div>
@@ -108,6 +109,14 @@
 
   &:hover{
     color: #1877f2;
+  }
+}
+.btn-pinterest{
+  font-size: 2.0em;
+  transition: all .3s ease-out;
+
+  &:hover{
+    color: #E60023;
   }
 }
 
