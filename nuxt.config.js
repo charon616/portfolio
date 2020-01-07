@@ -52,10 +52,6 @@ export default {
   webfontloader: {
     google: {
       families: ["Lato:400,700"],
-      families: ["M+PLUS+1p"],
-      families: ["Nothing+You+Could+Do"],
-      families: ["Caveat"],
-      families: ["Amatic+SC"]
     }
   },
   /*
