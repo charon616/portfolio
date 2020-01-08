@@ -81,7 +81,7 @@ export default {
       }
     },
     calcNextId: function(id){
-      if(Number(id) == 27){
+      if(Number(id) == 28){
         return '01';
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );
