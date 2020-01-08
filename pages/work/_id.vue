@@ -30,7 +30,7 @@
 
         <div class="work-detail__move-page">
           <nuxt-link :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="work-detail__move-page__button"><i class="fas fa-long-arrow-alt-left"></i> PREV</nuxt-link>
-          <p>#{{ $route.params.id }} / 27</p>
+          <p>#{{ $route.params.id }} / 28</p>
           <nuxt-link :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }" class="work-detail__move-page__button">NEXT <i class="fas fa-long-arrow-alt-right"></i></nuxt-link>
         </div>
       </div>
@@ -77,7 +77,7 @@ export default {
       if(Number(id)-1 != 0){
         return ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        return 27;
+        return 28;
       }
     },
     calcNextId: function(id){

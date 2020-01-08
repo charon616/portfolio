@@ -58,7 +58,7 @@
 </template>
 
 <script>
-  import MyCanvas from '~/components/MyCanvas.vue'
+  import MyCanvas from '~/components/MyCanvas.vue';
   import PagetopComponent from '~/components/PagetopComponent.vue';
   import jsonfile from '~/assets/work/works.json';
 
@@ -78,7 +78,7 @@
             title: '東京大学制作展2019',
             url: require('~/assets/work/work1.jpg'),
             period: '2019',
-            category: 'Poster/Pamplet',
+            category: 'Poster/Pamphlet',
             id: '01'
           },
           {
