@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="page-wrap">
-      <div class="first-view">
+      <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
         <div v-for="n of 8" :key="n">
           <img class="first-view__bg" src="/title3.svg"/>
@@ -61,6 +61,7 @@
   import MyCanvas from '~/components/MyCanvas.vue';
   import PagetopComponent from '~/components/PagetopComponent.vue';
   import jsonfile from '~/assets/work/works.json';
+  import VueScrollTo from 'vue-scrollto';
 
   export default {
     components: {
@@ -510,7 +511,7 @@
         }
       }
       .work__img{
-        transform: scale(1.1);
+        transform: translate3d(0, 8px, 0) scale(1.1);
         transition: 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
       }
     }

@@ -35,6 +35,19 @@ body{
   // cursor: none;
 }
 
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .3s;
+}
+
+.page-enter,
+.page-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;

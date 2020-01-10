@@ -39,8 +39,7 @@ export default {
     },
     {
       src: '~plugins/vue-scrollto',
-    },
-    '~/plugins/lazyload'
+    }
   ],
   /*
    ** Nuxt.js dev-modules

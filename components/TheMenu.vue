@@ -5,7 +5,7 @@
       <img class="logo" src="~/assets/icon/logo.png">
     </nuxt-link>
     <div class="menu">
-      <nuxt-link class="menu__item" v-scroll-to="'/'" to="/">TOP</nuxt-link>
+      <nuxt-link class="menu__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
       <nuxt-link class="menu__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
       <nuxt-link class="menu__item" to="/about">ABOUT</nuxt-link>
       <!-- <nuxt-link class="menu__item" to="/about"><i class="fab fa-instagram"></i></nuxt-link> -->
@@ -22,8 +22,8 @@
       </transition>
       <transition name="fade">
         <div class="sm-menu__items" v-show="menu">
-          <nuxt-link class="sm-menu__items__item" to="/">TOP</nuxt-link>
-          <nuxt-link class="sm-menu__items__item" to="/#work">WORK</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
           <nuxt-link class="sm-menu__items__item" to="/about">ABOUT</nuxt-link>
         </div>
       </transition>
@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import VueScrollTo from 'vue-scrollto';
+
 let photos = {
   1: require('~/assets/icon/logo.png'), 
   2: require('~/assets/icon/logo-pc.png')
