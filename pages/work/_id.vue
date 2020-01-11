@@ -57,6 +57,7 @@ export default {
 
   async asyncData ({ params }) {
     let { data } = await axios.get(`https://karinkiho.com/work/${params.id}`)
+    // let { data } = await axios.get(`http://localhost:3000/work/${params.id}`)
     return { data, url:jsonfile.items[Number(params.id-1)].url }
   },
 
@@ -77,7 +78,7 @@ export default {
         }
       },
       jsondata: jsonfile,
-      url: jsonfile.items[Number(params.id-1)].url
+      url: []
     }
   },
 
