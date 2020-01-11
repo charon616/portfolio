@@ -56,9 +56,19 @@ export default {
   },
 
   async asyncData ({ params }) {
-    let { data } = await axios.get(`https://karinkiho.com/work/${params.id}`)
-    // let { data } = await axios.get(`http://localhost:3000/work/${params.id}`)
-    return { data, url:jsonfile.items[Number(params.id-1)].url }
+    // let { data } = await axios.get(`https://karinkiho.com/work/${params.id}`)
+    // let { data } = await axios.get(`https://api.myjson.com/bins/16z7vy`)
+    // // return { url:jsonfile.items[Number(params.id-1)].url }
+    // return { url:data.items[Number(params.id-1)].url }
+
+    try {
+      let { data } = await axios.get(`https://api.myjson.com/bins/16z7vy`)
+      return { url:data.items[Number(params.id-1)].url };
+    } catch (err) {
+      error({
+        url:jsonfile.items[Number(params.id-1)].url
+      });
+    }
   },
 
   data() {
