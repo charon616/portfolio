@@ -145,6 +145,13 @@ body{
     padding-top: $side-bar-height;
     width: 100vw;
   }
+  html{
+    cursor: initial;
+  }
+  *:link,
+  *:visited {
+    cursor: initial;
+  }
 }
 
 @media screen and (max-width: 480px) {
