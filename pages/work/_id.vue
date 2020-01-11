@@ -19,7 +19,8 @@
 
 
         <swiper :options="swiperOption" class="work-detail__slider"> 
-          <swiper-slide v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index'>
+          <!-- <swiper-slide v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index'> -->
+          <swiper-slide v-for='(link, index) in url' :key='index'>
             <img class="work-detail__img" :src="link"/>
           </swiper-slide>
           <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" class="swiper-pagination swiper-pagination-black"  slot="pagination"></div>
@@ -28,7 +29,8 @@
         </swiper>
 
         <div class="work-detail__viewer">
-          <img class="work-detail__img" v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index' :src="link"/>
+          <!-- <img class="work-detail__img" v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index' :src="link"/> -->
+          <img class="work-detail__img" v-for='(link, index) in url' :key='index' :src="link"/>
         </div>
 
         <div class="work-detail__move-page">
@@ -45,11 +47,17 @@
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import jsonfile from '~/assets/work/works.json';
+import axios from 'axios';
 
 export default {
   components: {
     swiper, 
     swiperSlide
+  },
+
+  async asyncData ({ params }) {
+    let { data } = await axios.get(`https://karinkiho.com/work/${params.id}`)
+    return { data, url:jsonfile.items[Number(params.id-1)].url }
   },
 
   data() {
@@ -69,6 +77,7 @@ export default {
         }
       },
       jsondata: jsonfile,
+      url: jsonfile.items[Number(params.id-1)].url
     }
   },
 
