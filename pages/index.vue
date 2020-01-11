@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div id="page-wrap">
+    <div >
       <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
         <div v-for="n of 8" :key="n">
@@ -20,16 +20,16 @@
             sandbox="allow-scripts">
         </iframe> -->
         <!-- <iframe width="100%" height="100%" frameborder="0" sandbox="allow-scripts" src="https://editor.p5js.org/charon616/embed/JcH3ahfdK"></iframe> -->
-        <nuxt-link class="down-button" v-scroll-to="'#work'" to><span></span>Scroll</nuxt-link>
+        <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  class="down-button" v-scroll-to="'#work'" to><span></span>Scroll</nuxt-link>
       </div>
 
       <div class="main-content" id="work">
-        <h2 class="page-title">WORK</h2>
+        <h2 class="page-title animated bounceInDown" >WORK</h2>
         <div class="works">
           <div class="work" v-for='(item, index) in items' :key='`first-${index}`'>
             <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" :src="item.url"/>
-              <div class="work__caption">
+              <img class="work__img" :src="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
                 <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>
               </div>
@@ -39,17 +39,17 @@
         <div class="works">
           <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`'>
             <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" :src="item.url"/>
-              <div class="work__caption">
+              <img class="work__img" :src="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
                 <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>
               </div>
             </nuxt-link>
           </div>
-          <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button">View All</nuxt-link>
+           <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All</nuxt-link>
         </div>
 
-        <PagetopComponent />
+        <PagetopComponent v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  />
 
       </div>
 
@@ -61,12 +61,21 @@
   import MyCanvas from '~/components/MyCanvas.vue';
   import PagetopComponent from '~/components/PagetopComponent.vue';
   import jsonfile from '~/assets/work/works.json';
-  import VueScrollTo from 'vue-scrollto';
 
   export default {
     components: {
       MyCanvas,
       PagetopComponent
+    },
+    methods: {
+      mouseover: function(){ 
+        let stalker = document.getElementById('cursor-stalker');
+        stalker.classList.add('hov_');
+      },
+      mouseleave: function(){
+        let stalker = document.getElementById('cursor-stalker');
+        stalker.classList.remove('hov_');
+      }
     },
     data() {
       return {
@@ -84,7 +93,7 @@
           },
           {
             title: 'AR-ZINE',
-            url: require('~/assets/work/work2.png'),
+            url: require('~/assets/work/work2.jpg'),
             period: '2019',
             category: 'AR App',
             id: '02'
@@ -105,7 +114,7 @@
           },
           {
             title: '東京大学制作展2017',
-            url: require('~/assets/work/work5.png'),
+            url: require('~/assets/work/work5.jpg'),
             period: '2017',
             category: 'Web',
             id: '05'
@@ -133,7 +142,7 @@
           },
           {
             title: '苗村研究室OpenHouse2020',
-            url: require('~/assets/work/work27.png'),
+            url: require('~/assets/work/work27.jpg'),
             period: '2019',
             category: 'Web',
             id: '09'
@@ -161,7 +170,7 @@
           },
           {
             title: 'AMPM',
-            url: require('~/assets/work/work12.png'),
+            url: require('~/assets/work/work12.jpg'),
             period: '2018',
             category: 'Animation',
             id: '13'
@@ -267,7 +276,7 @@
           },
           {
             title: '名刺',
-            url: require('~/assets/work/work28.png'),
+            url: require('~/assets/work/work28.jpg'),
             period: '2019',
             category: 'Printing',
             id: '28'

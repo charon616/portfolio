@@ -20,19 +20,6 @@ export default {
   },
   mounted() {
     window.addEventListener('mousemove', this.mouse);
-
-    let stalker = document.getElementById('cursor-stalker');
-    // const linkElem = document.querySelectorAll('nuxt-link');
-    const linkElem = document.getElementsByTagName("a");
-    console.log(linkElem);
-    for (let i = 0; i < linkElem.length; i++) {
-      linkElem[i].addEventListener('mouseover', function (e) {
-        stalker.classList.add('hov_');
-      });
-      linkElem[i].addEventListener('mouseout', function (e) {
-        stalker.classList.remove('hov_');
-      });
-    }
   },
 
   methods: {
@@ -48,10 +35,7 @@ export default {
     applyTransform: function(){
       console.log(this.transform)
       return "translate(80px, 70px)";
-    },
-    // styles: function(){
-      
-    // }
+    }
   }
 }
 </script>
@@ -65,7 +49,7 @@ export default {
     pointer-events: none;
     &__main{
         border-radius: 50%;
-        background-color: $accent-color;
+        background-color: rgba(46, 255, 192, 1);
         position: fixed;
         top: -6px; 
         left: -6px;
@@ -89,11 +73,12 @@ export default {
         transition-timing-function: ease-out;
         pointer-events: none;
         &.hov_{
+          background-color: rgba(50, 50, 50, 0.25);
           top: -32px;     
           left: -32px;   
           width: 64px;
           height: 64px;
-          transition: .3s;
+          transition: all .2s ease-out;
         }
     }
 }

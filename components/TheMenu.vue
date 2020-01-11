@@ -1,13 +1,13 @@
 <template>
   <div class="side-content">
-    <nuxt-link to="/">
+    <nuxt-link to="/" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >
       <img class="logo-pc" src="~/assets/icon/logo-pc.png">
       <img class="logo" src="~/assets/icon/logo.png">
     </nuxt-link>
     <div class="menu">
-      <nuxt-link class="menu__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
-      <nuxt-link class="menu__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
-      <nuxt-link class="menu__item" to="/about">ABOUT</nuxt-link>
+      <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
+      <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
+      <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" to="/about">ABOUT</nuxt-link>
       <!-- <nuxt-link class="menu__item" to="/about"><i class="fab fa-instagram"></i></nuxt-link> -->
       <!-- <nuxt-link class="menu-item" to="/about">SPECIAL</nuxt-link> -->
     </div>
@@ -61,6 +61,14 @@ export default {
       this.$nextTick(() => {
         this.$scrollTo(hash, 0, { offset: -120 })
       })
+    },
+    mouseover: function(){ 
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.add('hov_');
+    },
+    mouseleave: function(){
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.remove('hov_');
     }
   },
 

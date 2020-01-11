@@ -1,17 +1,20 @@
 <template>
+  <transition name="slide">
   <div class="container">
     <div id="page-wrap">
       <div class="main-content work-detail" id="work-detail">
   
         <div class="work-detail__textbox">
-          <h2 class="work-detail__textbox__title">{{ jsondata.items[stringToNum($route.params.id-1)].title }}</h2>
+          <transition enter-active-class="animated zoomIn">
+            <h2 class="work-detail__textbox__title">{{ jsondata.items[stringToNum($route.params.id-1)].title }}</h2>
+          </transition>
           <div class="work-detail__textbox__property">
             <p>{{ jsondata.items[stringToNum($route.params.id-1)].category }} | {{ jsondata.items[stringToNum($route.params.id-1)].period }}</p>
             <p>#{{ $route.params.id }}</p>
           </div>
           <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ jsondata.items[stringToNum($route.params.id-1)].description }} </p>
           <br/>
-          <a v-if="jsondata.items[stringToNum($route.params.id-1)].link != null" class="link-button" v-bind:href="jsondata.items[stringToNum($route.params.id-1)].link">{{ jsondata.items[stringToNum($route.params.id-1)].link_txt }}</a>
+          <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="jsondata.items[stringToNum($route.params.id-1)].link != null" class="link-button" v-bind:href="jsondata.items[stringToNum($route.params.id-1)].link">{{ jsondata.items[stringToNum($route.params.id-1)].link_txt }}</a>
         </div>
 
 
@@ -19,9 +22,9 @@
           <swiper-slide v-for='(link, index) in jsondata.items[stringToNum($route.params.id-1)].url' :key='index'>
             <img class="work-detail__img" :src="link"/>
           </swiper-slide>
-          <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" class="swiper-pagination swiper-pagination-black"  slot="pagination"></div>
-          <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
-          <div v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-next" class="swiper-button-next swiper-button-white swiper-custom-button"></div>
+          <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" class="swiper-pagination swiper-pagination-black"  slot="pagination"></div>
+          <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
+          <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="jsondata.items[stringToNum($route.params.id-1)].url.length!=1" slot="button-next" class="swiper-button-next swiper-button-white swiper-custom-button"></div>
         </swiper>
 
         <div class="work-detail__viewer">
@@ -29,14 +32,14 @@
         </div>
 
         <div class="work-detail__move-page">
-          <nuxt-link :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="work-detail__move-page__button"><i class="fas fa-long-arrow-alt-left"></i> PREV</nuxt-link>
+          <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="work-detail__move-page__button"><i class="fas fa-long-arrow-alt-left"></i> PREV</nuxt-link>
           <p>#{{ $route.params.id }} / 28</p>
-          <nuxt-link :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }" class="work-detail__move-page__button">NEXT <i class="fas fa-long-arrow-alt-right"></i></nuxt-link>
+          <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }" class="work-detail__move-page__button">NEXT <i class="fas fa-long-arrow-alt-right"></i></nuxt-link>
         </div>
       </div>
     </div>
-
   </div>
+  </transition>
 
 </template>
 <script>
@@ -69,6 +72,14 @@ export default {
     }
   },
 
+  created() {
+    let stalker = document.getElementById('cursor-stalker');
+    if(stalker==null){
+      return;
+    }
+    stalker.classList.remove('hov_');
+  },
+
   methods: {
     stringToNum: function(str){
       return Number(str);
@@ -86,6 +97,14 @@ export default {
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );
       }
+    },
+    mouseover: function(){ 
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.add('hov_');
+    },
+    mouseleave: function(){
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.remove('hov_');
     }
   }
 }
@@ -94,6 +113,7 @@ export default {
 <style lang="scss" scoped >
 @import 'swiper/dist/css/swiper.css'; 
 @import "~assets/scss/variables";
+
   .main-content{
     margin-top: 0;
   }

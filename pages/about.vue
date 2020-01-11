@@ -26,14 +26,14 @@
           <p>Research --- HCI、視線計測、デザインツールなど。</p>
 
           <p class="space">karinkiho616 [at] g.ecc.u-tokyo.ac.jp</p>
-          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" role="button">
+          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <i class="fab fa-facebook"></i>
           </a>
-          <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button">
+          <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <i class="fab fa-instagram"></i>
           </a>
-          <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja">GIF MAGAZINE</a>
-          <a class="simple-link" href="https://pin.it/z3obxmhah4juvm">Pinterest</a>
+          <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">GIF MAGAZINE</a>
+          <a class="simple-link" href="https://pin.it/z3obxmhah4juvm" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">Pinterest</a>
           </div>
         </div>
       </div>
@@ -41,6 +41,18 @@
 
 </template>
 <script>
+export default {
+    methods: {
+      mouseover: function(){ 
+        let stalker = document.getElementById('cursor-stalker');
+        stalker.classList.add('hov_');
+      },
+      mouseleave: function(){
+        let stalker = document.getElementById('cursor-stalker');
+        stalker.classList.remove('hov_');
+      }
+    }
+}
 </script>
 
 <style scoped lang="scss">
