@@ -10,7 +10,7 @@
         </div>
         <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ item.description }} </p>
         <br/>
-        <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="item.link">{{ item.link_txt }}</a>
+        <a target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="item.link">{{ item.link_txt }}</a>
       </div>
 
       <swiper :options="swiperOption" class="work-detail__slider"> 

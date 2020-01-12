@@ -27,16 +27,16 @@
           <p><span>Research</span> HCI、視線計測、デザインツールなど。</p>
 
           <p class="space">karinkiho616 [at] g.ecc.u-tokyo.ac.jp</p>
-          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+          <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <font-awesome-icon :icon="['fab', 'facebook']" />
           </a>
-          <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+          <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <font-awesome-icon :icon="['fab', 'instagram']" />
           </a>
-          <a class="btn-pinterest space" href="https://pin.it/z3obxmhah4juvm" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+          <a class="btn-pinterest space" href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <font-awesome-icon :icon="['fab', 'pinterest']" />
           </a>
-          <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">GIF MAGAZINE</a>
+          <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">GIF MAGAZINE</a>
           </div>
         </div>
       </div>
