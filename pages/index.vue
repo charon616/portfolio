@@ -28,7 +28,7 @@
         <div class="works">
           <div class="work" v-for='(item, index) in items' :key='`first-${index}`'>
             <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" :src="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <img class="work__img" v-lazy="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
               <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
                 <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>
@@ -39,7 +39,7 @@
         <div class="works">
           <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`'>
             <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" :src="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <img class="work__img" v-lazy="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
               <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
                 <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>

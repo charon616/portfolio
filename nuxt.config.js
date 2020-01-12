@@ -53,6 +53,10 @@ export default {
     {
       src: '~plugins/menu-control.js',
       ssr: false
+    },
+    {
+      src: '~plugins/lazyload',
+      ssr: false
     }
   ],
   /*
