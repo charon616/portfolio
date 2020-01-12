@@ -1,7 +1,7 @@
 <template>
     <transition name="fade">
         <div id="pagetop" class="fixed right-0 bottom-0" v-show="scY > 900" @click="toTop">
-            <span class="top-button"><i class="fas fa-long-arrow-alt-up"></i></span>
+            <span class="top-button"><font-awesome-icon icon="long-arrow-alt-up"/></span>
         </div>
     </transition>
 </template>

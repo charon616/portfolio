@@ -42,8 +42,26 @@ body{
 
 .page-enter,
 .page-leave-to
-  {
+{
   opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 1.0s;
+}
+
+.slide-enter{
+  transform: translateX(200px);
+}
+.slide-enter-to{
+  transform: translateX(0px);
+}
+.slide-leave{
+  transform: translateX(0px);
+}
+.slide-leave-to{
+  transform: translateX(-200px);
 }
 
 .container {

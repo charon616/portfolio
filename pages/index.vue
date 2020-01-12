@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div >
+    <div>
       <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
-        <div v-for="n of 8" :key="n">
+        <div v-for="n of 8" :key="n" class="animated jello">
           <img class="first-view__bg" src="/title3.svg"/>
           <img class="first-view__bg" src="/title2.svg"/>
         </div>
@@ -24,10 +24,10 @@
       </div>
 
       <div class="main-content" id="work">
-        <h2 class="page-title animated bounceInDown" >WORK</h2>
+        <h2 class="page-title" >WORK</h2>
         <div class="works">
           <div class="work" v-for='(item, index) in items' :key='`first-${index}`'>
-            <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
+            <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
               <img class="work__img" :src="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
               <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
@@ -149,21 +149,21 @@
           },
           {
             title: 'unlock',
-            url: require('~/assets/work/work9.png'),
+            url: require('~/assets/work/work9.jpg'),
             period: '2019',
             category: 'App UI',
             id: '10'
           },
           {
             title: 'yumemo',
-            url: require('~/assets/work/work10.png'),
+            url: require('~/assets/work/work10.jpg'),
             period: '2018',
             category: 'App UI',
             id: '11'
           },
           {
             title: 'YAC2018',
-            url: require('~/assets/work/work11.png'),
+            url: require('~/assets/work/work11.jpg'),
             period: '2018',
             category: 'Banner',
             id: '12'
@@ -177,28 +177,28 @@
           },
           {
             title: 'UmeeT',
-            url: require('~/assets/work/work23.png'),
+            url: require('~/assets/work/work23.jpg'),
             period: '2017',
             category: 'Logo',
             id: '14'
           },
           {
             title: 'NUTONE',
-            url: require('~/assets/work/work24.png'),
+            url: require('~/assets/work/work24.jpg'),
             period: '2019',
             category: 'Logo / Web',
             id: '15'
           },
           {
             title: 'ROBOXER',
-            url: require('~/assets/work/work25.png'),
+            url: require('~/assets/work/work25.jpg'),
             period: '2019',
             category: 'Logo',
             id: '16'
           },
           {
             title: 'OUR Shurijo',
-            url: require('~/assets/work/work26.png'),
+            url: require('~/assets/work/work26.jpg'),
             period: '2019',
             category: 'Logo',
             id: '17'
@@ -206,7 +206,7 @@
         ],
         items_square: [{
             title: 'sys-seeing',
-            url: require('~/assets/work/work15.png'),
+            url: require('~/assets/work/work15.jpg'),
             period: '2018',
             category: 'Logo',
             id: '18'
@@ -241,28 +241,28 @@
           },
           {
             title: 'きたすばる',
-            url: require('~/assets/work/work20.png'),
+            url: require('~/assets/work/work20.jpg'),
             period: '2019',
             category: 'Logo',
             id: '23'
           },
           {
             title: '東武東上線沿線サミット',
-            url: require('~/assets/work/work21.png'),
+            url: require('~/assets/work/work21.jpg'),
             period: '2019',
             category: 'Logo',
             id: '24'
           },
           {
             title: '周南工場夜景',
-            url: require('~/assets/work/work22.png'),
+            url: require('~/assets/work/work22.jpg'),
             period: '2019',
             category: 'Logo',
             id: '25'
           },
           {
             title: 'GIF',
-            url: require('~/assets/work/work13.gif'),
+            url: require('~/assets/work/work13.jpg'),
             period: '2018',
             category: 'GIF Animation',
             id: '26'
@@ -291,6 +291,10 @@
 <style scoped lang="scss">
 @import "~assets/scss/variables";
 
+.container{
+  background-color: $main-color;
+}
+
 .down-button{
     position: absolute;
     bottom: 20px;
@@ -301,8 +305,10 @@
     transform: translate(-50%, -50%);
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 0.2em;
-    padding-top: 70px;
+    letter-spacing: .1em;
+    padding: 70px 32px 8px;
+    color: rgba(46, 255, 192, 1);
+    background-color: rgba(46, 255, 192, 0.25);
     span{
         position: absolute;
         top: 0;
@@ -310,8 +316,8 @@
         width: 24px;
         height: 24px;
         margin-left: -12px;
-        border-left: 1px solid $sub-color;
-        border-bottom: 1px solid $sub-color;
+        border-left: 1px solid rgba(46, 255, 192, 1);
+        border-bottom: 1px solid rgba(46, 255, 192, 1);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         -webkit-animation: sdb 1.5s infinite;
@@ -357,7 +363,6 @@
   height: 100vh;
   z-index: 0;
   color: rgb(237, 168, 179);
-  background-color: $main-color;
   object-fit: cover;
   overflow: hidden;
 
@@ -423,7 +428,7 @@
   flex-wrap: wrap;
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
-  background-color: $main-color;
+
   .work {
     width: calc(100%/3);
     height: auto;
@@ -614,13 +619,23 @@
 }
 
 @media screen and (max-width: 480px) {
+  .down-button{
+    background-color: rgba(0, 0, 0, 0);
+    color: $sub-color;
+    span{
+      border-left: 1px solid $sub-color;
+      border-bottom: 1px solid $sub-color;
+    }
+  }
   .first-view{
     img{
       width: 100%;
     }
     &__bg{
-      opacity: 0.5;
-
+      display: none;
+    }
+    &__txt{
+      font-size: 0.4em;
     }
   }
   .works {

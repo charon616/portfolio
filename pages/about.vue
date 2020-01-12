@@ -10,8 +10,9 @@
         
         <div class="text-box">
         <h3>KIHO Karin</h3>
-          <p>Designer | Engineer</p>
-          <p style="letter-spacing: .2em;">1996.6.16<p>
+        <h4>キホウ カリン</h4>
+          <p class="space">Designer | Engineer</p>
+          <p>1996.6.16<p>
 
           <p class="space">
             東京大学大学院 学際情報学府 学際情報学専攻 <br/>先端表現情報学コース 苗村研究室所属
@@ -20,17 +21,17 @@
             大学のフリーペーパー制作サークルでデザインを始め、いつの間にか夢中に。大学院では将来の人間のコミュニケーションのあり方や新しいエンターテイメントの可能性を探りつつ、先端芸術的な表現のためのスキルや知識を身に付けたい。
           </p> -->
           <!-- <h3>Skill</h3> -->
-          <p class="space">Design --- グラフィック全般。特にエディトリアル、UI。</p>
-          <p>Programming --- C++、Python、Unity、Webフロント系言語など。
+          <p class="space"><span>Design</span> グラフィック全般。特にエディトリアル、UI。</p>
+          <p><span>Programming</span> C++、Python、Unity、Webフロント系言語など。
           </p>
-          <p>Research --- HCI、視線計測、デザインツールなど。</p>
+          <p><span>Research</span> HCI、視線計測、デザインツールなど。</p>
 
           <p class="space">karinkiho616 [at] g.ecc.u-tokyo.ac.jp</p>
           <a class="btn-facebook space" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-            <i class="fab fa-facebook"></i>
+            <font-awesome-icon :icon="['fab', 'facebook']" />
           </a>
           <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-            <i class="fab fa-instagram"></i>
+            <font-awesome-icon :icon="['fab', 'instagram']" />
           </a>
           <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">GIF MAGAZINE</a>
           <a class="simple-link" href="https://pin.it/z3obxmhah4juvm" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">Pinterest</a>
@@ -51,6 +52,9 @@ export default {
         let stalker = document.getElementById('cursor-stalker');
         stalker.classList.remove('hov_');
       }
+    },
+    mounted() {
+      Typekit.load({async: true})
     }
 }
 </script>
@@ -80,26 +84,33 @@ export default {
 
 .main-content {
   margin-top: 0;
-
-  text-align: center;
   line-height: 1.75;
 }
 
-// #about {
-//   margin-top: 0;
-//   text-align: center;
-//   line-height: 1.75;
-//   // width: 60%;
-// }
-
 .text-box{
+  font-family: 'Lato', 'Source Sans Pro', a-otf-gothic-bbb-pr6n, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif; 
+  font-weight: 400;
+  font-style: normal;
+
   width: 60%;
   margin: 24px auto;
   h3{
     font-size: 1.6em;
     font-weight: normal;
     letter-spacing: .1em;
-    margin-bottom: 8px;
+    margin-bottom: -6px;  
+  }
+  h4{
+    letter-spacing: .1em;
+  }
+  span{
+    font-size: 0.8em; 
+    font-weight: bold;
+    padding: 4px;
+    background: $sub-color; 
+    color: white;
+    border-radius: 2px;
   }
 }
 
@@ -143,6 +154,14 @@ export default {
   .text-box{
     margin: 18px auto 0;
     width: 90%;
+    span{
+      display: block;
+      background: none;
+      color: $sub-color;
+      border-bottom: 1px solid $sub-color;
+      border-radius: 0;
+      padding: 4px 0 0; 
+    }
   }
   br{
     line-height: 2;
