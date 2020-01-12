@@ -14,14 +14,14 @@
 
     <div class="sm-menu">
       <transition name="fade">
-      <button class="sm-menu__trigger" v-bind:class="{ active: isActive }" v-on:click="clickMenu">
+      <button class="sm-menu__trigger" v-bind:class="{ active: isMenuActive }" v-on:click="clickMenu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       </transition>
       <transition name="fade">
-        <div class="sm-menu__items" v-show="menu">
+        <div class="sm-menu__items" v-show="isMenuActive">
           <nuxt-link class="sm-menu__items__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
           <nuxt-link class="sm-menu__items__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
           <nuxt-link class="sm-menu__items__item" to="/about">ABOUT</nuxt-link>
@@ -33,6 +33,7 @@
 
 <script>
 import VueScrollTo from 'vue-scrollto';
+import { mapMutations } from 'vuex';
 
 let photos = {
   1: require('~/assets/icon/logo.png'), 
@@ -40,12 +41,6 @@ let photos = {
 }
 
 export default {
-  data(){
-    return{
-      menu: false,
-      isActive: false
-    }
-  },
   mounted () {
     if ($nuxt.$route.hash) {
       this.scrollToHash()
@@ -53,8 +48,7 @@ export default {
   },
   methods:{
     clickMenu: function(){
-      this.menu = !this.menu;
-      this.isActive = !this.isActive;
+      this.$store.commit('changeMenu')
     },
     scrollToHash () {
       const hash=$nuxt.$route.hash
@@ -71,9 +65,11 @@ export default {
       stalker.classList.remove('hov_');
     }
   },
-
   computed: {
-    photos() { return photos }
+    photos() { return photos },
+    isMenuActive () {
+      return this.$store.state.isMenuActive
+    }
   }
 }
  
@@ -237,8 +233,8 @@ export default {
         box-sizing: border-box;
 
         position: relative;
-        width: 50px;
-        height: 32px;
+        width: 44px;
+        height: 30px;
         z-index: 1;
         background: rgba(0, 0, 0, 0);
         border: 0;
@@ -247,7 +243,7 @@ export default {
           position: absolute;
           left: 0;
           width: 100%;
-          height: 3px;
+          height: 2px;
           background-color: $sub-color;
           border-radius: 3px;
           transition: all .4s ease-out;
@@ -268,14 +264,15 @@ export default {
         top: $nav-height;
         margin-top: -8px;
         display: block;
-        font-size: 1.4em;
+        font-size: 1.2em;
         font-weight: bold;
         text-align: right;
-        line-height: 1.8em;
+        line-height: 2.0em;
         z-index: 0;
         &__item{
-          background-color: $bg-color;
-          padding: 2px 8px;
+          background-color: $accent-color;
+          color: $main-color;
+          padding: 4px 12px;
           z-index: 0;
         }
         // &::before{
@@ -310,6 +307,13 @@ export default {
     }
     .fade-leave-active {
       transition: all .3s ease-out;
+    }
+
+    .sm-menu__trigger.active{
+      width: 40px;
+      span{
+        background-color: $accent-color;
+      }
     }
 
     .sm-menu__trigger.active span:nth-of-type(1) {

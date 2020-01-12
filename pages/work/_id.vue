@@ -20,10 +20,16 @@ import jsonfile from '~/assets/work/works.json';
 import axios from 'axios';
 
 export default {
-  transition: 'basic',
+  // transition: {
+  //   name: 'custom-classes-transition',
+  //   enterActiveClass: 'animated fadeInLeft',
+  //   leaveActiveClass: 'animated fadeOut',
+  //   duration: {enter: 800, leave: 200}
+  // },
   components: {
     WorkDetail
   },
+  loading: false,
 
   async asyncData ({ params }) {
     try {

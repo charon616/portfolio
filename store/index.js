@@ -1,20 +1,27 @@
-// export const state = () => ({
-//   page: 'index',
+export const state = () => ({
+  isMenuActive: false
+  // page: 'index',
 
-//   // items: [],
-//   // counter: 10,
-//   // currentLocation: 'initial'
-// })
+  // items: [],
+  // counter: 10,
+  // currentLocation: 'initial'
+})
 
-// export const getters = () => ({
-//   items: (state) => state.items
-// })
+export const getters = () => ({
+  // items: (state) => state.items
+})
 
-// export const mutations = {
-//   updatePage(state, pageName){
-//     state.page = pageName
-//     console.log(pageName)
-//   },
+export const mutations = {
+  closeMenu(state){
+    state.isMenuActive = false
+  },
+  changeMenu(state){
+    state.isMenuActive = !state.isMenuActive
+  }
+  // updatePage(state, pageName){
+  //   state.page = pageName
+  //   console.log(pageName)
+  // },
 
   // increment(state) {
   //   state.counter++
@@ -25,4 +32,4 @@
   // setItems(state, { items }) {
   //   state.items = items
   // }
-// }
+}

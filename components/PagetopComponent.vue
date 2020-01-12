@@ -42,7 +42,7 @@ export default {
 .top-button{
   background-color: $sub-color;
   color: white;
-  font-size: 2.0em;
+  font-size: 1.7em;
   text-align: center;
   line-height: 8vmin;
 
@@ -53,10 +53,10 @@ export default {
   height: 8vmin;
 
   border-radius: $radius-size;
-  border: 2px solid $sub-color;
+  border: 2px solid rgba(46, 255, 192, 1);
   box-sizing: border-box;
-  background-color: $sub-color;
-  color: $main-color;
+  background-color: rgba(46, 255, 192, 1);
+  color: $sub-color;
 
   z-index: 90;
   transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
@@ -66,7 +66,7 @@ export default {
     width: 90%;
     height: 90%;
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid white;
+    border: 1px solid $sub-color;
     box-sizing: border-box;
     border-radius: 50%;
     top: 5%;

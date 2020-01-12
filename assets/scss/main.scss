@@ -17,7 +17,7 @@ html {
 }
 
 body{
-  background-color: $bg-color;
+  background-color: $main-color;
 }
 
 *,
@@ -35,9 +35,11 @@ body{
   cursor: none;
 }
 
-.page-enter-active,
+.page-enter-active{
+  transition: opacity .3s ease-out;
+}
 .page-leave-active {
-  transition: opacity .3s;
+  transition: opacity .2s ease-out;
 }
 
 .page-enter,
@@ -48,11 +50,12 @@ body{
 
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 1.0s;
+  transition: all 1.0s;
 }
 
 .slide-enter{
-  transform: translateX(200px);
+  transform: translateX(100px);
+  opacity: 0;
 }
 .slide-enter-to{
   transform: translateX(0px);
@@ -61,7 +64,8 @@ body{
   transform: translateX(0px);
 }
 .slide-leave-to{
-  transform: translateX(-200px);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 
 .container {

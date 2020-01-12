@@ -35,7 +35,6 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
   /*
    ** Global CSS
    */
@@ -50,6 +49,10 @@ export default {
     },
     {
       src: "~plugins/vue-scrollto"
+    },
+    {
+      src: '~plugins/menu-control.js',
+      ssr: false
     }
   ],
   /*
@@ -76,6 +79,14 @@ export default {
         icons: ["fab"]
       }
     ]
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return {
+        x: 0,
+        y: 0
+      }
+    }
   },
   /*
    ** Build configuration

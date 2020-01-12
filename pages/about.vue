@@ -33,8 +33,10 @@
           <a class="btn-instagram space" href="https://www.instagram.com/june_giraffe/?hl=ja" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
             <font-awesome-icon :icon="['fab', 'instagram']" />
           </a>
+          <a class="btn-pinterest space" href="https://pin.it/z3obxmhah4juvm" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+            <font-awesome-icon :icon="['fab', 'pinterest']" />
+          </a>
           <a class="simple-link" href="https://gifmagazine.net/users/71554/profile?locale=ja" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">GIF MAGAZINE</a>
-          <a class="simple-link" href="https://pin.it/z3obxmhah4juvm" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">Pinterest</a>
           </div>
         </div>
       </div>
@@ -61,6 +63,10 @@ export default {
 
 <style scoped lang="scss">
 @import "~assets/scss/variables";
+
+.container{
+  background-color: $bg-color;
+}
 
 .simple-link{
   display: block;
@@ -115,11 +121,11 @@ export default {
 }
 
 .space{
-  margin-top: 16px;
+  margin-top: 12px;
 }
   
 .btn-instagram{
-  font-size: 2.0em;
+  font-size: 1.8em;
   transition: all .3s ease-out;
 
   &:hover{
@@ -127,7 +133,7 @@ export default {
   }
 }
 .btn-facebook{
-  font-size: 2.0em;
+  font-size: 1.8em;
   transition: all .3s ease-out;
 
   &:hover{
@@ -135,7 +141,8 @@ export default {
   }
 }
 .btn-pinterest{
-  font-size: 2.0em;
+  margin-left: 6px;
+  font-size: 1.8em;
   transition: all .3s ease-out;
 
   &:hover{

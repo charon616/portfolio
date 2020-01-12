@@ -1,24 +1,23 @@
 <template>
   <div class="work-detail">
     
-      <transition appear name="slide">
       <div class="work-detail__textbox">
         <h2 class="work-detail__textbox__title">{{ item.title }}</h2>
         <div class="work-detail__textbox__property ">
           <p>{{ item.category }} | {{ item.period }}</p>
+          <p></p>
           <p>#{{ id }}</p>
         </div>
         <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ item.description }} </p>
         <br/>
         <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="item.link">{{ item.link_txt }}</a>
       </div>
-      </transition>
 
       <swiper :options="swiperOption" class="work-detail__slider"> 
         <swiper-slide v-for='(link, index) in url' :key='index'>
           <img class="work-detail__img" :src="link"/>
         </swiper-slide>
-        <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" class="swiper-pagination swiper-pagination-black"  slot="pagination"></div>
+        <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" class="swiper-pagination swiper-pagination-black" slot="pagination"></div>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" slot="button-next" class="swiper-button-next swiper-button-white swiper-custom-button"></div>
       </swiper>
@@ -101,6 +100,7 @@ export default {
       &__property{
         display: flex;
         margin: 8px 0;
+        -webkit-justify-content: space-between;
         justify-content: space-between;
         font-weight: bold;
         font-size: 1.2em;
@@ -172,7 +172,8 @@ export default {
           text-align: initial;
         }
         &__property{
-          p:first-child{
+          p:nth-child(2){
+            border-bottom: 1px solid black;
             position: relative;
             &::after{
               border-top: 1px solid $sub-color;
