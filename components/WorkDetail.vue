@@ -23,10 +23,7 @@
       </swiper>
 
       <div class="work-detail__viewer">
-        <lazy-component v-for="(link, index) in url" :key="index" >
-          <img class="work-detail__img" :src="link" >
-        </lazy-component>
-        <!-- <img class="work-detail__img" v-for='(link, index) in url' :key='index' data-src="link"/> -->
+        <img class="work-detail__img" v-for='(link, index) in url' :key='index' :src="link"/>
       </div>
   </div>
 </template>
