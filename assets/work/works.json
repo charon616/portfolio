@@ -11,7 +11,7 @@
     },
     {
       "title": "AR-ZINE",
-      "url": ["/work/work2.jpg", "/work/work2-2.jpg", "/work/work1-3.jpg"],
+      "url": ["/work/work2.jpg", "/work/work2-2.jpg", "/work/work1-3.jpg", "/work/work2-3.jpg"],
       "period": "2019",
       "category": "AR App",
       "description": "東京大学制作展2019にて，当日に来場者に配布するパンフレットにARを用いて追加情報を表示するWebアプリケーションを作成した。A-FrameというWeb VRフレームワーク，8th WallというWeb ARフレームワークを用いている。リンクは用いたコンテンツの一部。",
