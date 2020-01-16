@@ -33,7 +33,7 @@ export default {
 
   async asyncData ({ params }) {
     try {
-      let { data } = await axios.get(`https://api.myjson.com/bins/s5kjm`)
+      let { data } = await axios.get(`https://api.myjson.com/bins/tqwny`)
       return { jsondata: data };
     } catch (err) {
       error({
