@@ -114,28 +114,47 @@ export default {
       width: 100%;
       position: relative;
       margin: 32px 0;
+      padding: 6px 0;
       text-align: center;
       display: block;
       font-size: 0.8em;
+      transition: all .1s ease-out;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 0;
 
+      // &::after {
+      //   content: '';
+      //   width: 55%;
+      //   height: 2px;
+      //   margin: 2px auto;
+      //   background-color: $sub-color;
+      //   opacity: 0;
+      //   display: block;
+      //   -webkit-transform: translateX(-10%);
+      //   transform: translateX(-10%);
+      //   transition: all .1s ease-out;
+      // }
       &::after {
         content: '';
-        width: 55%;
-        height: 2px;
-        margin: 2px auto;
+        width: 80%;
+        height: 100%;
+        border-radius: 2em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
         background-color: $sub-color;
+        background-color: rgba(90, 50, 246, 0.2);
         opacity: 0;
         display: block;
-        -webkit-transform: translateX(-10%);
-        transform: translateX(-10%);
+        -webkit-transform: translateX(10%);
+        transform: translateX(10%);
         transition: all .1s ease-out;
+        z-index: -1;
       }
-
       &:hover {
         &::after {
           opacity: 1;
-          -webkit-transform: translateX(0%);
-          transform: translateX(0%);
           transition: all .3s ease-out;
         }
       }
@@ -178,18 +197,20 @@ export default {
       &__item {
         line-height: $side-bar-height;
         &::after {
-            width: 40%;
-            margin-top: 0;
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+            height: 50%;
+            width: 80%;
+            // width: 40%;
+            // margin-top: 0;
+            // position: absolute;
+            // bottom: 20%;
+            // left: 50%;
+            -webkit-transform: translateX(10%) translateY(50%);
+            transform: translateX(10%) translateY(50%);
         }
         &:hover{
             &::after {
-                -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
+                // -webkit-transform: translateX(-50%);
+                // transform: translateX(-50%);
             }
         }
       }

@@ -35,6 +35,13 @@ body{
   cursor: none;
 }
 
+*::selection{
+  background: $accent-color;
+  background: rgba(46, 255, 192, 1);
+  // color: #fff;
+
+}
+
 .page-enter-active{
   transition: opacity .3s ease-out;
 }
