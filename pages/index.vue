@@ -67,6 +67,12 @@
       MyCanvas,
       PagetopComponent
     },
+    mounted() {
+      const hash = this.$route.hash
+      if (hash && hash.match(/^#.+$/)) {
+        this.$scrollTo(hash)
+      }
+    },
     methods: {
       mouseover: function(){ 
         let stalker = document.getElementById('cursor-stalker');

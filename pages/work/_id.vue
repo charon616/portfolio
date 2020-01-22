@@ -6,8 +6,8 @@
         <WorkDetail :item="jsondata.items[stringToNum($route.params.id-1)]" :url="jsondata.items[stringToNum($route.params.id-1)].url" :id="$route.params.id"></WorkDetail>
 
         <div class="move-page">
-          <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="move-page__button animated"><font-awesome-icon icon="long-arrow-alt-left"/> PREV</nuxt-link>
-          <p style="display:inline;" class="move-page__pos"><span style="display:inline;" class="animated jello">#{{ $route.params.id }}</span> / 28</p>
+          <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="move-page__button"><font-awesome-icon icon="long-arrow-alt-left"/> PREV</nuxt-link>
+          <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" to="/#work" style="display:inline;" class="move-page__home"><font-awesome-icon :icon="['fas', 'th']" /></nuxt-link>
           <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }" class="move-page__button">NEXT <font-awesome-icon icon="long-arrow-alt-right"/></nuxt-link>
         </div>
       </div>
@@ -109,14 +109,41 @@ export default {
     z-index: 90;
     &__button{
       &:hover{
-        animation: tada 1s;
+        animation: pulse 1s;
       }
       &:nth-child(3){
         &:hover{
-          animation: tada 1s;
+          animation: pulse 1s;
         }
       }
     }
+    &__home{
+      transition: all .2s ease-out;
+      &:hover{
+        font-size: 1.1em;
+      }
+
+    }
+  }
+
+  /* 【CSS】右向き矢印 */
+  .cssArrow_r{
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0 2em 0 0.5em;
+      border-bottom: 2px solid $sub-color;
+      line-height: 1em;
+  }
+
+  .cssArrow_r::after{
+      position: absolute;
+      right: 0;
+      bottom: -2px;
+      border-right: 1.0em solid $main-color;
+      border-bottom: 0.5em solid $sub-color;
+      content: "";
   }
 
   @keyframes moveleft {

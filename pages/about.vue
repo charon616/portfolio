@@ -90,6 +90,7 @@ export default {
 
 .main-content {
   margin-top: 0;
+  margin-bottom: 64px;
   line-height: 1.75;
 }
 
