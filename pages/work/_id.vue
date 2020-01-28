@@ -113,7 +113,7 @@ export default {
       }
       &:nth-child(3){
         &:hover{
-          animation: pulse 1s;
+          animation: puls 1s;
         }
       }
     }

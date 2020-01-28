@@ -7,6 +7,16 @@
         <div id="app">
     <button id="btn" v-on:click="omikuji">ボタン</button>
     <div>{{result}}</div>
+
+    <div>
+      <img class="book" src='~/assets/special/book.jpg'>
+      <p>No.1</p>
+      <p>No.2</p>
+      <p>No.3</p>
+      <p>No.4</p>
+      <p>No.5</p>
+      <p>No.6</p>
+    </div>
 </div>
 
 
@@ -41,6 +51,10 @@ export default {
 
   text-align: center;
   line-height: 1.75;
+}
+
+.book{
+  width: 100%;
 }
 
 </style>
