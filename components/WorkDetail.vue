@@ -7,7 +7,7 @@
           <p>{{ item.category }} | {{ item.period }}</p>
           <p></p>
           <!-- <p>#{{ id }}</p> -->
-          <p>#{{ $route.params.id }}<span class="work-detail__textbox__property__pos"> / 28</span></p>
+          <p>#{{ $route.params.id }}<span class="work-detail__textbox__property__pos"> / 29</span></p>
         </div>
         <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ item.description }} </p>
         <br/>

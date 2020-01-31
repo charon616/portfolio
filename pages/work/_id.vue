@@ -33,7 +33,7 @@ export default {
 
   async asyncData ({ params }) {
     try {
-      let { data } = await axios.get(`https://api.myjson.com/bins/1659ey`)
+      let { data } = await axios.get(`https://api.myjson.com/bins/1e8gqy`)
       return { jsondata: data };
     } catch (err) {
       error({
@@ -67,11 +67,11 @@ export default {
       if(Number(id)-1 != 0){
         return ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        return 28;
+        return 29;
       }
     },
     calcNextId: function(id){
-      if(Number(id) == 28){
+      if(Number(id) == 29){
         return '01';
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );
