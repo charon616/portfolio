@@ -3,10 +3,11 @@
     <div>
       <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
-        <div v-for="n of 8" :key="n" class="animated jello">
+        <!-- <div v-for="n of 8" :key="n" class="animated jello">
           <img class="first-view__bg" src="/title3.svg"/>
           <img class="first-view__bg" src="/title2.svg"/>
-        </div>
+        </div> -->
+        <!-- <canvas id="myCanvas" width="800" height="800"></canvas> -->
         <div class="first-view__txt">
           <h1>KIHO Karin</h1>
         </div>
@@ -81,6 +82,21 @@
       mouseleave: function(){
         let stalker = document.getElementById('cursor-stalker');
         stalker.classList.remove('hov_');
+      },
+      drawcanvas: function(){
+        // Stageオブジェクトを作成します
+        var stage = new createjs.Stage("myCanvas");
+
+        // 円を作成します
+        var shape = new createjs.Shape();
+        shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
+        shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
+        shape.x = 200; // X 座標 200px の位置に配置
+        shape.y = 200; // Y 座標 200px の位置に配置
+        stage.addChild(shape); // 表示リストに追加
+
+        // Stageの描画を更新します
+        stage.update();
       }
     },
     data() {
@@ -303,6 +319,11 @@
 
 <style scoped lang="scss">
 @import "~assets/scss/variables";
+
+#myCanvas{
+  background: deeppink;
+  color: blueviolet;
+}
 
 .container{
   background-color: $main-color;

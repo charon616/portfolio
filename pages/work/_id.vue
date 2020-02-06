@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div id="page-wrap">
-      <div class="main-content">
+      <div class="main-content" v-touch:swipe.left="swipeLeftHandler" v-touch:swipe.right="swipeRightHandler">
         
         <WorkDetail :item="jsondata.items[stringToNum($route.params.id-1)]" :url="jsondata.items[stringToNum($route.params.id-1)].url" :id="$route.params.id"></WorkDetail>
 
@@ -84,6 +84,26 @@ export default {
     mouseleave: function(){
       let stalker = document.getElementById('cursor-stalker');
       stalker.classList.remove('hov_');
+    },
+    swipeRightHandler: function(direction){
+      const id = this.$route.params.id;
+      let prevId;
+      if(Number(id)-1 != 0){
+        prevId = ( '00' + (Number(id)-1) ).slice( -2 );
+      }else{
+        prevId = 29;
+      }
+      this.$router.push({ name: 'work-id', params: {id: prevId} });
+    },
+    swipeLeftHandler: function(direction){
+      const id = this.$route.params.id;
+      let nextId;
+      if(Number(id) == 29){
+        nextId = '01';
+      }else{
+        nextId = ( '00' + (Number(id)+1) ).slice( -2 );
+      }
+      this.$router.push({ name: 'work-id', params: {id: nextId} });
     }
   }
 }

@@ -29,6 +29,12 @@ export default {
     script: [
       {
         src: "https://use.typekit.net/kcu2jmj.js"
+      },
+      {
+        src: "https://code.createjs.com/1.0.0/createjs.min.js"
+      },
+      {
+        src: "/common.js"
       }
     ]
   },
@@ -52,6 +58,10 @@ export default {
     },
     {
       src: '~plugins/menu-control.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/vue2-touch-events.js',
       ssr: false
     },
     {
