@@ -79,6 +79,10 @@ export default {
 <style scoped lang="scss">
   @import "~assets/scss/variables";
 
+  button{
+    outline:0;
+  }
+
   .side-content {
     width: $side-bar-width;
     height: 100vh;

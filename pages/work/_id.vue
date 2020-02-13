@@ -3,7 +3,7 @@
     <div id="page-wrap">
       <div class="main-content" v-touch:swipe.left="swipeLeftHandler" v-touch:swipe.right="swipeRightHandler">
         
-        <WorkDetail :item="jsondata.items[stringToNum($route.params.id-1)]" :url="jsondata.items[stringToNum($route.params.id-1)].url" :id="$route.params.id"></WorkDetail>
+        <WorkDetail :item="jsondata.items[stringToNum($route.params.id-1)]" :url="jsondata.items[stringToNum($route.params.id-1)].url" :id="$route.params.id" :total="jsondata.total"></WorkDetail>
 
         <div class="move-page">
           <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }" class="move-page__button"><font-awesome-icon icon="long-arrow-alt-left"/> PREV</nuxt-link>
@@ -33,8 +33,9 @@ export default {
 
   async asyncData ({ params }) {
     try {
-      let { data } = await axios.get(`https://api.myjson.com/bins/1e8gqy`)
-      return { jsondata: data };
+      // let { data } = await axios.get(`https://api.myjson.com/bins/l2zi8`)
+      // return { jsondata: data };
+      jsondata: jsonfile
     } catch (err) {
       error({
         jsondata: jsonfile
@@ -67,11 +68,11 @@ export default {
       if(Number(id)-1 != 0){
         return ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        return 29;
+        return Number(this.jsondata.total);
       }
     },
     calcNextId: function(id){
-      if(Number(id) == 29){
+      if(Number(id) == Number(this.jsondata.total)){
         return '01';
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );

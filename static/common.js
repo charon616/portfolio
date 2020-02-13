@@ -35,4 +35,4 @@
 //   console.log("x:", x, "y:", y);
 // }
 // var canvas = document.getElementById("myCanvas");
-// canvas.addEventListener('mouseover', onOver, false);
+// canvas.addEventListener('click', onOver, false);

@@ -3,15 +3,21 @@
     
       <div class="work-detail__textbox">
         <h2 class="work-detail__textbox__title">{{ item.title }}</h2>
-        <div class="work-detail__textbox__property ">
-          <p>{{ item.category }} | {{ item.period }}</p>
-          <p></p>
-          <!-- <p>#{{ id }}</p> -->
-          <p>#{{ $route.params.id }}<span class="work-detail__textbox__property__pos"> / 29</span></p>
+        <div class="work-detail__textbox__property">
+          <div>
+            <div class="work-detail__textbox__property__category" v-for="(cat, index) in item.category" :key="index">
+              {{cat}}
+            </div>
+            <span class="work-detail__textbox__property__period">{{ item.period }}</span>
+          </div>
+          <p>#{{ $route.params.id }}<span class="work-detail__textbox__property__pos"> / {{ total }}</span></p>
         </div>
         <p class="work-detail__textbox__description" style="margin-top: 40px;">{{ item.description }} </p>
         <br/>
-        <a target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="item.link">{{ item.link_txt }}</a>
+
+        <div v-for='(site, index) in item.link' :key="index">
+          <a target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="site">{{ item.link_txt[index] }}</a>
+        </div>
       </div>
 
       <swiper :options="swiperOption" class="work-detail__slider"> 
@@ -32,7 +38,7 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
-  props: ['item', 'url', 'id'],
+  props: ['item', 'url', 'id', 'total'],
   components: {
     swiper, 
     swiperSlide
@@ -105,6 +111,21 @@ export default {
         justify-content: space-between;
         font-weight: bold;
         font-size: 1.2em;
+        &__category{
+          display: inline;
+        }
+        &__category + &__category{
+          border-left: 1px solid $sub-color;
+          padding-left: 6px;
+        }
+        &__period{
+          &:before{
+            content: "－";
+            font-weight: lighter;
+            margin-right: .5rem;
+          }
+        }
+
         &__pos{
           font-size: 1.0rem;
           font-weight: lighter;
@@ -132,6 +153,10 @@ export default {
   .swiper-container {
     max-width: 64%;
     height: 90vh;
+  }
+
+  .link-button{
+    margin-bottom: 8px;
   }
 
   @media screen and (max-width: 1024px) {
@@ -178,16 +203,8 @@ export default {
         }
         &__property{
           p:nth-child(2){
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $sub-color;
             position: relative;
-            &::after{
-              border-top: 1px solid $sub-color;
-              content: "";
-              position: absolute;
-              top: 50%;
-              right: -3em;
-              width: 20%;
-            }
           }
           &__pos{
             font-size: 0.8rem;

@@ -3,11 +3,11 @@
     <div>
       <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
-        <!-- <div v-for="n of 8" :key="n" class="animated jello">
+        <div v-for="n of 8" :key="n" class="animated jello">
           <img class="first-view__bg" src="/title3.svg"/>
           <img class="first-view__bg" src="/title2.svg"/>
-        </div> -->
-        <!-- <canvas id="myCanvas" width="800" height="800"></canvas> -->
+        </div>
+        <!-- <canvas id="myCanvas" v-on:mouseover="canvasMouseover" v-on:mousedown="canvasMousedown" width="800" height="800"></canvas> -->
         <div class="first-view__txt">
           <h1>KIHO Karin</h1>
         </div>
@@ -29,10 +29,13 @@
         <div class="works">
           <div class="work" v-for='(item, index) in items' :key='`first-${index}`'>
             <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" v-lazy="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <img class="work__img" v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
               <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
-                <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>
+                <span class="work__caption__category">
+                  <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                </span>
+                <span class="work__caption__period" >{{ item.period }}</span>
               </div>
             </nuxt-link>
           </div>
@@ -40,10 +43,13 @@
         <div class="works">
           <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`'>
             <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" v-lazy="item.url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+              <img class="work__img" v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
               <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
                 <h3 class="work__caption__title">{{ item.title }}</h3>
-                <p class="work__caption__category">{{ item.category }} | {{ item.period }}</p>
+                <span class="work__caption__category">
+                  <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                </span>
+                <span class="work__caption__period" >{{ item.period }}</span>
               </div>
             </nuxt-link>
           </div>
@@ -73,6 +79,14 @@
       if (hash && hash.match(/^#.+$/)) {
         this.$scrollTo(hash)
       }
+
+      // let canvas = document.getElementById('myCanvas');
+      //   let ctx = canvas.getContext('2d');
+      //   ctx.fillRect(25, 25, 100, 100);
+      //   ctx.clearRect(45, 45, 60, 60);
+      //   ctx.strokeRect(50, 50, 50, 50);
+    },
+    created() {
     },
     methods: {
       mouseover: function(){ 
@@ -83,20 +97,21 @@
         let stalker = document.getElementById('cursor-stalker');
         stalker.classList.remove('hov_');
       },
-      drawcanvas: function(){
-        // Stageオブジェクトを作成します
-        var stage = new createjs.Stage("myCanvas");
+      canvasMouseover: function(e){
+        // const canvas = document.getElementById('myCanvas');
+        // var x = e.clientX - canvas.offsetLeft;
+        // var y = e.clientY - canvas.offsetTop;
+        // console.log("x:", x, "y:", y);
 
-        // 円を作成します
-        var shape = new createjs.Shape();
-        shape.graphics.beginFill("DarkRed"); // 赤色で描画するように設定
-        shape.graphics.drawCircle(0, 0, 100); //半径 100px の円を描画
-        shape.x = 200; // X 座標 200px の位置に配置
-        shape.y = 200; // Y 座標 200px の位置に配置
-        stage.addChild(shape); // 表示リストに追加
+        // let canvas = document.getElementById('myCanvas');
+        // let ctx = canvas.getContext('2d');
+        // ctx.fillRect(25, 25, 100, 100);
+        // ctx.clearRect(45, 45, 60, 60);
+        // ctx.strokeRect(50, 50, 50, 50);
 
-        // Stageの描画を更新します
-        stage.update();
+      },
+      canvasMousedown: function(e){
+
       }
     },
     data() {
@@ -106,212 +121,46 @@
         radius: 50,
         images: [],
         jsondata: jsonfile,
-        items: [{
-            title: '東京大学制作展2019',
-            url: require('~/assets/work/work1.jpg'),
-            period: '2019',
-            category: 'Poster/Pamphlet',
-            id: '01'
-          },
-          {
-            title: 'AR-ZINE',
-            url: require('~/assets/work/work2.jpg'),
-            period: '2019',
-            category: 'AR App',
-            id: '02'
-          },
-          {
-            title: '東京大学制作展2019EXTRA',
-            url: require('~/assets/work/work3.jpg'),
-            period: '2019',
-            category: 'Poster',
-            id: '03'
-          },
-          {
-            title: '存在を積み上げる地図',
-            url: require('~/assets/work/work4.jpg'),
-            period: '2019',
-            category: 'Media Art',
-            id: '04'
-          },
-          {
-            title: '東京大学制作展2017',
-            url: require('~/assets/work/work5.jpg'),
-            period: '2017',
-            category: 'Web',
-            id: '05'
-          },
-          {
-            title: 'biscUiT',
-            url: require('~/assets/work/work6.jpg'),
-            period: '2015-2018',
-            category: 'Free Paper',
-            id: '06'
-          },
-          {
-            title: '成年年齢引下げポスター',
-            url: require('~/assets/work/work29.jpg'),
-            period: '2020',
-            category: 'Poster',
-            id: '07'
-          },
-          {
-            title: '魅る文字',
-            url: require('~/assets/work/work7.jpg'),
-            period: '2019',
-            category: 'Free Paper（編集）',
-            id: '08'
-          },
-          {
-            title: 'Web Portfilio',
-            url: require('~/assets/work/work8.jpg'),
-            period: '2019',
-            category: 'Web',
-            id: '09'
-          },
-          {
-            title: '苗村研究室OpenHouse2020',
-            url: require('~/assets/work/work27.jpg'),
-            period: '2019',
-            category: 'Web',
-            id: '10'
-          },
-          {
-            title: 'unlock',
-            url: require('~/assets/work/work9.jpg'),
-            period: '2019',
-            category: 'App UI',
-            id: '11'
-          },
-          {
-            title: 'yumemo',
-            url: require('~/assets/work/work10.jpg'),
-            period: '2018',
-            category: 'App UI',
-            id: '12'
-          },
-          {
-            title: 'YAC2018',
-            url: require('~/assets/work/work11.jpg'),
-            period: '2018',
-            category: 'Banner',
-            id: '13'
-          },
-          {
-            title: 'AMPM',
-            url: require('~/assets/work/work12.jpg'),
-            period: '2018',
-            category: 'Animation',
-            id: '14'
-          },
-          {
-            title: 'UmeeT',
-            url: require('~/assets/work/work23.jpg'),
-            period: '2017',
-            category: 'Logo',
-            id: '15'
-          },
-          {
-            title: 'NUTONE',
-            url: require('~/assets/work/work24.jpg'),
-            period: '2019',
-            category: 'Logo / Web',
-            id: '16'
-          },
-          {
-            title: 'ROBOXER',
-            url: require('~/assets/work/work25.jpg'),
-            period: '2019',
-            category: 'Logo',
-            id: '17'
-          },
-          {
-            title: 'OUR Shurijo',
-            url: require('~/assets/work/work26.jpg'),
-            period: '2019',
-            category: 'Logo',
-            id: '18'
-          },
+        items: [],
+        items_square: [],
+        url: [ 
+          require('~/assets/work/work1.jpg'), 
+          require('~/assets/work/work2.jpg'),
+          require('~/assets/work/work3.jpg'),
+          require('~/assets/work/work4.jpg'),
+          require('~/assets/work/work5.jpg'),
+          require('~/assets/work/work6.jpg'),
+          require('~/assets/work/work29.jpg'),
+          require('~/assets/work/work7.jpg'),
+          require('~/assets/work/work8.jpg'),
+          require('~/assets/work/work27.jpg'),
+          require('~/assets/work/work9.jpg'),
+          require('~/assets/work/work10.jpg'),
+          require('~/assets/work/work11.jpg'),
+          require('~/assets/work/work12.jpg'),
+          require('~/assets/work/work23.jpg'),
+          require('~/assets/work/work24.jpg'),
+          require('~/assets/work/work25.jpg'),
+          require('~/assets/work/work26.jpg')
         ],
-        items_square: [{
-            title: 'sys-seeing',
-            url: require('~/assets/work/work15.jpg'),
-            period: '2018',
-            category: 'Logo',
-            id: '19'
-          },
-          {
-            title: 'Code for Univ',
-            url: require('~/assets/work/work16.png'),
-            period: '2019',
-            category: 'Logo',
-            id: '20'
-          },
-          {
-            title: 'MindHack',
-            url: require('~/assets/work/work17.png'),
-            period: '2019',
-            category: 'Logo',
-            id: '21'
-          },
-          {
-            title: 'Rainer',
-            url: require('~/assets/work/work18.png'),
-            period: '2019',
-            category: 'Logo',
-            id: '22'
-          },
-          {
-            title: 'Living Roots',
-            url: require('~/assets/work/work19.png'),
-            period: '2019',
-            category: 'Logo',
-            id: '23'
-          },
-          {
-            title: 'きたすばる',
-            url: require('~/assets/work/work20.jpg'),
-            period: '2019',
-            category: 'Logo',
-            id: '24'
-          },
-          {
-            title: '東武東上線沿線サミット',
-            url: require('~/assets/work/work21.jpg'),
-            period: '2019',
-            category: 'Logo',
-            id: '25'
-          },
-          {
-            title: '周南工場夜景',
-            url: require('~/assets/work/work22.jpg'),
-            period: '2019',
-            category: 'Logo',
-            id: '26'
-          },
-          {
-            title: 'GIF',
-            url: require('~/assets/work/work13.jpg'),
-            period: '2018',
-            category: 'GIF Animation',
-            id: '27'
-          },
-          {
-            title: 'Illustration',
-            url: require('~/assets/work/work14.jpg'),
-            period: '2018-2019',
-            category: 'Illustration',
-            id: '28'
-          },
-          {
-            title: '名刺',
-            url: require('~/assets/work/work28.jpg'),
-            period: '2019',
-            category: 'Printing',
-            id: '29'
-          },
+        square_url: [
+          require('~/assets/work/work15.jpg'),
+          require('~/assets/work/work16.png'),
+          require('~/assets/work/work17.png'),
+          require('~/assets/work/work18.png'),
+          require('~/assets/work/work19.png'),
+          require('~/assets/work/work20.jpg'),
+          require('~/assets/work/work21.jpg'),
+          require('~/assets/work/work22.jpg'),
+          require('~/assets/work/work13.jpg'),
+          require('~/assets/work/work14.jpg'),
+          require('~/assets/work/work28.jpg')
         ],
       }
+    },
+    created: function(){
+      this.items = this.jsondata.items.slice(0, 18)
+      this.items_square = this.jsondata.items.slice(18)
     }
   }
 
@@ -507,6 +356,7 @@
     }
 
     &__img{
+      // filter: grayscale(100%);
       width: 100%;
       height: 100%;
       padding: 8px;
@@ -542,6 +392,22 @@
         transform: translateX(-50%);
         font-size: 0.8em;
         transition: transform 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99) 0.1s;
+        span + span{
+          border-left: 1px solid $sub-color;
+          padding-left: 4px;
+          padding-right: 0;
+        }
+        span{
+          padding-right: 4px;
+        }
+      }
+      &__period{
+        font-size: 0.8em;
+        &:before{
+          content: "－";
+          font-weight: lighter;
+          margin-right: .5rem;
+        }
       }
     }
 
@@ -553,7 +419,7 @@
           transform: translateX(0);
           transition: 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99) 0.2s;
         }
-        &__category{
+        span{
           transform: translateX(0);
           transition: 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99) 0.3s;
         }
@@ -561,6 +427,7 @@
       .work__img{
         transform: translate3d(0, 8px, 0) scale(1.1);
         transition: 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+        // filter: grayscale(0%);
       }
     }
   }
@@ -751,7 +618,7 @@
 
     #square{
       width: 100%;
-      &:nth-child(odd){
+      &:nth-child(even){
         a{
           flex-direction: row-reverse;
           background-color: $sub-color;
@@ -769,7 +636,7 @@
         }
 
       }
-      &:nth-child(even){
+      &:nth-child(odd){
         a{
           flex-direction: row;
           background-color: $main-color;
