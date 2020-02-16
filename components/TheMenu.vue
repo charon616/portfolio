@@ -8,6 +8,7 @@
       <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
       <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
       <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" to="/about">ABOUT</nuxt-link>
+      <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" to="/special">SPECIAL</nuxt-link>
       <!-- <nuxt-link class="menu__item" to="/about"><i class="fab fa-instagram"></i></nuxt-link> -->
       <!-- <nuxt-link class="menu-item" to="/about">SPECIAL</nuxt-link> -->
     </div>
@@ -25,6 +26,7 @@
           <nuxt-link class="sm-menu__items__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
           <nuxt-link class="sm-menu__items__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
           <nuxt-link class="sm-menu__items__item" to="/about">ABOUT</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" to="/special">SPECIAL</nuxt-link>
         </div>
       </transition>
     </div>
@@ -110,7 +112,7 @@ export default {
   }
 
   .menu {
-    margin-top: 160px;
+    margin-top: 120px;
     font-size: calc(#{$side-bar-width}/5);
     font-weight: bold;
 

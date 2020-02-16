@@ -3,14 +3,16 @@
     <div>
       <div class="first-view" id="first-view">
         <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
+
         <div v-for="n of 8" :key="n" class="animated jello">
           <img class="first-view__bg" src="/title3.svg"/>
           <img class="first-view__bg" src="/title2.svg"/>
         </div>
         <!-- <canvas id="myCanvas" v-on:mouseover="canvasMouseover" v-on:mousedown="canvasMousedown" width="800" height="800"></canvas> -->
         <div class="first-view__txt">
-          <h1>KIHO Karin</h1>
+            <h1>KIHO Karin</h1>
         </div>
+
         <!-- <MyCanvas /> -->
         <!-- <iframe
             title="p5.js demo"
@@ -26,34 +28,64 @@
 
       <div class="main-content" id="work">
         <h2 class="page-title" >WORK</h2>
-        <div class="works">
-          <div class="work" v-for='(item, index) in items' :key='`first-${index}`'>
-            <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
-              <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-                <h3 class="work__caption__title">{{ item.title }}</h3>
-                <span class="work__caption__category">
-                  <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
-                </span>
-                <span class="work__caption__period" >{{ item.period }}</span>
-              </div>
-            </nuxt-link>
-          </div>
+
+        <div>
+          <ul class="category_list">
+            <li v-bind:class="{ 'cat_Active': previewAll }" class="cat1_Active">
+              <label>
+              <input type="checkbox" :checked="previewAll" @click="selectAll">
+              <span> All </span>
+              </label>
+            </li>
+            <!-- <li v-for='(category, index) in category_lists' :key='index' > -->
+            <li v-for='(category, index) in category_lists' :key='index' v-bind:class='[category.activeClass, {"cat_Active": category.isActive}]'>
+              <label v-bind:for="category.cat">
+              <input type="checkbox" 
+                v-bind:id="category.cat"
+                v-bind:value="category.cat" 
+                v-model="preview"
+                v-on:click="checkboxClicked(category)">
+                <span>{{ category.cat }}</span>
+              </label>
+            </li>
+          </ul>
         </div>
+
         <div class="works">
-          <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`'>
-            <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
-              <img class="work__img" v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
-              <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
-                <h3 class="work__caption__title">{{ item.title }}</h3>
-                <span class="work__caption__category">
-                  <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
-                </span>
-                <span class="work__caption__period" >{{ item.period }}</span>
-              </div>
-            </nuxt-link>
+          <transition-group name="list">
+            <div class="work" v-for='(item, index) in items' :key='`first-${index}`' v-show="item.display">
+              <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
+                <img class="work__img" v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+                <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                  <h3 class="work__caption__title">{{ item.title }}</h3>
+                  <span class="work__caption__category">
+                    <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                  </span>
+                  <span class="work__caption__period" >{{ item.period }}</span>
+                </div>
+              </nuxt-link>
+            </div>
+          </transition-group>
+        </div>
+
+        <div class="works">
+          <transition-group name="list">
+            <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`' v-show="item.display">
+              <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
+                <img class="work__img" v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+                <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                  <h3 class="work__caption__title">{{ item.title }}</h3>
+                  <span class="work__caption__category">
+                    <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                  </span>
+                  <span class="work__caption__period" >{{ item.period }}</span>
+                </div>
+              </nuxt-link>
+            </div>
+          </transition-group>
+          <div style="text-align: center;">
+           <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All →</nuxt-link>
           </div>
-           <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All</nuxt-link>
         </div>
 
         <PagetopComponent v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  />
@@ -72,7 +104,7 @@
   export default {
     components: {
       MyCanvas,
-      PagetopComponent
+      PagetopComponent,
     },
     mounted() {
       const hash = this.$route.hash
@@ -87,6 +119,42 @@
       //   ctx.strokeRect(50, 50, 50, 50);
     },
     created() {
+    },
+    watch: {
+      preview: function (val) {
+        let items = this.items;
+        let items_square = this.items_square;
+        let preview = val;
+
+        if(preview.length > 0) {
+          for (let i = 0; i < items.length; i++) {
+            let categories = items[i].cat_search;
+            for (let j = 0; j < preview.length; j++) {
+              if(categories.indexOf(preview[j]) >= 0){
+                items[i].display = true;
+                break;
+              } else {
+                items[i].display = false;
+              }
+            }
+          }
+          for (let i = 0; i < items_square.length; i++) {
+            let categories = items_square[i].cat_search;
+            for (let j = 0; j < preview.length; j++) {
+              if(categories.indexOf(preview[j]) >= 0){
+                items_square[i].display = true;
+                break;
+              } else {
+                items_square[i].display = false;
+              }
+            }
+          }
+        } else {
+          for (let i = 0; i < items[i].length; i++) {
+            items[i].display = true;
+          }
+        }
+      }
     },
     methods: {
       mouseover: function(){ 
@@ -111,7 +179,35 @@
 
       },
       canvasMousedown: function(e){
+      },
+      selectAll: function(){
+        if (this.previewAll) {
+          // this.previewAll = false
+          this.preview = []
+        } else {
+          this.previewAll = true
+          this.preview = []
 
+          for (let i = 0; i < this.items.length; i++) {
+            this.items[i].display = true;
+          }
+          for (let i = 0; i < this.items_square.length; i++) {
+            this.items_square[i].display = true;
+          }
+        }
+        for (let i=0; i < this.category_lists.length; i++){
+          this.category_lists[i].isActive = true
+        }
+      },
+      checkboxClicked: function(obj){
+        this.preview = [obj.cat]
+        this.previewAll = false
+
+        // 選択したカテゴリのみ背景色をつける
+        for (let i=0; i < this.category_lists.length; i++){
+          this.category_lists[i].isActive = false
+        }
+        obj.isActive = true
       }
     },
     data() {
@@ -123,6 +219,29 @@
         jsondata: jsonfile,
         items: [],
         items_square: [],
+        category_lists: [
+          { cat: 'Web/UI',
+            activeClass: 'cat2_Active',
+            isActive: true
+          }, 
+          {
+            cat: 'Logo', 
+            activeClass: 'cat3_Active',
+            isActive: true
+          },
+          {
+            cat: 'Printing',
+            activeClass: 'cat4_Active',
+            isActive: true
+          },
+          {
+            cat: 'Other',
+            activeClass: 'cat5_Active',
+            isActive: true
+          }
+        ],	// 全カテゴリ
+        preview: [],		// チェックボックスでチェックしたカテゴリを格納する
+        previewAll: true,
         url: [ 
           require('~/assets/work/work1.jpg'), 
           require('~/assets/work/work2.jpg'),
@@ -271,7 +390,8 @@
   &__txt{
     color: white;
     background-color: $sub-color;
-    padding: 8px 16px;
+    // padding: 8px 16px;
+    padding: 24px 48px;
     text-align: center;
     // text-shadow:2px 2px 3px $sub-color;
     position: absolute;
@@ -291,11 +411,11 @@
 }
 
 .page-title{
-  padding: 32px 1.2em;
-  margin-bottom: 32px;
-  height: calc(10vh + 32px);
+  padding: 48px 1.2em;
+  margin: 8px auto 8px;
+  height: calc(10vh + 48px);
   &:before {
-    top: 32px;
+    top: 48px;
     left: 0;
   }
 
@@ -305,12 +425,107 @@
   }
 }
 
-.works {
+label, input[type='checkbox'] {
+    cursor: pointer;
+}
+
+.cat_Active{
+  &.cat1_Active{
+    background-image: url("~assets/icon/cat1_bg.svg");
+  }
+  &.cat2_Active{
+    background-image: url("~assets/icon/cat2_bg.svg");
+  }
+  &.cat3_Active{
+    background-image: url("~assets/icon/cat3_bg.svg");
+  }
+  &.cat4_Active{
+    background-image: url("~assets/icon/cat4_bg.svg");
+  }
+  &.cat5_Active{
+    background-image: url("~assets/icon/cat5_bg.svg");
+  }
+}
+
+.category_list{
   display: -webkit-flex;
   display: flex;
-  flex-wrap: wrap;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 32px auto 40px;
+  li{
+    display: inline-block;
+    margin: 0 16px;
+    width: 80px;
+    height: 80px;
+    label{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      text-align: center;
+      input{
+        display: none;
+      }
+      span{
+        color: $sub-color;
+        font-size: .8em;
+        letter-spacing: .2em;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+    }
+
+    &:first-child label{
+      background-image: url("~assets/icon/cat_1.svg");
+    }
+    &:nth-child(2) label{
+      background-image: url("~assets/icon/cat_2.svg");
+    }
+    &:nth-child(3) label{
+      background-image: url("~assets/icon/cat_3.svg");
+    }
+    &:nth-child(4) label{
+      background-image: url("~assets/icon/cat_4.svg");
+    }
+    &:nth-child(5) label{
+      background-image: url("~assets/icon/cat_5.svg");
+    }
+  }
+}
+
+.works {
+  // display: -webkit-flex;
+  // display: flex;
+  // flex-wrap: wrap;
+  // -webkit-justify-content: flex-start;
+  // justify-content: flex-start;
+  & > span{
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+  }
+
+  .list-enter-active, .list-leave-active {
+    transition: opacity .4s;
+  }
+
+  .list-enter, .list-leave-to /* .list-leave-active for below version 2.1.8 */ {
+    opacity: 0;
+    // transform: translateY(30px);
+  }
+
+  // .list-move {
+  //   transition: transform 1.4s;
+  // }
 
   .work {
     width: calc(100%/3);
@@ -434,7 +649,7 @@
 
   &__button{
     position: relative;
-    padding: 16px 0;
+    padding: 24px 0;
     border: 2px solid $sub-color;
     font-size: 1.5em; 
     font-weight: bold;
@@ -444,8 +659,8 @@
     display: inline-block;
     box-sizing: border-box;
     z-index: 0;
-    width: 100%;
-    margin: 8px;
+    width: 90%;
+    margin: 16px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
     &::before{
@@ -473,7 +688,7 @@
   }
 }
 
-.works:nth-child(3){
+.works:nth-child(4){
   padding-bottom: 160px;
 }
 
@@ -537,6 +752,21 @@
     }
     &__txt{
       font-size: 0.4em;
+    }
+  }
+
+  .category_list{
+    margin: 16px 2vw 32px;
+    li{
+      width: calc(#{$main-content-width - 12vw}/6);
+      height: calc(#{$main-content-width - 12vw}/6);
+      margin: 2vw;
+      // padding: 8px;
+      label{
+        span{
+          letter-spacing: .1em;
+        }
+      }
     }
   }
   .works {
