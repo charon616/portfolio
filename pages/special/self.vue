@@ -78,9 +78,9 @@
                         headerFront=""
                         headerBack=""
                         colorBack="#6332f6"
-                        front="好きなPV" 
+                        front="行ってみたい国" 
                         textSizeFront="1.6em"
-                        back="ピンポン、Les Miserables"
+                        back="ドイツ、オーストラリア"
                         textSizeBack="1.6em"
                         colorTextFront="#6332f6">
                     </vue-flashcard>

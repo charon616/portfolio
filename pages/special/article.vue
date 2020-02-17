@@ -54,7 +54,9 @@
                 <img src="~assets/special/final2.jpg">
             </div>
 
-            <nuxt-link to="/special" class="link-button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >←　戻る</nuxt-link>
+            <div style="text-align: center;">
+              <nuxt-link to="/special" class="link-button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >←　戻る</nuxt-link>
+            </div>
         </section>
       </div>
     </div>
@@ -148,9 +150,11 @@ export default {
 }
 
 .link-button{
-    width: 100%;
+    margin: 80px auto 32px;
     padding: 16px;
+    width: calc(#{$main-content-width - 2vw}/2);
 }
+
 
 @media screen and (max-width: 480px) {
     .article{

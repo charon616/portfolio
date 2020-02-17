@@ -7,13 +7,13 @@
         <div class="special">
           <p style="display: block; width: 100%; text-align: center; margin-bottom: 32px;">いろんな実装を試したり自己紹介したりする場所。</p>
           <nuxt-link class="special__link" to="/special/article" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave">
-            <img class="special__link__img" src="~assets/special/logo2.png">
+            <img class="special__link__img" src="~assets/special/logo.jpg">
           </nuxt-link>
           <nuxt-link class="special__link" to="/special/book" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave">
-            <img class="special__link__img" src="~assets/special/book.png">
+            <img class="special__link__img" src="~assets/special/book.jpg">
           </nuxt-link>
           <nuxt-link class="special__link" to="/special/self" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave">
-            <img class="special__link__img" src="~assets/special/self.png">
+            <img class="special__link__img" src="~assets/special/self.jpg">
           </nuxt-link>
         </div>
 
@@ -54,8 +54,7 @@ export default {
 
 .main-content {
   margin-top: 0;
-  // margin-bottom: 64px;
-  margin-bottom: 2000px;
+  margin-bottom: 64px;
   line-height: 1.75;
 }
 

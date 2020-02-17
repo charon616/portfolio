@@ -83,11 +83,9 @@
               </nuxt-link>
             </div>
           </transition-group>
-          <div style="text-align: center;">
-           <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All →</nuxt-link>
-          </div>
-        </div>
+          <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All →</nuxt-link>
 
+        </div>
         <PagetopComponent v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  />
 
       </div>
@@ -280,6 +278,19 @@
     created: function(){
       this.items = this.jsondata.items.slice(0, 18)
       this.items_square = this.jsondata.items.slice(18)
+
+      this.previewAll = true
+      this.preview = []
+      for (let i=0; i < this.category_lists.length; i++){
+        this.category_lists[i].isActive = true
+      }
+      for (let i = 0; i < this.items.length; i++) {
+        this.items[i].display = true;
+      }
+      for (let i = 0; i < this.items_square.length; i++) {
+        this.items_square[i].display = true;
+      }
+
     }
   }
 
@@ -827,46 +838,46 @@ label, input[type='checkbox'] {
       } 
     }
 
-    .work:nth-child(even) {
-      a{
-        background-color: $sub-color;
-        color: $main-color;
+    // .work:nth-child(even) {
+    //   a{
+    //     background-color: $sub-color;
+    //     color: $main-color;
 
-        flex-direction: row-reverse;
-        text-align: right;
-      }
-      &:hover{
-        .work__caption{
-          color: $main-color;
-        }
+    //     flex-direction: row-reverse;
+    //     text-align: right;
+    //   }
+    //   &:hover{
+    //     .work__caption{
+    //       color: $main-color;
+    //     }
 
-        .work__img{
-          transform: scale(1.0);
-        }
-      }
-    }
+    //     .work__img{
+    //       transform: scale(1.0);
+    //     }
+    //   }
+    // }
 
     #square{
       width: 100%;
-      &:nth-child(even){
-        a{
-          flex-direction: row-reverse;
-          background-color: $sub-color;
-          color: $main-color;
-          text-align: right;
-        }
-        &:hover{
-          .work__caption{
-            color: $main-color;
-          }
+      // &:nth-child(even){
+      //   a{
+      //     flex-direction: row-reverse;
+      //     background-color: $sub-color;
+      //     color: $main-color;
+      //     text-align: right;
+      //   }
+      //   &:hover{
+      //     .work__caption{
+      //       color: $main-color;
+      //     }
 
-          .work__img{
-            transform: scale(1.0);
-          }
-        }
+      //     .work__img{
+      //       transform: scale(1.0);
+      //     }
+      //   }
 
-      }
-      &:nth-child(odd){
+      // }
+      
         a{
           flex-direction: row;
           background-color: $main-color;
@@ -888,7 +899,7 @@ label, input[type='checkbox'] {
           transform: scale(1.0);
         }
       }
-    }
+    
     &__button{
       width: 100%;
       margin: 16px;
