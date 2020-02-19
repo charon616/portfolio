@@ -94,6 +94,7 @@ export default {
       }
     ]
   },
+  // loading: '~/components/loading.vue',
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       return {

@@ -17,6 +17,8 @@
           </nuxt-link>
         </div>
 
+        <Lottie :options="defaultOptions" :height="400" :width="400" v-on:animCreated="handleAnimation"/>
+
         <!-- <kinesis-container>
           <kinesis-element :strength="300" type="translate" axis="x">
             <h1>KIHO Karin</h1>
@@ -31,11 +33,15 @@
 <script>
 import { KinesisContainer, KinesisElement} from 'vue-kinesis';
 
+import Lottie from "~/components/lottie.vue";
+import * as animationData from "~/assets/animation/305-loader-5.json";
+
 
 export default {
   components: {
     KinesisContainer, 
-    KinesisElement
+    KinesisElement,
+    Lottie
   },
   methods: {
       mouseover: function(){ 
@@ -45,6 +51,15 @@ export default {
     mouseleave: function(){
       let stalker = document.getElementById('cursor-stalker');
       stalker.classList.remove('hov_');
+    },
+    handleAnimation: function(anim) {
+      this.anim = anim;
+    },
+  },
+  data(){
+    return{
+      defaultOptions: { animationData: animationData },
+      animationSpeed: 2
     }
   }
 }

@@ -206,7 +206,7 @@
           this.category_lists[i].isActive = false
         }
         obj.isActive = true
-      }
+      },
     },
     data() {
       return {
@@ -272,7 +272,7 @@
           require('~/assets/work/work13.jpg'),
           require('~/assets/work/work14.jpg'),
           require('~/assets/work/work28.jpg')
-        ],
+        ]
       }
     },
     created: function(){
