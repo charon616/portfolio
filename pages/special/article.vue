@@ -14,7 +14,7 @@
                     <br>
                     今回は・医療機器であること・幅広い年齢層の方がユーザーであること・アメリカの展示会で披露することなどから、フラットで清潔感があり、かつ古臭く見えないようなデザインを目指すことに。
                 </p>
-                <img src="~assets/special/share.png">
+                <img src='~assets/special/share.png'>
             </div>
             <h3>スケッチ、案出し</h3>
             <div class="article__body">
@@ -65,8 +65,6 @@
 </template>
 <script>
 import { KinesisContainer, KinesisElement} from 'vue-kinesis'
-
-
 
 export default {
     components: {

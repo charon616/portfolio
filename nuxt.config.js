@@ -94,7 +94,10 @@ export default {
       }
     ]
   },
-  // loading: '~/components/loading.vue',
+  loading: {
+    color: '#6332f6'
+    // height: '5px'
+  },
   router: {
     scrollBehavior: function (to, from, savedPosition) {
       return {
