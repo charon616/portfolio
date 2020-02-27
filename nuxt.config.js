@@ -76,7 +76,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["nuxt-webfontloader", "nuxt-fontawesome"],
+  modules: ["nuxt-webfontloader", "nuxt-fontawesome", '@nuxtjs/style-resources'],
   webfontloader: {
     google: {
       families: ["Lato:400,700"]
@@ -105,6 +105,12 @@ export default {
         y: 0
       }
     }
+  },
+  styleResources: {
+    stylus: [
+      '~assets/stylus/_variables.styl',
+      '~assets/stylus/main.styl'
+    ]
   },
   /*
    ** Build configuration
