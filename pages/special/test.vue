@@ -1,60 +1,103 @@
-<template>
-  <div class="container">
-    <div id="page-wrap">
-      <div class="main-content" id="special">
-        <h2 class="page-title" >SPECIAL</h2>
+<template lang="pug">
+.container
+  #page-wrap
+    .main-content#special
+      h2.page-title SPECIAL
+      #app
+        button#btn(v-on:click="omikuji") ボタン
+        ._ {{result}}
+      
+      //- img.test(src="~/assets/special/test0.png")
 
-        <div id="app">
-    <button id="btn" v-on:click="omikuji">ボタン</button>
-    <div>{{result}}</div>
+      .main
+        h1.main__txt(v-parallax="0.2") parallaxテスト
+        img.main__img(src="~/assets/special/test1.png" v-parallax="0.5")
 
-    <div>
-      <img class="book" src='~/assets/special/book.jpg'>
-      <p>No.1</p>
-      <p>No.2</p>
-      <p>No.3</p>
-      <p>No.4</p>
-      <p>No.5</p>
-      <p>No.6</p>
-    </div>
-</div>
+      img(src="~/assets/special/test0.png")
 
+      //- h2 tets
+      //- kinesis-container(event="scroll")
+      //-   kinesis-element( :strength="100" originX="50")
+      //-     h2 tets
+      //-     img(src="~/assets/special/test0.png")
+      
+      section(v-scroll-reveal.reset)
+        h1 Tada!
+      section(v-scroll-reveal.reset="{ delay: 250 }")
+        h1 Slightly late tada!
+      
 
-
-      </div>
-    </div>
-  </div>
 
 </template>
 <script>
-export default {
-    data() {
-        return{
-            result:"ボタンを押すとここにおみくじの結果が出るよ",
-            omikujiResult:["大吉","中吉","小吉","凶"]
-        }
-    },
-    methods: {
-        omikuji: function(){
-            const num = Math.floor(Math.random()*this.omikujiResult.length);
-            this.result = this.omikujiResult[num];
-        }
+import VueScrollReveal from 'vue-scroll-reveal';
+import { KinesisContainer, KinesisElement} from 'vue-kinesis';
 
-    }
+export default {
+  components: {
+      KinesisContainer, 
+      KinesisElement,
+      VueScrollReveal
+  },
+  data() {
+      return{
+          result:"ボタンを押すとここにおみくじの結果が出るよ",
+          omikujiResult:["大吉","中吉","小吉","凶"]
+      }
+  },
+  methods: {
+      omikuji: function(){
+          const num = Math.floor(Math.random()*this.omikujiResult.length);
+          this.result = this.omikujiResult[num];
+      }
+
+  }
 }
 </script>
-<style scoped lang="scss">
-@import "~assets/scss/variables";
+<style scoped lang="stylus">
 
-.main-content {
-  margin-top: 0;
+.main-content 
+  margin-top 0
+  text-align center
+  line-height 1.75
 
-  text-align: center;
-  line-height: 1.75;
-}
+.test
+  display flex
+  align-items center
+  justify-content center
+  // margin-top 80vh
+  height 500px
+  z-index 0
+  position fixed
+  top 0
+  left 0
+  // top 40vh
+  // left 50%
+  // transform translateX(-50%)
 
-.book{
-  width: 100%;
-}
+.main 
+  display flex
+  align-items center
+  justify-content center
+  height 500px
+  overflow hidden
+  margin-top 80vh
+  margin-bottom 100vh
+  position relative
+  z-index 1
+  &__img
+    z-index 0
+    transition all .5s ease-out
+  &__txt
+    z-index 5 
+    color deeppink 
+    position absolute
+    top 0
+    left 50%
+    transform translateX(-50%)
+    transition all .5s ease-out
+
+section 
+  height 100vh
 
 </style>

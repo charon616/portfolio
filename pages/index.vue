@@ -1,55 +1,101 @@
-<template lang="pug">
-.container
-    .first-view#first-view
-      .animated.jello(v-for="n of 8" :key="n")
-        img.first-view__bg(src="/title3.svg")
-        img.first-view__bg(src="/title2.svg")
-      .first-view__txt
-        h1 KIHO Karin
-      nuxt-link(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  class="down-button" v-scroll-to="'#work'" to)
-        span
-        | Scroll
+<template>
+  <div class="container">
+    <div>
+      <div class="first-view" id="first-view">
+        <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
 
-    .main-content#work 
-      h2.page-title WORK
-        ul.category_list
-          li.cat1_Active(v-bind:class="{ 'cat_Active': previewAll }")
-            label
-              input(type="checkbox" :checked="previewAll" @click="selectAll")
-              span All
-          li(v-for='(category, index) in category_lists' :key='index' v-bind:class='[category.activeClass, {"cat_Active": category.isActive}]')
-            label(v-bind:for="category.cat")
-              input(type="checkbox" v-bind:id="category.cat" v-bind:value="category.cat" v-model="preview" v-on:click="checkboxClicked(category)")
-              span {{ category.cat }}
+        <div v-for="n of 8" :key="n" class="animated jello">
+          <img class="first-view__bg" src="/title3.svg"/>
+          <img class="first-view__bg" src="/title2.svg"/>
+        </div>
+        <!-- <canvas id="myCanvas" v-on:mouseover="canvasMouseover" v-on:mousedown="canvasMousedown" width="800" height="800"></canvas> -->
+        <div class="first-view__txt">
+            <h1>KIHO Karin</h1>
+        </div>
 
-      .works
-        transition-group(name="list")
-          .work(v-for='(item, index) in items' :key='`first-${index}`' v-show="item.display")
-            nuxt-link.animated(:to="{ name: 'work-id', params: { id: item.id } }")
-              img.work__img(v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-              .work__caption(v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-                h3.work__caption__title {{ item.title }}
-                span.work__caption__category
-                  span(v-for="(cat, index) in item.category" :key="index") {{cat}}
-                span.work__caption__period {{ item.period }}
+        <!-- <MyCanvas /> -->
+        <!-- <iframe
+            title="p5.js demo"
+            src="https://nnamm.com/_creativecoding/180924/demo1.html"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            sandbox="allow-scripts">
+        </iframe> -->
+        <!-- <iframe width="100%" height="100%" frameborder="0" sandbox="allow-scripts" src="https://editor.p5js.org/charon616/embed/JcH3ahfdK"></iframe> -->
+        <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  class="down-button" v-scroll-to="'#work'" to><span></span>Scroll</nuxt-link>
+      </div>
 
-      .works
-        transition-group(name="list")
-          .work#square(v-for='(item, index) in items_square' :key='`second-${index}`' v-show="item.display")
-            nuxt-link(:to="{ name: 'work-id', params: { id: item.id } }")
-              img.work__img(v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-              .work__caption(v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-                h3.work__caption__title {{ item.title }}
-                span.work__caption__category
-                  span(v-for="(cat, index) in item.category" :key="index") {{cat}}
-                span.work__caption__period {{ item.period }}
-      nuxt-link.works__button(:to="{ name: 'work-id', params: { id: '01' } }" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") View All →
-      
-    PagetopComponent(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
+      <div class="main-content" id="work">
+        <h2 class="page-title" >WORK</h2>
+        
+        <div>
+          <ul class="category_list">
+            <li v-bind:class="{ 'cat_Active': previewAll }" class="cat1_Active">
+              <label>
+              <input type="checkbox" :checked="previewAll" @click="selectAll">
+              <span> All </span>
+              </label>
+            </li>
+            <!-- <li v-for='(category, index) in category_lists' :key='index' > -->
+            <li v-for='(category, index) in category_lists' :key='index' v-bind:class='[category.activeClass, {"cat_Active": category.isActive}]'>
+              <label v-bind:for="category.cat">
+              <input type="checkbox" 
+                v-bind:id="category.cat"
+                v-bind:value="category.cat" 
+                v-model="preview"
+                v-on:click="checkboxClicked(category)">
+                <span>{{ category.cat }}</span>
+              </label>
+            </li>
+          </ul>
+        </div>
 
+        <div class="works">
+          <transition-group name="list">
+            <div class="work" v-for='(item, index) in items' :key='`first-${index}`' v-show="item.display" v-scroll-reveal>
+              <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
+                <img class="work__img" v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+                <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                  <h3 class="work__caption__title">{{ item.title }}</h3>
+                  <span class="work__caption__category">
+                    <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                  </span>
+                  <span class="work__caption__period" >{{ item.period }}</span>
+                </div>
+              </nuxt-link>
+            </div>
+          </transition-group>
+        </div>
+
+        <div class="works">
+          <transition-group name="list">
+            <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`' v-show="item.display" v-scroll-reveal>
+              <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
+                <img class="work__img" v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
+                <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
+                  <h3 class="work__caption__title">{{ item.title }}</h3>
+                  <span class="work__caption__category">
+                    <span v-for="(cat, index) in item.category" :key="index">{{cat}}</span>
+                  </span>
+                  <span class="work__caption__period" >{{ item.period }}</span>
+                </div>
+              </nuxt-link>
+            </div>
+          </transition-group>
+          <nuxt-link :to="{ name: 'work-id', params: { id: '01' } }" class="works__button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >View All →</nuxt-link>
+
+        </div>
+        <PagetopComponent v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  />
+
+      </div>
+
+    </div>
+  </div>
 </template>
 
 <script>
+  import VueScrollReveal from 'vue-scroll-reveal';
   import MyCanvas from '~/components/MyCanvas.vue';
   import PagetopComponent from '~/components/PagetopComponent.vue';
   import jsonfile from '~/assets/work/works.json';
@@ -58,6 +104,7 @@
     components: {
       MyCanvas,
       PagetopComponent,
+      VueScrollReveal
     },
     mounted() {
       const hash = this.$route.hash
@@ -162,6 +209,16 @@
         }
         obj.isActive = true
       },
+      handleScroll: function(evt, el) {
+        console.log(window.scrollY);
+        if (window.scrollY > 50) {
+          el.setAttribute(
+            "style",
+            "opacity: 1; transform: translate3d(0, -10px, 0)"
+          );
+        }
+        return window.scrollY > 100;
+      }
     },
     data() {
       return {
@@ -259,35 +316,36 @@
 
 .container
   background-color main-color
+  margin-bottom 20vh
 
 .down-button
-    position absolute
-    bottom 20px
-    left 50%
-    z-index 2
-    display inline-block
-    -webkit-transform translate(-50%, -50%)
-    transform translate(-50%, -50%)
-    text-decoration none
-    font-weight bold
-    letter-spacing .1em
-    padding 70px 32px 8px
-    color rgba(46, 255, 192, 1)
-    background-color rgba(46, 255, 192, 0.25)
-    span
-        position absolute
-        top 0
-        left 50%
-        width 24px
-        height 24px
-        margin-left -12px
-        border-left 1px solid rgba(46, 255, 192, 1)
-        border-bottom 1px solid rgba(46, 255, 192, 1)
-        -webkit-transform rotate(-45deg)
-        transform rotate(-45deg)
-        -webkit-animation sdb 1.5s infinite
-        animation sdb 1.5s infinite
-        box-sizing border-box
+  position absolute
+  bottom 20px
+  left 50%
+  z-index 2
+  display inline-block
+  -webkit-transform translate(-50%, -50%)
+  transform translate(-50%, -50%)
+  text-decoration none
+  font-weight bold
+  letter-spacing .1em
+  padding 70px 32px 8px
+  color rgba(46, 255, 192, 1)
+  background-color rgba(46, 255, 192, 0.25)
+  span
+      position absolute
+      top 0
+      left 50%
+      width 24px
+      height 24px
+      margin-left -12px
+      border-left 1px solid rgba(46, 255, 192, 1)
+      border-bottom 1px solid rgba(46, 255, 192, 1)
+      -webkit-transform rotate(-45deg)
+      transform rotate(-45deg)
+      -webkit-animation sdb 1.5s infinite
+      animation sdb 1.5s infinite
+      box-sizing border-box
 
 @keyframes sdb 
   0% 
@@ -664,5 +722,9 @@ label, input[type='checkbox']
       border 2px solid sub-color
       color sub-color
       font-size 6vw
+
+.scroll-appear
+  opacity 0
+  transition 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1)
 
 </style>
