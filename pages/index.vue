@@ -2,27 +2,15 @@
   <div class="container">
     <div>
       <div class="first-view" id="first-view">
-        <!-- <img class="first-view__img" src="/work/work13.gif"/> -->
 
         <div v-for="n of 8" :key="n" class="animated jello">
           <img class="first-view__bg" src="/title3.svg"/>
           <img class="first-view__bg" src="/title2.svg"/>
         </div>
-        <!-- <canvas id="myCanvas" v-on:mouseover="canvasMouseover" v-on:mousedown="canvasMousedown" width="800" height="800"></canvas> -->
         <div class="first-view__txt">
             <h1>KIHO Karin</h1>
         </div>
 
-        <!-- <MyCanvas /> -->
-        <!-- <iframe
-            title="p5.js demo"
-            src="https://nnamm.com/_creativecoding/180924/demo1.html"
-            width="100%"
-            height="100%"
-            frameborder="0"
-            sandbox="allow-scripts">
-        </iframe> -->
-        <!-- <iframe width="100%" height="100%" frameborder="0" sandbox="allow-scripts" src="https://editor.p5js.org/charon616/embed/JcH3ahfdK"></iframe> -->
         <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave"  class="down-button" v-scroll-to="'#work'" to><span></span>Scroll</nuxt-link>
       </div>
 
@@ -37,7 +25,6 @@
               <span> All </span>
               </label>
             </li>
-            <!-- <li v-for='(category, index) in category_lists' :key='index' > -->
             <li v-for='(category, index) in category_lists' :key='index' v-bind:class='[category.activeClass, {"cat_Active": category.isActive}]'>
               <label v-bind:for="category.cat">
               <input type="checkbox" 
@@ -53,7 +40,7 @@
 
         <div class="works">
           <transition-group name="list">
-            <div class="work" v-for='(item, index) in items' :key='`first-${index}`' v-show="item.display" v-scroll-reveal>
+            <div class="work" v-for='(item, index) in items' :key='`first-${index}`' v-show="item.display">
               <nuxt-link class="animated" :to="{ name: 'work-id', params: { id: item.id } }">
                 <img class="work__img" v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
                 <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
@@ -70,7 +57,7 @@
 
         <div class="works">
           <transition-group name="list">
-            <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`' v-show="item.display" v-scroll-reveal>
+            <div class="work" id="square"  v-for='(item, index) in items_square' :key='`second-${index}`' v-show="item.display">
               <nuxt-link :to="{ name: 'work-id', params: { id: item.id } }">
                 <img class="work__img" v-lazy="square_url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"/>
                 <div class="work__caption" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave">
@@ -253,6 +240,8 @@
         preview: [],		// チェックボックスでチェックしたカテゴリを格納する
         previewAll: true,
         url: [ 
+          require('~/assets/work/work31.jpg'), 
+          require('~/assets/work/work30.jpg'),
           require('~/assets/work/work1.jpg'), 
           require('~/assets/work/work2.jpg'),
           require('~/assets/work/work3.jpg'),
@@ -266,13 +255,13 @@
           require('~/assets/work/work9.jpg'),
           require('~/assets/work/work10.jpg'),
           require('~/assets/work/work11.jpg'),
-          require('~/assets/work/work12.jpg'),
+          require('~/assets/work/work12.jpg')
+        ],
+        square_url: [
           require('~/assets/work/work23.jpg'),
           require('~/assets/work/work24.jpg'),
           require('~/assets/work/work25.jpg'),
-          require('~/assets/work/work26.jpg')
-        ],
-        square_url: [
+          require('~/assets/work/work26.jpg'),
           require('~/assets/work/work15.jpg'),
           require('~/assets/work/work16.png'),
           require('~/assets/work/work17.png'),
@@ -288,8 +277,8 @@
       }
     },
     created: function(){
-      this.items = this.jsondata.items.slice(0, 18)
-      this.items_square = this.jsondata.items.slice(18)
+      this.items = this.jsondata.items.slice(0, 16)
+      this.items_square = this.jsondata.items.slice(16)
 
       this.previewAll = true
       this.preview = []
@@ -467,7 +456,7 @@ label, input[type='checkbox']
     opacity 0
 
   .work 
-    width calc(100%/3)
+    width calc(100%/4)
     height auto
     text-align left 
     margin 0
@@ -602,7 +591,7 @@ label, input[type='checkbox']
   padding-bottom 160px
 
 #square
-  width "calc(%s / 5)" % main-content-width
+  width "calc(%s / 6)" % main-content-width
 
 +tb()
   main-content-width = 100vw

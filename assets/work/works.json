@@ -1,5 +1,30 @@
 {
-  "items": [{
+  "items": [
+    {
+      "title": "Todai To Texas 2020",
+      "url": ["/work/work31-3.jpg", "/work/work31-2.jpg"],
+      "period": "2020",
+      "category": [ "Space", "Web"],
+      "cat_search": ["Web/UI", "Other"],
+      "description": "SXSWに東大から出展する6チームのブースデザインをもう1人の共同制作者と担当した。残念ながらコロナウイルスの影響でSXSWの開催が中止になってしまったが、Todai To Texas 2020のアーカイブとして特設サイトを公開予定である。ステッカーも同時に作成。",
+      "link": ["http://todaitotexas.com/"],
+      "link_txt": ["Todai To Texas"],
+      "id": "01",
+      "display": true
+    },
+    {
+      "title": "東京大学制作展アーカイブ",
+      "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
+      "period": "2020",
+      "category": [ "Booklet"],
+      "cat_search": [ "Printing" ],
+      "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
+      "link": [ "http://www.iiiexhibition.com/" ],
+      "link_txt": [ "東京大学制作展 2019" ],
+      "id": "02",
+      "display": true
+    },
+    {
       "title": "東京大学制作展2019",
       "url": ["/work/work1.jpg", "/work/work1-2.jpg", "/work/work1-3.jpg", "/work/work1-4.jpg"],
       "period": "2019",
@@ -8,7 +33,7 @@
       "description": "東京大学制作展2019のメインビジュアル、宣伝用ポスター、ポストカード、当日案内用パンフレットを作成した。全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
       "link": ["http://www.iiiexhibition.com/"],
       "link_txt": ["東京大学制作展 2019"],
-      "id": "01",
+      "id": "03",
       "display": true
     },
     {
@@ -20,7 +45,7 @@
       "description": "東京大学制作展2019にて，当日に来場者に配布するパンフレットにARを用いて追加情報を表示するWebアプリケーションを作成した。A-FrameというWeb VRフレームワーク，8th WallというWeb ARフレームワークを用いている。",
       "link": ["https://youtu.be/GYU697rQm2o", "https://cover-animation2.glitch.me/"],
       "link_txt": ["YouTube", "Glitch"],
-      "id": "02",
+      "id": "04",
       "display": true
     },
     {
@@ -32,7 +57,7 @@
       "description": "東京大学制作展EXTRA 2019のメインビジュアル、宣伝用フライヤー、宣伝用ポスター、当日案内用看板を作成した。メインビジュアルに関しては共同制作者が手のイメージを3Dモデリングした後の色調補正を担当。ロゴ作成も共同制作者が行なっており，全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
       "link": ["http://iiiexhibition.com/log/iiiEx2019/"],
       "link_txt": ["東京大学制作展EXTRA 2019"],
-      "id": "03",
+      "id": "05",
       "display": true
     },
     {
@@ -44,7 +69,7 @@
       "description": "東京大学制作展EXTRA 2019にて来場者の位置情報を共有する地図を作成した。会場内に設置したWebカメラを用いて，頭部の位置から会場上での位置を画像のみから求めている。描画にはC++とOpenFrameworksを用いた。３人での共同制作。リンクは描画側で用いたアルゴリズムの一部。",
       "link": ["https://www.openprocessing.org/sketch/724608"],
       "link_txt": ["Open Processing"],
-      "id": "04",
+      "id": "06",
       "display": true
     },
     {
@@ -56,7 +81,7 @@
       "description": "東京大学制作展EXTRA 2017 のweb デザイン、第19 回東京大学制作展のweb デザイン（SP 版のみ）に関して、ワイヤーフレームの設計からデザインのラフまでを行った。微調整やコーディングに関しては共同制作者が行っている。",
       "link": ["http://iiiexhibition.com/log/iiiEx2017/"],
       "link_txt": ["東京大学制作展EXTRA 2017"],
-      "id": "05",
+      "id": "07",
       "display": true
     },
     {
@@ -68,7 +93,7 @@
       "description": "所属していたサークルでは東大女子向けのフリーペーパーを年間２、３冊発行しており、企画から営業、取材、記事執筆、デザインまで全て東大生が行っている。デザイン統括という役職を務め、6-10 人ほどいるデザイン担当へのページの割り振りと最終チェックを任されていた。",
       "link": ["http://utbiscuit.xxxx.jp/"],
       "link_txt": ["biscUiT Webサイト"],
-      "id": "06",
+      "id": "08",
       "display": true
     },
     {
@@ -78,7 +103,7 @@
       "category": ["Poster"],
       "cat_search": ["Printing"],
       "description": "法務省主催のコンペ応募作品。",
-      "id": "07",
+      "id": "09",
       "display": true
     },
     {
@@ -90,7 +115,7 @@
       "description": "モリサワの主催する「Moji no ZINE」というワークショップにて、学生メンバー５人でA3で1枚サイズのZINEを作成した。内容はデザイナーの方にインタビューしてフォントに対する想いなどを伺うというもの。主な担当は編集であり，デザインは別のメンバーが行なっている。",
       "link": ["https://www.cinra.net/report/201909-morisawa_kngsh"],
       "link_txt": ["CINRA.NETの記事"],
-      "id": "08",
+      "id": "10",
       "display": true
     },
     {
@@ -100,7 +125,7 @@
       "category": ["Web"],
       "cat_search": ["Web/UI"],
       "description": "大学・大学院在学中に関わった作品等をまとめるためにポートフォリオサイトを作成した（このサイト）。Nuxt.jsというフレームワーク（Vue.js）を使用し，デザインからコーディングまで一貫して行なっている。PC，タブレット，スマホそれぞれでレイアウトを調整して見やすくなるようUIを工夫している。構成はNetlify（ホスティング）+Nuxt.js（Webアプリフレームワーク）+Pug（HTMLテンプレートエンジン）+stylus（CSSプリプロセッサ）など。",
-      "id": "09",
+      "id": "11",
       "display": true
     },
     {
@@ -112,7 +137,7 @@
       "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
       "link": ["https://nae-lab.org/open/2020/index.php"],
       "link_txt": ["苗村研究室 Open House 2020"],
-      "id": "10",
+      "id": "12",
       "display": true
     },
     {
@@ -122,7 +147,7 @@
       "category": ["UI"],   
       "cat_search": ["Web/UI"],
       "description": "DeNAの夏のインターンのUIデザイナーコースにて、学生３人メンター2人のチームで３日間で作成したアプリ「unlock」。お題は「これからの時代に必要なプロのデザイナーを増やすためのサービス」。美大や専門学校出身でない一般の大学生や既卒で他の職に就いている人がデザイナーとして就職するのが困難であるという状況に注目し，実践的なデザイン課題を通して実力をつけ，企業のインターンを斡旋するまでのアプリを提案した。ビジュアル面で主に担当したのはロゴ作成とプレゼン資料作成。",
-      "id": "11",
+      "id": "13",
       "display": true
     },
     {
@@ -134,7 +159,7 @@
       "description": "スポーツ系の部活やサークルに取り組む選手が日々の練習記録をメモするための架空アプリのUI デザイン。株式会社サイバーエージェントのUI デザインインターンにて作成し、構想から提案までを５日間で行った。課題は「メモをするアプリのUI」。",
       "link": ["https://xd.adobe.com/view/09a39315-0b9b-47e8-4648-5abc373999a9-7f92/"],
       "link_txt": ["XDプロトタイプ"],
-      "id": "12",
+      "id": "14",
       "display": true
     },
     {
@@ -146,7 +171,7 @@
       "description": "コンペ応募作品（採用）。",
       "link": ["http://ynu.yokohama/yac2018/"],
       "link_txt": ["YAC2018"],
-      "id": "13",
+      "id": "15",
       "display": true
     },
     {
@@ -156,7 +181,7 @@
       "category": ["Animation"],
       "cat_search": ["Other"],
       "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
-      "id": "14",
+      "id": "16",
       "display": true
     },
     {
@@ -166,7 +191,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "東大生が中心となって運営するWEB メディア、「UmeeT」のロゴのリデザインおよび名刺作成を友人の依頼で行った。最終的にはファビコンやノベルティなどに使えるシンボルマークも作成した。",
-      "id": "15",
+      "id": "17",
       "display": true
     },
     {
@@ -174,11 +199,11 @@
       "url": ["/work/work24.jpg", "/work/work24-2.png", "/work/work24-3.jpg"],
       "period": "2019",
       "category": ["Logo", "Web"],
-      "cat_search": ["Logo"],
+      "cat_search": ["Logo", "Web/UI"],
       "description": "「Todai to TEXAS 2020」の参加プロジェクト、「Syrinx」のロゴおよびWebを作成した。Webの作成はWordPressを用いている。途中でプロダクト名がNUTONEから変更となった。",
       "link": ["http://syrinx.community/"],
       "link_txt": ["Syrinx Webサイト"],
-      "id": "16",
+      "id": "18",
       "display": true
     },
     {
@@ -188,7 +213,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
-      "id": "17",
+      "id": "19",
       "display": true
     },
     {
@@ -200,7 +225,7 @@
       "description": "首里城をデジタル復元するプロジェクト、OUT Shurijoのロゴおよび紹介動画用のイラストを作成した。ロゴに関して、色の決定・シンボルマークの抽象化といった仕上げ部分は共同制作している。イラストに関して、のちに人物を増やすことができるようにテンプレートのようなものを作成している。",
       "link": ["https://www.our-shurijo.org/"],
       "link_txt": ["OUR Shurijo Webサイト"],
-      "id": "18",
+      "id": "20",
       "display": true
     },
     {
@@ -210,7 +235,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
-      "id": "19",
+      "id": "21",
       "display": true
     },
     {
@@ -220,7 +245,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
-      "id": "20",
+      "id": "22",
       "display": true
     },
     {
@@ -232,7 +257,7 @@
       "description": "人生を心理の面からハックするweb メディア、「MindHack」のロゴおよびファビコンを友人の依頼で作成した。",
       "link": ["https://mindhack-media.jp/"],
       "link_txt": ["MindHack Webサイト"],
-      "id": "21",
+      "id": "23",
       "display": true
     },
     {
@@ -242,7 +267,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "女性向けレインウェアブランド、「Rainer」のロゴを友人の依頼で作成した。",
-      "id": "22",
+      "id": "24",
       "display": true
     },
     {
@@ -252,7 +277,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で作成した。",
-      "id": "23",
+      "id": "25",
       "display": true
     },
     {
@@ -262,7 +287,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "コンペ応募作品。",
-      "id": "24",
+      "id": "26",
       "display": true
     },
     {
@@ -272,7 +297,7 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "コンペ応募作品。",
-      "id": "25",
+      "id": "27",
       "display": true
     },
     {
@@ -284,7 +309,7 @@
       "description": "コンペ応募作品。134作品の応募のうち最終候補5案に残る。",
       "link": ["https://www.city.shunan.lg.jp/site/kanko/45167.html"],
       "link_txt": ["コンペ結果 Webサイト"],
-      "id": "26",
+      "id": "28",
       "display": true
     },
     {
@@ -296,7 +321,7 @@
       "description": "2018年の11月に動画制作を勉強しようと思い立ち、「1日１個GIF作成」を目標に20個ほどのGIFアニメを作成した。実験的に手書きやデジタル作画、3DCGなど色々な手法を試している。",
       "link": ["https://gifmagazine.net/users/71554/profile?locale=ja"],
       "link_txt": ["GIF MAGAZINE"],
-      "id": "27",
+      "id": "29",
       "display": true
     },
     {
@@ -306,7 +331,7 @@
       "category": ["Illustration"],
       "cat_search": ["Other"],
       "description": "透明水彩、コピックなど。練習中。",
-      "id": "28",
+      "id": "30",
       "display": true
     },
     {
@@ -316,9 +341,9 @@
       "category": ["Printing"],
       "cat_search": ["Printing"],
       "description": "自分の名刺を作りました。",
-      "id": "29",
+      "id": "31",
       "display": true
     }
   ],
-  "total": "29"
+  "total": "31"
 }
