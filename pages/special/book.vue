@@ -49,12 +49,12 @@ export default {
 </script>
 <style scoped lang="stylus">
 
+#page-wrap
+  margin 0 auto
+
 .plane-txt 
   text-align center
   font-size 1.2em
-
-.container
-  background-color bg-color
 
 .main-content 
   margin-top 0

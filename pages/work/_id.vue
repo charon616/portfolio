@@ -111,11 +111,15 @@ export default {
 
 </script>
 <style scoped lang="stylus">
-@import 'swiper/dist/css/swiper.css'; 
+// @import 'swiper/dist/css/swiper.css';
+
+#page-wrap
+  width 100% 
 
 .main-content
   margin-top 0
   background main-color
+  width 100%
 
 .move-page
   width 100%

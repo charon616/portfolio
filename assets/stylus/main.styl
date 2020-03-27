@@ -1,3 +1,5 @@
+@import '_variables'
+
 sp()
   @media screen and (max-width: 480px) 
     {block}
@@ -5,3 +7,18 @@ sp()
 tb()
   @media screen and (max-width: 1024px) 
     {block}
+
+// .main-content 
+//   width main-content-width
+//   position absolute
+//   top 0
+//   right 0
+
+.container
+  background-color main-color
+  width main-content-width
+  position absolute
+  top 0
+  right 0
+  +tb()
+    width 100%

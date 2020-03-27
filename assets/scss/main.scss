@@ -82,14 +82,14 @@ body{
   display: flex;
 }
 
-.main-content {
-  margin-left: $side-content-width;
-  margin-top: 100vh;
-  width: calc(100% - #{$side-content-width});
-  width: calc(100vw - #{$side-content-width});
-  // width: 100%;
-  // padding-left: $side-content-width;
-}
+// .main-content {
+//   margin-left: $side-content-width;
+//   margin-top: 100vh;
+//   width: calc(100% - #{$side-content-width});
+//   width: calc(100vw - #{$side-content-width});
+//   // width: 100%;
+//   // padding-left: $side-content-width;
+// }
 
 .page-title {
   height: 10vh;

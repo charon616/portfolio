@@ -298,13 +298,10 @@
 </script>
 
 <style scoped lang="stylus">
-
-#myCanvas
-  background deeppink
-  color blueviolet
+.main-content 
+  margin-top 100vh
 
 .container
-  background-color main-color
   margin-bottom 20vh
 
 .down-button
@@ -350,9 +347,7 @@
   position absolute
   left 0
   top 0
-  margin-left side-content-width
-  padding 0
-  width "calc(100% - %s)" % side-content-width
+  width 100%
   height 100vh
   z-index 0
   color rgb(237, 168, 179)

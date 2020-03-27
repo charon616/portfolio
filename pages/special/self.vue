@@ -50,8 +50,9 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+
 .container
-    background-color bg-color
+  background-color bg-color
 
 .main-content 
     margin-top 0

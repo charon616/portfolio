@@ -65,6 +65,9 @@ export default {
 </script>
 <style scoped lang="stylus">
 
+#page-wrap
+  margin 0 auto
+
 .container
   background-color bg-color
 
