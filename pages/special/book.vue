@@ -22,11 +22,11 @@
 
 </template>
 <script>
-import pdf from 'vue-pdf'
+// import pdf from 'vue-pdf'
 
 export default {
   components: {
-    pdf
+    // pdf
   },
   methods: {
     mouseover: function(){ 

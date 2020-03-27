@@ -69,10 +69,6 @@ export default {
       ssr: false
     },
     {
-      src: '~plugins/vue-parallax-js',
-      ssr: false
-    },
-    {
       src: '~plugins/vue-scroll-reveal',
       ssr: false
     },
