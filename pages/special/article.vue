@@ -64,6 +64,8 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+img
+  height auto
 
 #page-wrap
   margin 0 auto
@@ -115,6 +117,8 @@ export default {
     img
         padding 8px
         width calc(100%/2)
+        height auto
+        max-height 100%
 
 .link-button
   margin 80px auto 32px

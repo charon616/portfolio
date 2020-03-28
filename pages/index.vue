@@ -258,6 +258,7 @@ export default {
           font-size 0.4em
     .main-content
       margin-top 100vh
+      margin-bottom 20vh
       .page-title
         padding 48px 1.2em
         margin 8px auto 8px
