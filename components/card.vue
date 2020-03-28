@@ -1,17 +1,22 @@
 <template lang="pug">
 .card(v-show = "item.display" v-size = "{ width: item.width, height: item.height }")
-    nuxt-link(:to="{ name: 'work-id', params: { id: item.id } }")
-        img.card__img(v-lazy="url[index]" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-        .card__caption(v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-            h3.card__caption__title {{ item.title }}
-            span.card__caption__category
-                span(v-for="(cat, id) in item.category" :key="id") {{cat}}
-            span.card__caption__period {{ item.period }}
+  nuxt-link(:to="{ name: 'work-id', params: { id: calcId(index) } }")
+    img.card__img(v-lazy="url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+    .card__caption(v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        h3.card__caption__title {{ item.title }}
+        span.card__caption__category
+            span(v-for="(cat, id) in item.category" :key="id") {{cat}}
+        span.card__caption__period {{ item.period }}
     
 </template>
 <script>
 export default {
-  props: ["item", "index", "url"],
+  props: ["item", "index"],
+  computed: {
+    url: function(){
+      return require("~/assets/work/" + this.item.cover)
+    }
+  },
   methods: {
     mouseover: function() {
       let stalker = document.getElementById("cursor-stalker");
@@ -20,14 +25,23 @@ export default {
     mouseleave: function() {
       let stalker = document.getElementById("cursor-stalker");
       stalker.classList.remove("hov_");
+    },
+    calcId: function(id){
+      return ( '00' + (Number(id)) ).slice( -2 )
     }
   }
 };
 </script>
 
 <style lang="stylus" scoped>
+
+.list-enter-active, .list-leave-active
+  transition opacity .4s
+.list-enter, .list-leave-to
+  opacity 0
+
 .card
-  width calc(100%/4)
+//   width calc(100%/4)
   height auto
   text-align left
   margin 0 

@@ -74,16 +74,20 @@ export default {
     },
     {
       src: '~plugins/custom-scroll.js',
-    }
+    },
+    {
+      src: '~plugins/size.js',
+      ssr: false
+    },
   ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ['@nuxt/typescript-build'],
   /*
    ** Nuxt.js modules
    */
-  modules: ["nuxt-webfontloader", "nuxt-fontawesome", '@nuxtjs/style-resources'],
+  modules: ["nuxt-webfontloader", "nuxt-fontawesome", '@nuxtjs/style-resources', '@nuxtjs/device'],
   webfontloader: {
     google: {
       families: ["Lato:400,700"]

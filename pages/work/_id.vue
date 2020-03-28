@@ -2,7 +2,7 @@
 .container
   #page-wrap
     .main-content(v-touch:swipe.left="swipeLeftHandler" v-touch:swipe.right="swipeRightHandler")
-      WorkDetail(:item="jsondata.items[stringToNum($route.params.id-1)]" :url="jsondata.items[stringToNum($route.params.id-1)].url" :id="$route.params.id" :total="jsondata.total")
+      WorkDetail(:item="jsondata.items[$route.params.id-1]" :url="jsondata.items[$route.params.id-1].url" :id="$route.params.id" :total="jsondata.total")
       .move-page
         nuxt-link.move-page__button(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }")
           font-awesome-icon(icon="long-arrow-alt-left")
@@ -19,12 +19,6 @@ import jsonfile from '~/assets/work/works.json';
 import axios from 'axios';
 
 export default {
-  // transition: {
-  //   name: 'custom-classes-transition',
-  //   enterActiveClass: 'animated fadeInLeft',
-  //   leaveActiveClass: 'animated fadeOut',
-  //   duration: {enter: 800, leave: 200}
-  // },
   components: {
     WorkDetail
   },
@@ -32,9 +26,9 @@ export default {
 
   async asyncData ({ params }) {
     try {
-      let { data } = await axios.get(`https://api.myjson.com/bins/18y6rs`)
-      return { jsondata: data };
-      // jsondata: jsonfile
+      // let { data } = await axios.get(`https://api.myjson.com/bins/18y6rs`)
+      // return { jsondata: data };
+      jsondata: jsonfile
     } catch (err) {
       jsondata: jsonfile
       // error({
@@ -92,14 +86,14 @@ export default {
       if(Number(id)-1 != 0){
         prevId = ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        prevId = 29;
+        prevId = this.jsondata.total;
       }
       this.$router.push({ name: 'work-id', params: {id: prevId} });
     },
     swipeLeftHandler: function(direction){
       const id = this.$route.params.id;
       let nextId;
-      if(Number(id) == 29){
+      if(Number(id) == this.jsondata.total){
         nextId = '01';
       }else{
         nextId = ( '00' + (Number(id)+1) ).slice( -2 );

@@ -3,14 +3,17 @@
   h1.red Hello {{ name }}!
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      name: '名前'
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  data(){
+    return{
+      name: "John"
     }
   }
-}
+  
+})
 </script>
 
 <style lang="stylus">
