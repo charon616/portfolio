@@ -333,11 +333,11 @@
     {
       "title": "Living Roots",
       "cover": "work19.png",
-      "url": ["/work/work19-2.png", "/work/work19-3.png"],
+      "url": ["/work/work19-2.png", "/work/work19-3.png", "/work/work19-4.jpg"],
       "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で作成した。",
+      "category": ["Logo", "Card"],
+      "cat_search": ["Logo", "Printing"],
+      "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
       "display": true,
       "width": 8,
       "height": 8
