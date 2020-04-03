@@ -81,14 +81,17 @@ body{
   display: flex;
 }
 
-// .main-content {
-//   margin-left: $side-content-width;
-//   margin-top: 100vh;
-//   width: calc(100% - #{$side-content-width});
-//   width: calc(100vw - #{$side-content-width});
-//   // width: 100%;
-//   // padding-left: $side-content-width;
-// }
+/*other pagination*/
+.swiper-pagination .swiper-pagination-bullet {
+  border-radius: 0;
+  background: gray;
+  opacity: 1;
+  cursor: none !important;
+}
+
+.swiper-pagination-bullet-active{
+  background: $sub-color !important;
+}
 
 .page-title {
   height: 10vh;

@@ -24,7 +24,7 @@
         <swiper-slide v-for='(link, index) in url' :key='index'>
           <img class="work-detail__img" :src="link"/>
         </swiper-slide>
-        <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" class="swiper-pagination swiper-pagination-black" slot="pagination"></div>
+        <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" class="swiper-pagination swiper-custom-pagination" slot="pagination"></div>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" slot="button-next" class="swiper-button-next swiper-button-white swiper-custom-button"></div>
       </swiper>
@@ -46,12 +46,13 @@ export default {
   data() {
     return {
       swiperOption: {
-        // loop: true,
+        loop: true,
         autoplay: {
           delay: 5000
         },
         pagination: {
           el: '.swiper-pagination',
+          type: 'bullets',
           clickable: true
         },
         navigation: {
@@ -153,6 +154,16 @@ export default {
   .swiper-container {
     max-width: 64%;
     height: 90vh;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .swiper-custom-button{
+    background: $sub-color;
+    fill: $sub-color;
+    font-size: 36px;
+    text-align: center;
+    line-height: 64px;
   }
 
   .link-button{
@@ -181,12 +192,6 @@ export default {
         height: auto;
         order: 3;
       }
-    }
-    .swiper-custom-button{
-      background: $sub-color;
-      font-size: 36px;
-      text-align: center;
-      line-height: 64px;
     }
   }
 

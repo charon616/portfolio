@@ -105,7 +105,6 @@ export default {
 
 </script>
 <style scoped lang="stylus">
-// @import 'swiper/dist/css/swiper.css';
 
 #page-wrap
   width 100% 
