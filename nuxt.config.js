@@ -32,9 +32,6 @@ export default {
       },
       {
         src: "https://code.createjs.com/1.0.0/createjs.min.js"
-      },
-      {
-        src: "/common.js"
       }
     ]
   },
