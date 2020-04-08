@@ -5,11 +5,13 @@
         .animated.jello(v-for="n of 8" :key="n")
           img.first-view__bg(src="/title3.svg")
           img.first-view__bg(src="/title2.svg")
-        .first-view__txt
-          h1 KIHO Karin
-
-        nuxt-link.down-button(@mouseover.native="mouseover" @mouseleave.native="mouseleave" v-scroll-to="'#work'" to) Scroll
-          span
+        transition(name="slide-fade" appear)
+          .first-view__txt
+            transition(name="slide-fade2" appear)
+              h1 KIHO Karin
+        transition(name="slide-fade3" appear)
+          nuxt-link.down-button(@mouseover.native="mouseover" @mouseleave.native="mouseleave" v-scroll-to="'#work'" to) Scroll
+            span
 
       .main-content#work
         h2.page-title WORK
@@ -172,6 +174,9 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+
+.jello
+  animation-delay 1s
 
 .container
   margin-bottom 20vh

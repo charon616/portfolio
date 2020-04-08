@@ -16,3 +16,31 @@ tb()
   right 0
   +tb()
     width 100%
+
+.slide-fade-enter-active, .slide-fade-leave-active 
+  transition all .6s .2s main-transition
+  webkit-clip-path: inset(0);
+  clip-path: inset(0);
+.slide-fade-enter, .slide-fade-leave-to
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+
+.slide-fade2-enter-active, .slide-fade2-leave-active 
+  transition all .6s .4s main-transition
+  webkit-clip-path: inset(0);
+  clip-path: inset(0);
+.slide-fade2-enter, .slide-fade2-leave-to
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+
+.slide-fade3-enter-active, .slide-fade3-leave-active 
+  transition all .6s 1.8s main-transition
+  webkit-clip-path: inset(0);
+  clip-path: inset(0);
+.slide-fade3-enter, .slide-fade3-leave-to
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+
++tb()
+  .slide-fade3-enter-active, .slide-fade3-leave-active 
+    transition all .6s 1s main-transition
