@@ -7,6 +7,7 @@
         span.card__caption__category
             span(v-for="(cat, id) in item.category" :key="id") {{cat}}
         span.card__caption__period {{ item.period }}
+    span.card__new(v-if="item.period == 2020")
     
 </template>
 <script>
@@ -63,7 +64,7 @@ export default {
     border 8px solid main-color
     box-sizing border-box
     pointer-events none
-  &:after
+  &::after
     content ''
     width 100%
     height 100%
@@ -121,6 +122,21 @@ export default {
         content "－"
         font-weight lighter
         margin-right .5rem
+  &__new
+    width 48px
+    height 48px
+    position absolute
+    top 16px
+    left 16px
+    z-index 2
+    background-image url("~assets/icon/new100.svg")
+    +sp()
+      top 20px
+      left 20px
+      width 36px
+      height 36px
+
+
 
   &:hover
     .card__caption

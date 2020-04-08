@@ -243,7 +243,7 @@
     {
       "title": "Syrinx",
       "cover": "work24.jpg",
-      "url": ["/work/work24.jpg", "/work/work24-2.png", "/work/work24-3.jpg"],
+      "url": ["/work/work24.jpg", "/work/work24-2.png", "/work/work24-3.jpg", "/work/work24-4.jpg"],
       "period": "2019",
       "category": ["Logo", "Web"],
       "cat_search": ["Logo", "Web/UI"],
@@ -262,6 +262,18 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
+      "display": true,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "title": "YANEKARA",
+      "cover": "work32.png",
+      "url": ["/work/work32.png", "/work/work32-2.png", "/work/work32-3.png"],
+      "period": "2020",
+      "category": ["Logo"],
+      "cat_search": ["Logo"],
+      "description": "太陽光パネルで得た電気を効率よく企業や家庭で利用するため電気自動車を蓄電池として利用するプロジェクト、「Yanekara」のロゴを作成した。2人での共同制作である。",
       "display": true,
       "width": 8,
       "height": 8
@@ -407,5 +419,5 @@
       "height": 8
     }
   ],
-  "total": "31"
+  "total": "32"
 }
