@@ -62,6 +62,10 @@ export default {
       ssr: false
     },
     {
+      src: '~plugins/composition-api',
+      ssr: false
+    },
+    {
       src: '~plugins/lazyload',
       ssr: false
     },

@@ -33,6 +33,9 @@ export default {
             });
         },
     },
+    destroyed() {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
 }
 </script>
 

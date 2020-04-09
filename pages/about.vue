@@ -102,7 +102,7 @@ export default {
         },
         {
           name: "Web",
-          score: 70,
+          score: 45,
           color: "#9FC40C"
         },
         {
