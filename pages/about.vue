@@ -29,7 +29,13 @@
           span Research
           |  HCI、視線計測、デザインツールなど。
 
-        p.space karinkiho616 [at] g.ecc.u-tokyo.ac.jp
+        p.space
+          span.hidden Skill
+        .charts
+          BarChart.chart(v-for="(skill, index) in skills" :key="index" :name="skill.name" :score="skill.score" :color="skill.color")
+
+        p.space
+          span.hidden Link
         a.btn-facebook.space(style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'facebook']")
         a.btn-instagram.space(href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
@@ -38,8 +44,10 @@
           font-awesome-icon(:icon="['fab', 'pinterest']")
         a.simple-link(href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
         a.simple-link(href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ
-
-        //- BarChart.chart
+        
+        p.space 
+          span Contact
+          |  karinkiho616 [at] g.ecc.u-tokyo.ac.jp
 
 </template>
 <script>
@@ -48,6 +56,62 @@ import BarChart from '~/components/chart.vue'
 export default {
   components: {
     BarChart
+  },
+  data() {
+    return {
+      skills: [
+        {
+          name: "Ai",
+          score: 90,
+          color: "#FA7420"
+        },
+        {
+          name: "Ps",
+          score: 65,
+          color: "#17B9FA"
+        },
+        {
+          name: "XD",
+          score: 70,
+          color: "#F900B4"
+        },
+        {
+          name: "Id",
+          score: 40,
+          color: "#F82385"
+        },
+        {
+          name: "Ae",
+          score: 30,
+          color: "#5600E0"
+        },
+        {
+          name: "Unity",
+          score: 30,
+          color: "#000000"
+        },
+        {
+          name: "Python",
+          score: 60,
+          color: "#FDCD3F"
+        },
+        {
+          name: "C++",
+          score: 60,
+          color: "#164477"
+        },
+        {
+          name: "Web",
+          score: 70,
+          color: "#9FC40C"
+        },
+        {
+          name: "Drawing",
+          score: 70,
+          color: "#6D4E3B"
+        }
+      ]
+    }
   },
   methods: {
     mouseover: function(){ 
@@ -66,14 +130,30 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-// .chart
-//   // height 300px
+.charts
+  display flex
+  justify-content flex-start
+  flex-wrap wrap
+  width 100%
+  padding 8px 0
+  .chart
+    width 80px
+    margin 24px 24px 0 0
+
++tb()
+  .charts
+    align-content space-between
+    .chart
+      width 64px
+      margin 16px 8px
+
 
 .container
   background-color bg-color
 
 .simple-link
-  display block
+  // display block
+  padding 0 4px
   text-decoration underline
   &:hover
     color accent-color
@@ -115,6 +195,10 @@ export default {
     background sub-color
     color white
     border-radius 2px
+    &.hidden
+      display none
+      +sp()
+        display block
 
 .space
   margin-top 12px
