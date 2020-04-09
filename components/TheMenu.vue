@@ -273,15 +273,18 @@ export default {
           height: 2px;
           background-color: $sub-color;
           border-radius: 3px;
-          transition: all .4s ease-out;
           &:nth-of-type(1) {
             top: 0;
+            transition: all .4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
           }
           &:nth-of-type(2) {
             top: 14px;
+            transition: all .4s .2s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+            clip-path: inset(0);
           }
           &:nth-of-type(3) {
             bottom: 0;
+            transition: all .4s .1s cubic-bezier(0.55, 0.05, 0.22, 0.99);
           }
         }
       }
@@ -318,22 +321,19 @@ export default {
     }
 
     //menuのtransition effect
-    .fade-enter,
-    .fade-leave-to {
-      opacity: 0;
-      transform: translateX(40%);
+    .fade-enter-active, .fade-leave-active {
+      transition: all .6s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+      -webkit-clip-path: inset(0);
+      clip-path: inset(0);
+    }
+    .fade-enter, .fade-leave-to{
+      -webkit-clip-path: inset(0 100% 0 0);
+      clip-path: inset(0 0 100% 0);
     }
     
     .v-enter-to,
     .v-leave {
       opacity: 1;
-    }
-    
-    .fade-enter-active{
-      transition: all .4s ease-out;
-    }
-    .fade-leave-active {
-      transition: all .3s ease-out;
     }
 
     .sm-menu__trigger.active{
@@ -342,17 +342,19 @@ export default {
         background-color: $accent-color;
       }
     }
-
     .sm-menu__trigger.active span:nth-of-type(1) {
       -webkit-transform: translateY(14.5px) rotate(-45deg);
       transform: translateY(14.5px) rotate(-45deg);
+      transition: all .4s .1s cubic-bezier(0.55, 0.05, 0.22, 0.99);
     }
     .sm-menu__trigger.active span:nth-of-type(2) {
-      opacity: 0;
+      clip-path: inset(0 0 0 100%);
+      transition: all .4s cubic-bezier(0.55, 0.05, 0.22, 0.99);
     }
     .sm-menu__trigger.active span:nth-of-type(3) {
       -webkit-transform: translateY(-14.5px) rotate(45deg);
       transform: translateY(-14.5px) rotate(45deg);
+      transition: all .4s .2s cubic-bezier(0.55, 0.05, 0.22, 0.99);
     }
   }
 </style>

@@ -39,26 +39,35 @@
         a.simple-link(href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
         a.simple-link(href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ
 
+        //- BarChart.chart
+
 </template>
 <script>
+import BarChart from '~/components/chart.vue'
+
 export default {
-    methods: {
-      mouseover: function(){ 
-        let stalker = document.getElementById('cursor-stalker');
-        stalker.classList.add('hov_');
-      },
-      mouseleave: function(){
-        let stalker = document.getElementById('cursor-stalker');
-        stalker.classList.remove('hov_');
-      }
+  components: {
+    BarChart
+  },
+  methods: {
+    mouseover: function(){ 
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.add('hov_');
     },
-    mounted() {
-      Typekit.load({async: true})
+    mouseleave: function(){
+      let stalker = document.getElementById('cursor-stalker');
+      stalker.classList.remove('hov_');
     }
+  },
+  mounted() {
+    Typekit.load({async: true})
+  }
 }
 </script>
 
 <style scoped lang="stylus">
+// .chart
+//   // height 300px
 
 .container
   background-color bg-color
