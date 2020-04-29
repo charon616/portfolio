@@ -23,12 +23,6 @@ export default {
         href: "/apple-touch-icon.png"
       }
     ],
-    link: [
-      {
-        rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
-      }
-    ],
     script: [
       {
         src: "https://use.typekit.net/kcu2jmj.js", defer: true
