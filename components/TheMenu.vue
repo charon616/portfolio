@@ -15,7 +15,7 @@
 
     <div class="sm-menu">
       <transition name="fade">
-      <button class="sm-menu__trigger" v-bind:class="{ active: isMenuActive }" v-on:click="clickMenu">
+      <button class="sm-menu__trigger" v-bind:class="{ active: isMenuActive }" v-on:click="clickMenu" aria-label="menu">
         <span></span>
         <span></span>
         <span></span>

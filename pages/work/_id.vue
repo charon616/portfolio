@@ -4,12 +4,12 @@
     .main-content(v-touch:swipe.left="swipeLeftHandler" v-touch:swipe.right="swipeRightHandler")
       WorkDetail(:item="info" :url="info.url" :id="$route.params.id" :total="total")
       .move-page
-        nuxt-link.move-page__button(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }")
+        nuxt-link.move-page__button(aria-label="prev-button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }")
           font-awesome-icon(icon="long-arrow-alt-left")
           |  PREV 
         nuxt-link.move-page__home(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" to="/#work" style="display:inline;")
           font-awesome-icon(:icon="['fas', 'th']")
-        nuxt-link.move-page__button(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }")
+        nuxt-link.move-page__button(aria-label="next-button" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcNextId($route.params.id) } }")
           | NEXT 
           font-awesome-icon(icon="long-arrow-alt-right")
 </template>

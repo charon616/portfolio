@@ -10,7 +10,7 @@
             transition(name="slide-fade2" appear)
               h1 KIHO Karin
         transition(name="slide-fade3" appear)
-          nuxt-link.down-button(@mouseover.native="mouseover" @mouseleave.native="mouseleave" v-scroll-to="'#work'" to) Scroll
+          nuxt-link.down-button(aria-label="down" @mouseover.native="mouseover" @mouseleave.native="mouseleave" v-scroll-to="'#work'" to) Scroll
             span
 
       .main-content#work

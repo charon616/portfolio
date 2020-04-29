@@ -18,7 +18,7 @@
       //-     a(href="https://drive.google.com/open?id=1mHAGoeKvHyoGsM_pLR3brp9OrfMf0TGd") PDF をダウンロード
       //-     |.
       
-      nuxt-link.link-button(to="/special" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") ←　戻る
+      nuxt-link.link-button(aria-label="special" to="/special" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") ←　戻る
 
 </template>
 <script>

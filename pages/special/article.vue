@@ -39,7 +39,7 @@
           img(src="~assets/special/final2.jpg" alt="final2.jpg")
         
         ._(style="text-align: center;")
-          nuxt-link.link-button(to="/special" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") ←　戻る
+          nuxt-link.link-button(aria-label="special" to="/special" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") ←　戻る
 
 </template>
 <script>
