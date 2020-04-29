@@ -26,16 +26,12 @@ export default {
     link: [
       {
         rel: "stylesheet",
-        href:
-          "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+        href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
       }
     ],
     script: [
       {
-        src: "https://use.typekit.net/kcu2jmj.js"
-      },
-      {
-        src: "https://code.createjs.com/1.0.0/createjs.min.js"
+        src: "https://use.typekit.net/kcu2jmj.js", defer: true
       }
     ]
   },
@@ -66,15 +62,7 @@ export default {
       ssr: false
     },
     {
-      src: '~plugins/composition-api',
-      ssr: false
-    },
-    {
       src: '~plugins/lazyload',
-      ssr: false
-    },
-    {
-      src: '~plugins/vue-scroll-reveal',
       ssr: false
     },
     {

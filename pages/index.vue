@@ -38,18 +38,14 @@
 </template>
 
 <script>
-import VueScrollReveal from "vue-scroll-reveal";
-import MyCanvas from "~/components/MyCanvas.vue";
 import PagetopComponent from "~/components/PagetopComponent.vue";
 import card from "~/components/card.vue";
 import jsonfile from "~/assets/work/works.json";
 
 export default {
   components: {
-    MyCanvas,
     PagetopComponent,
-    card,
-    VueScrollReveal
+    card
   },
   mounted() {
     const hash = this.$route.hash;

@@ -11,7 +11,6 @@ import { green } from 'color-name';
 export default {
   data(){
     return{
-      // applyTransform: "translate(0,0)",
       styles: {
         transform: 'translate(80px,80px)',
       },
