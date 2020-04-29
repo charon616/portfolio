@@ -7,11 +7,11 @@
       .special
         p(style="display: block; width: 100%; text-align: center; margin-bottom: 32px;") いろんな実装を試したり自己紹介したりする場所。
         nuxt-link.special__link(to="/special/article" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
-          img.special__link__img(src="~assets/special/logo.jpg")
+          img.special__link__img(src="~assets/special/logo.jpg" alt="logo.jpg")
         nuxt-link.special__link(to="/special/book" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
-          img.special__link__img(src="~assets/special/book.jpg")
+          img.special__link__img(src="~assets/special/book.jpg" alt="book.jpg")
         nuxt-link.special__link(to="/special/self" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
-          img.special__link__img(src="~assets/special/self.jpg")
+          img.special__link__img(src="~assets/special/self.jpg" alt="self.jpg")
 
       Lottie.svganimation(:options="defaultOptions" :height="300" :width="300" v-on:animCreated="handleAnimation")
 

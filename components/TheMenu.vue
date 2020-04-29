@@ -1,8 +1,8 @@
 <template>
   <div class="side-content">
     <nuxt-link to="/" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" >
-      <img class="logo-pc" src="~/assets/icon/logo-pc.png">
-      <img class="logo" src="~/assets/icon/logo.png">
+      <img class="logo-pc" src="~/assets/icon/logo-pc.png" alt="logo-pc">
+      <img class="logo" src="~/assets/icon/logo.png" alt="logo">
     </nuxt-link>
     <div class="menu">
       <nuxt-link v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" class="menu__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>

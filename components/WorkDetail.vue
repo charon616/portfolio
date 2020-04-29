@@ -16,13 +16,13 @@
         <br/>
 
         <div v-for='(site, index) in item.link' :key="index">
-          <a target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="site">{{ item.link_txt[index] }}</a>
+          <a aria-label="item.link_txt[index]" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="item.link != null" class="link-button" v-bind:href="site">{{ item.link_txt[index] }}</a>
         </div>
       </div>
 
       <swiper :options="swiperOption" class="work-detail__slider"> 
         <swiper-slide v-for='(link, index) in url' :key='index'>
-          <img class="work-detail__img" :src="link"/>
+          <img class="work-detail__img" :src="link" :alt="link"/>
         </swiper-slide>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" class="swiper-pagination swiper-custom-pagination" slot="pagination"></div>
         <div v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" v-if="url.length!=1" slot="button-prev" class="swiper-button-prev swiper-button-white swiper-custom-button"></div>
@@ -30,7 +30,7 @@
       </swiper>
 
       <div class="work-detail__viewer">
-        <img class="work-detail__img" v-for='(link, index) in url' :key='index' :src="link"/>
+        <img class="work-detail__img" v-for='(link, index) in url' :key='index' :src="link" :alt="link"/>
       </div>
   </div>
 </template>

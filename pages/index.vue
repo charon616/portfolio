@@ -3,8 +3,8 @@
     ._group
       .first-view#first-view
         .animated.jello(v-for="n of 8" :key="n")
-          img.first-view__bg(src="/title3.svg")
-          img.first-view__bg(src="/title2.svg")
+          img.first-view__bg(src="/title3.svg" alt="")
+          img.first-view__bg(src="/title2.svg" alt="")
         transition(name="slide-fade" appear)
           .first-view__txt
             transition(name="slide-fade2" appear)
@@ -117,7 +117,6 @@ export default {
       obj.isActive = true;
     },
     handleScroll: function(evt, el) {
-      console.log(window.scrollY);
       if (window.scrollY > 50) {
         el.setAttribute(
           "style",
@@ -132,8 +131,7 @@ export default {
       scrollY: 0,
       scrollTimer: 0,
       radius: 50,
-      jsondata: jsonfile,
-      items: [],
+      items: jsonfile.items,
       category_lists: [
         { cat: "Web/UI", activeClass: "cat2_Active", isActive: true },
         {
@@ -157,10 +155,6 @@ export default {
     };
   },
   created: function() {
-    console.log(this.test)
-
-    this.items = this.jsondata.items;
-
     this.previewAll = true;
     this.preview = [];
     for (let i = 0; i < this.category_lists.length; i++) {

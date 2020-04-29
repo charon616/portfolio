@@ -1,7 +1,10 @@
 <template lang="pug">
 .card(v-show = "item.display" v-size = "{ width: item.width, height: item.height }")
   nuxt-link(:to="{ name: 'work-id', params: { id: calcId(index) } }")
-    img.card__img(v-lazy="url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+    picture
+      source.card__img(:data-srcset="webpurl" type="image/webp")
+      img.card__img(:data-src="url" v-lazy="url" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" :alt="url")
+
     .card__caption(v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
         h3.card__caption__title {{ item.title }}
         span.card__caption__category
@@ -16,6 +19,10 @@ export default {
   computed: {
     url: function(){
       return require("~/assets/work/" + this.item.cover)
+    },
+    webpurl: function(){
+      let name = this.baseName(this.item.cover)
+      return require("~/assets/work/" + name + ".webp")
     }
   },
   methods: {
@@ -29,6 +36,12 @@ export default {
     },
     calcId: function(id){
       return ( '00' + (Number(id)) ).slice( -2 )
+    },
+    baseName: function(str){
+      var base = new String(str).substring(str.lastIndexOf('/') + 1); 
+      if(base.lastIndexOf(".") != -1)       
+          base = base.substring(0, base.lastIndexOf("."));
+      return base;
     }
   }
 };
@@ -42,7 +55,6 @@ export default {
   opacity 0
 
 .card
-//   width calc(100%/4)
   height auto
   text-align left
   margin 0 
@@ -79,11 +91,13 @@ export default {
     pointer-events none
   a
     display flex
+  picture
+    width 100%
+    height 100%
+    margin 0
   &__img
     width 100%
     height 100%
-    padding 8px
-    margin 0
     object-fit cover
     box-sizing border-box
     border-radius "calc(%s * 4)" % radius-size
@@ -170,11 +184,12 @@ export default {
       justify-content center
       align-items center
       padding 8px
-    &__img
+    picture
       width 40%
-      height auto
       padding 0
       margin 8px
+    &__img
+      height auto
       border-radius 6px
     &__caption
       width 60%

@@ -21,7 +21,6 @@ export default {
   mounted() {
     window.addEventListener('mousemove', this.mouse);
   },
-
   methods: {
     mouse: function(e){ 
       let main = document.getElementById('cursor-main');
@@ -33,9 +32,11 @@ export default {
       }
     },
     applyTransform: function(){
-      console.log(this.transform)
       return "translate(80px, 70px)";
     }
+  },
+  destroyed() {
+    window.removeEventListener('mousemove', this.mouse);
   }
 }
 </script>

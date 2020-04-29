@@ -42,8 +42,6 @@ export default {
   },
   mounted() {
     // window.addEventListener('devicemotion', this.motion, true);
-
-    console.log(this.acceleration.x);
     alert(this.acceleration.x)
 
     window.addEventListener("devicemotion", (e) => {

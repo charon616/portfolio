@@ -6,16 +6,20 @@ export default {
    */
   head: {
     title: "KIHO Karin",
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "theme-color", content: "#6332f6" },
       { hid: "description", name: "description", content: "my-portfolio" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     link: [
       {
         rel: "apple-touch-icon",
-        type: "180x180",
+        sizes: "180x180",
         href: "/apple-touch-icon.png"
       }
     ],
@@ -106,9 +110,16 @@ export default {
       }
     ]
   },
+  /*
+   ** load settings
+   */
+  loadingIndicator: {
+    name: 'cube-grid',
+    color: '#fff',
+    background: '#6332f6'
+  },
   loading: {
     color: '#6332f6'
-    // height: '5px'
   },
   router: {
     scrollBehavior: function (to, from, savedPosition) {

@@ -11,9 +11,9 @@
 
       .main
         h1.main__txt(v-parallax="0.2") parallaxテスト
-        img.main__img(src="~/assets/special/test1.png" v-parallax="0.5")
+        img.main__img(src="~/assets/special/test1.png" v-parallax="0.5" alt="test1.png")
 
-      img(src="~/assets/special/test0.png")
+      img(src="~/assets/special/test0.png" alt="test0.png")
 
       //- h2 tets
       //- kinesis-container(event="scroll")

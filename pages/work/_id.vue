@@ -2,7 +2,7 @@
 .container
   #page-wrap
     .main-content(v-touch:swipe.left="swipeLeftHandler" v-touch:swipe.right="swipeRightHandler")
-      WorkDetail(:item="jsondata.items[$route.params.id-1]" :url="jsondata.items[$route.params.id-1].url" :id="$route.params.id" :total="jsondata.total")
+      WorkDetail(:item="info" :url="info.url" :id="$route.params.id" :total="total")
       .move-page
         nuxt-link.move-page__button(v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave" :to="{ name: 'work-id', params: { id: calcPrevId($route.params.id) } }")
           font-awesome-icon(icon="long-arrow-alt-left")
@@ -24,22 +24,10 @@ export default {
   },
   loading: false,
 
-  async asyncData ({ params }) {
-    try {
-      // let { data } = await axios.get(`https://api.myjson.com/bins/ytobg`)
-      // return { jsondata: data };
-      jsondata: jsonfile
-    } catch (err) {
-      jsondata: jsonfile
-      // error({
-      //   jsondata: jsonfile
-      // });
-    }
-  },
-
   data() {
     return {
-      jsondata: jsonfile,
+      info: jsonfile.items[Number(this.$route.params.id)-1],
+      total: jsonfile.total
     }
   },
 
@@ -51,8 +39,8 @@ export default {
     stalker.classList.remove('hov_');
   },
   mounted() {
-      Typekit.load({async: true})
-    },
+    Typekit.load({async: true})
+  },
 
   methods: {
     stringToNum: function(str){
@@ -62,11 +50,11 @@ export default {
       if(Number(id)-1 != 0){
         return ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        return Number(this.jsondata.total);
+        return Number(this.total);
       }
     },
     calcNextId: function(id){
-      if(Number(id) == Number(this.jsondata.total)){
+      if(Number(id) == Number(this.total)){
         return '01';
       }else{
         return ( '00' + (Number(id)+1) ).slice( -2 );
@@ -86,14 +74,14 @@ export default {
       if(Number(id)-1 != 0){
         prevId = ( '00' + (Number(id)-1) ).slice( -2 );
       }else{
-        prevId = this.jsondata.total;
+        prevId = this.total;
       }
       this.$router.push({ name: 'work-id', params: {id: prevId} });
     },
     swipeLeftHandler: function(direction){
       const id = this.$route.params.id;
       let nextId;
-      if(Number(id) == this.jsondata.total){
+      if(Number(id) == this.total){
         nextId = '01';
       }else{
         nextId = ( '00' + (Number(id)+1) ).slice( -2 );

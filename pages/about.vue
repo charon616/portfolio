@@ -5,7 +5,7 @@
       h2.page-title ABOUT
 
       .profile-illust
-        img(src="~assets/photo/DSC01678.JPG")
+        img(src="~assets/photo/DSC01678.JPG" alt="photo")
       
       .text-box
         h3 KIHO Karin
@@ -36,14 +36,14 @@
 
         p.space
           span.hidden Link
-        a.btn-facebook.space(style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        a.btn-facebook.space(aria-label="open facebook" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'facebook']")
-        a.btn-instagram.space(href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        a.btn-instagram.space(aria-label="open instagram" href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'instagram']")
-        a.btn-pinterest.space(href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        a.btn-pinterest.space(aria-label="open pinterest" href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'pinterest']")
-        a.simple-link(href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
-        a.simple-link(href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ
+        a.simple-link(aria-label="open gifmagazine" href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
+        a.simple-link(aria-label="open booklog" href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ
         
         p.space 
           span Contact
@@ -107,7 +107,7 @@ export default {
         },
         {
           name: "Drawing",
-          score: 70,
+          score: 40,
           color: "#6D4E3B"
         }
       ]
