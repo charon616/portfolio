@@ -3,13 +3,13 @@
     {
       "title": "Todai To Texas 2020",
       "cover": "work31.jpg",
-      "url": ["/work/work31-3.jpg", "/work/work31-2.jpg"],
+      "url": ["/work/work31.jpg", "/work/work31-2.jpg", "/work/work31-3.jpg", "/work/work31-4.jpg", "/work/work31-5.jpg"],
       "period": "2020",
       "category": [ "Space", "Web"],
       "cat_search": ["Web/UI", "Other"],
-      "description": "SXSWに東大から出展する6チームのブースデザインをもう1人の共同制作者と担当した。残念ながらコロナウイルスの影響でSXSWの開催が中止になってしまったが、Todai To Texas 2020のアーカイブとして特設サイトを公開予定である。ステッカーも同時に作成。",
-      "link": ["http://todaitotexas.com/"],
-      "link_txt": ["Todai To Texas"],
+      "description": "SXSWに東大から出展する6チームのブースデザインをもう1人の共同制作者と担当した。残念ながらコロナウイルスの影響でSXSWの開催が中止になってしまったが、Todai To Texas 2020のアーカイブとして特設サイトを制作・公開。ステッカーも同時に作成した。",
+      "link": ["https://2020.todaitotexas.com/", "http://todaitotexas.com/"],
+      "link_txt": ["Todai To Texas2020特設サイト", "Todai To Texas"],
       "display": true,
       "width": 24,
       "height": 18

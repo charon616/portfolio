@@ -17,12 +17,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.canvas {
-    width: 400px;
-    height: 300px;
-    background: powderblue;
-    color: pink;
-  border: 1px solid #000;
-}
+<style scoped lang="stylus">
+.canvas 
+  width 400px
+  height 300px
+  background powderblue
+  color pink
+  border 1px solid #000
 </style>

@@ -39,87 +39,76 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-@import "~assets/scss/variables";
+<style lang="stylus" scoped>
 
-.top-button{
-  background-color: $sub-color;
-  color: white;
-  font-size: 1.7em;
-  text-align: center;
-  line-height: 8vmin;
+.top-button
+  background-color sub-color
+  color white
+  font-size 1.7em
+  text-align center
+  line-height 8vmin
 
-  position: fixed;
-  bottom: 8vmin;
-  right: 8vmin;
-  width: 8vmin;
-  height: 8vmin;
+  position fixed
+  bottom 8vmin
+  right 8vmin
+  width 8vmin
+  height 8vmin
 
-  border-radius: $radius-size;
-  border: 2px solid rgba(46, 255, 192, 1);
-  box-sizing: border-box;
-  background-color: rgba(46, 255, 192, 1);
-  color: $sub-color;
+  border-radius radius-size
+  border 2px solid rgba(46, 255, 192, 1)
+  box-sizing border-box
+  background-color rgba(46, 255, 192, 1)
+  color sub-color
 
-  z-index: 90;
-  transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+  z-index 90
+  transition all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
 
-  &::after{
-    content: "";
-    width: 90%;
-    height: 90%;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid $sub-color;
-    box-sizing: border-box;
-    border-radius: 50%;
-    top: 5%;
-    left: 5%;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99);
-  }
+  &::after
+    content ""
+    width 90%
+    height 90%
+    background-color rgba(0, 0, 0, 0)
+    border 1px solid sub-color
+    box-sizing border-box
+    border-radius 50%
+    top 5%
+    left 5%
+    position absolute
+    opacity 0
+    transition all 0.7s cubic-bezier(0.55, 0.05, 0.22, 0.99)
 
-  &:hover{
-    border-radius: 50%;
-    i{
-        animation: rotate 2s cubic-bezier(0.55, 0.05, 0.22, 0.99) infinite;
-    }
-    &::after{
-        opacity: 1;
-    }
-  }
-}
+  &:hover
+    border-radius 50%
+    i
+      animation rotate 2s cubic-bezier(0.55, 0.05, 0.22, 0.99) infinite
+    &::after
+      opacity 1
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+.fade-enter-active, .fade-leave-active 
+  transition opacity .5s
+.fade-enter, .fade-leave-to 
+  opacity 0
 
-@keyframes rotate {
-  0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(360deg); }
-  100% { transform: rotate(360deg); }
-}
+@keyframes rotate 
+  0% 
+    transform rotate(0deg) 
+  50% 
+    transform rotate(360deg) 
+  100% 
+    transform rotate(360deg) 
++tb()
+  .top-button
+    line-height 10vmin
+    bottom 8vmin
+    right 8vmin
+    width 10vmin
+    height 10vmin
 
-@media screen and (max-width: 1024px) {
-  .top-button{
-    line-height: 10vmin;
-    bottom: 8vmin;
-    right: 8vmin;
-    width: 10vmin;
-    height: 10vmin;
-  }
-}
-
-@media screen and (max-width: 480px) {
-    .top-button{
-        line-height: 60px;
-        bottom: 8vmin;
-        right: 8vmin;
-        width: 60px;
-        height: 60px;
-    }
-}
++sp()
+  .top-button
+    line-height 60px
+    bottom 8vmin
+    right 8vmin
+    width 60px
+    height 60px
 </style>

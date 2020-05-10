@@ -84,151 +84,114 @@ export default {
 }
 
 </script>
-<style lang="scss" scoped >
-@import 'swiper/dist/css/swiper.css'; 
-@import "~assets/scss/variables";
-  .work-detail{
-    position: relative;
-    display: flex;
-    flex-wrap:wrap;
-    &__viewer{
-      display: none;
-    }
+<style lang="stylus" scoped>
+// @import 'swiper/dist/css/swiper.css'
 
-    &__textbox{
-      padding: 32px;
-      width: 36%;
-      height: 90vh;
-      text-align: justify;
-      position: relative;
-      
-      &__title{
-        font-size: 2.4em;
-      }
-      &__property{
-        display: flex;
-        margin: 8px 0;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-        font-weight: bold;
-        font-size: 1.2em;
-        &__category{
-          display: inline;
-        }
-        &__category + &__category{
-          border-left: 1px solid $sub-color;
-          padding-left: 6px;
-        }
-        &__period{
-          &:before{
-            content: "－";
-            font-weight: lighter;
-            margin-right: .5rem;
-          }
-        }
+.work-detail
+  position relative
+  display flex
+  flex-wrap wrap
+  &__viewer
+    display none
 
-        &__pos{
-          font-size: 1.0rem;
-          font-weight: lighter;
-        }
-      }
-      &__description{
-        font-family: 'Lato', 'Source Sans Pro', a-otf-gothic-bbb-pr6n, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif; 
-        font-weight: 400;
-        font-style: normal;
-      }
-    }
+  &__textbox
+    padding 32px
+    width 36%
+    height 90vh
+    text-align justify
+    position relative
+    
+    &__title
+      font-size 2.4em
+    &__property
+      display flex
+      margin 8px 0
+      -webkit-justify-content space-between
+      justify-content space-between
+      font-weight bold
+      font-size 1.2em
+      &__category
+        display inline
+      &__category + &__category
+        border-left 1px solid sub-color
+        padding-left 6px
+      &__period
+        &::before
+          content "－"
+          font-weight lighter
+          margin-right .5rem
+      &__pos
+        font-size 1.0rem
+        font-weight lighter
+    &__description
+      font-family 'Lato', 'Source Sans Pro', a-otf-gothic-bbb-pr6n, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif 
+      font-weight 400
+      font-style normal
+  &__slider
+    z-index 1
+  &__img 
+    height auto
+    width 100%
+    object-fit cover
 
-    &__slider{
-      z-index: 1;
-    }
+.swiper-container 
+  max-width 64%
+  height 90vh
+  padding-bottom 0
+  margin-bottom 0
 
-    &__img {
-      height: auto;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+.swiper-custom-button
+  background-color sub-color
+  font-size 36px
+  text-align center
+  line-height 64px
 
-  .swiper-container {
-    max-width: 64%;
-    height: 90vh;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
+.link-button
+  margin-bottom 8px
 
-  .swiper-custom-button{
-    background: $sub-color;
-    fill: $sub-color;
-    font-size: 36px;
-    text-align: center;
-    line-height: 64px;
-  }
++tb()
+  .work-detail
+    align-items center
+    &__textbox
+      width 100%
+      height auto
+      order 1
+    &__img 
+      width 100%
+      padding 0 32px 32px
+      max-width 100% 
+      height auto
+    &__slider 
+      width 100%
+      padding 0 32px 32px
+      max-width 100% 
+      height auto
+      order 3
 
-  .link-button{
-    margin-bottom: 8px;
-  }
-
-  @media screen and (max-width: 1024px) {
-    .work-detail{
-      align-items: center;
-      &__textbox{
-        width: 100%;
-        height: auto;
-        order: 1;
-        // margin: 16px;
-      }
-      &__img {
-        width: 100%;
-        padding: 0 32px 32px;
-        max-width: 100%; 
-        height: auto;
-      }
-      &__slider {
-        width: 100%;
-        padding: 0 32px 32px;
-        max-width: 100%; 
-        height: auto;
-        order: 3;
-      }
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .work-detail{
-      position: relative;
-      &__textbox{
-        order: 1;
-        width: 100%;
-        padding: 16px;
-        &__title{
-          font-size: 1.8em;
-          text-align: initial;
-        }
-        &__property{
-          p:nth-child(2){
-            border-bottom: 1px solid $sub-color;
-            position: relative;
-          }
-          &__pos{
-            font-size: 0.8rem;
-          }
-        }
-      }
-      &__img {
-        padding: 8px 16px;
-      }
-      &__slider {
-        display: none;
-      }
-      &__viewer{
-        display: block;
-        order: 2;
-        padding: 0;
-        margin-bottom: 48px;
-      }
-    }
-  }
++sp()
+  .work-detail
+    position relative
+    &__textbox
+      order 1
+      width 100%
+      padding 16px
+      &__title
+        font-size 1.8em
+        text-align initial
+      &__property
+        p:nth-child(2)
+          border-bottom 1px solid sub-color
+          position relative
+        &__pos
+          font-size 0.8rem
+    &__img 
+      padding 8px 16px
+    &__slider 
+      display none
+    &__viewer
+      display block
+      order 2
+      padding 0
+      margin-bottom 48px
 
 </style>
