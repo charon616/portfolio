@@ -5,7 +5,7 @@
       h2.page-title ABOUT
 
       .profile-illust
-        img(src="~assets/photo/DSC01678.JPG" alt="photo")
+        img(src="~assets/photo/name.png" alt="photo")
       
       .text-box
         h3 KIHO Karin
@@ -142,14 +142,6 @@ export default {
     width 80px
     margin 24px 24px 0 0
 
-+tb()
-  .charts
-    align-content space-between
-    .chart
-      width 64px
-      margin 16px 8px
-
-
 .container
   background-color bg-color
 
@@ -161,14 +153,15 @@ export default {
     color accent-color
 
 .profile-illust
-  width 100%
-  height 180px
+  width main-content-width
+  height 100%
   margin 0 auto 
+  display flex
+
   img
-    width 100%
-    height 100%
-    object-fit cover
-    overflow hidden
+    width 40%
+    height auto
+    margin 0 auto
 
 .main-content
   margin-top 0
@@ -223,9 +216,24 @@ btn-sns(arg)
   btn-sns(#E60023)
   // margin-left 6px
 
++tb()
+  .charts
+    align-content space-between
+    .chart
+      width 64px
+      margin 16px 8px
+  .profile-illust
+    width 100%
+    img
+      width 60%
+      height 100%
+
+
 +sp()
   .profile-illust
-    height 120px
+    width 90%
+    img
+      width 100%
   .text-box
     width 90%
     margin 18px auto 0
