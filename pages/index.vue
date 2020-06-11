@@ -2,9 +2,9 @@
   .container
     ._group
       .first-view#first-view
-        .jello(v-for="n of 8" :key="n")
-          img.first-view__bg(src="/title3.svg" alt="")
-          img.first-view__bg(src="/title2.svg" alt="")
+        //- .jello(v-for="n of 8" :key="n")
+        //-   img.first-view__bg(src="/title3.svg" alt="")
+        //-   img.first-view__bg(src="/title2.svg" alt="")
         transition(name="slide-fade" appear)
           .first-view__txt
             transition(name="slide-fade2" appear)
@@ -268,8 +268,8 @@ export default {
         font-weight bold
         letter-spacing .1em
         padding 70px 32px 8px
-        color rgba(46, 255, 192, 1)
-        background-color rgba(46, 255, 192, 0.25)
+        color sub-color
+        // background-color rgba(46, 255, 192, 0.25)
         span
           position absolute
           top 0
@@ -277,8 +277,8 @@ export default {
           width 24px
           height 24px
           margin-left -12px
-          border-left 1px solid rgba(46, 255, 192, 1)
-          border-bottom 1px solid rgba(46, 255, 192, 1)
+          border-left 1px solid sub-color
+          border-bottom 1px solid sub-color
           -webkit-transform rotate(-45deg)
           transform rotate(-45deg)
           -webkit-animation sdb 1.5s infinite

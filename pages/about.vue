@@ -42,7 +42,7 @@
           font-awesome-icon(:icon="['fab', 'instagram']")
         a.btn-pinterest.space(aria-label="open pinterest" href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'pinterest']")
-        a.btn-pinterest.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") 
+        a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") 
           font-awesome-icon(:icon="['fab', 'tumblr']")
         a.simple-link(aria-label="open gifmagazine" href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
         a.simple-link(aria-label="open booklog" href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ 
@@ -214,7 +214,9 @@ btn-sns(arg)
 
 .btn-pinterest
   btn-sns(#E60023)
-  // margin-left 6px
+
+.btn-tumbler
+  btn-sns(#35465C)
 
 +tb()
   .charts
