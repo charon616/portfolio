@@ -1,0 +1,27 @@
+{
+"items": [
+  {
+    "title": "成年年齢引下げ告知ポスター",
+    "cover": "work29.jpg",
+    "url": [ "/work/work29.jpg" ],
+    "period": "2020",
+    "category": ["Poster"],
+    "cat_search": ["Printing"],
+    "description": "法務省主催のコンペ応募作品。",
+    "display": true,
+    "width": 12,
+    "height": 9
+  },
+  {
+    "title": "sys-seeing",
+    "cover": "work15.jpg",
+    "url": ["/work/work15-2.png"],
+    "period": "2018",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  }]
+}

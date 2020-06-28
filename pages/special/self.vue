@@ -32,6 +32,7 @@ import { KinesisContainer, KinesisElement} from 'vue-kinesis';
 import vueFlashcard from 'vue-flashcard';
 
 export default {
+    layout: 'wide',
     components: {
         KinesisContainer, 
         KinesisElement,
@@ -53,6 +54,7 @@ export default {
 
 .container
   background-color bg-color
+  width 100%
 
 .main-content 
     margin-top 0

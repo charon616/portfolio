@@ -102,7 +102,7 @@ export default {
     position relative
     
     &__title
-      font-size 2.4em
+      font-size 2.3em
     &__property
       display flex
       margin 8px 0

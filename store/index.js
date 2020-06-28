@@ -1,5 +1,6 @@
 export const state = () => ({
-  isMenuActive: false
+  isMenuActive: false,
+  menudesu: true
   // page: 'index',
 
   // items: [],
@@ -9,6 +10,7 @@ export const state = () => ({
 
 export const getters = () => ({
   // items: (state) => state.items
+  menudesu: (state) => state.menudesu
 })
 
 export const mutations = {
@@ -17,6 +19,12 @@ export const mutations = {
   },
   changeMenu(state){
     state.isMenuActive = !state.isMenuActive
+  },
+  openMenu(state) {
+    state.menudesu = true
+  },
+  closeMenu(state) {
+    state.menudesu = false
   }
   // updatePage(state, pageName){
   //   state.page = pageName

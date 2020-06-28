@@ -35,7 +35,6 @@
 
 <script>
 import VueScrollTo from 'vue-scrollto';
-import { mapMutations } from 'vuex';
 
 let photos = {
   1: require('~/assets/icon/logo.png'), 
@@ -77,7 +76,6 @@ export default {
  
 
 </script>
-
 <style lang="stylus" scoped>
 button
   outline 0
@@ -90,6 +88,7 @@ button
   top 0
   left 'calc(%s - %s)' % (side-content-width side-bar-width)
   z-index 100
+  // box-shadow 1px 0px 
 
   .logo-pc 
     display block

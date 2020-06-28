@@ -66,6 +66,10 @@ export default {
       src: '~plugins/size.js',
       ssr: false
     },
+    {
+      src: "~plugins/persistedstate.js",
+      ssr: false
+    }
   ],
   /*
    ** Nuxt.js dev-modules

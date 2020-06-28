@@ -1,6 +1,50 @@
 {
   "items": [
     {
+      "title": "推しの情報を集めるwebアプリ",
+      "cover": "work34.png",
+      "url": ["/work/work34.png", "/work/work34-2.jpg"],
+      "period": "2020",
+      "category": ["Web App"],
+      "cat_search": ["Web/UI", "Other"],
+      "description": "バックエンドの勉強として作成。構成はFlask(Python) + Vue.js + bulma + Heroku。Twitter、Youtube APIや各種ホームページからスクレイピングして収集した情報をまとめただけのもの。",
+      "link": ["https://great-fan-app.herokuapp.com/"],
+      "link_txt": ["作成したアプリ"],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "title": "HONGO TECH GARAGE",
+      "cover": "work33.png",
+      "url": [
+        "/work/work33.png",
+        "/work/work33-2.png",
+        "/work/work33-3.png",
+        "/work/work33-4.png",
+        "/work/work33-5.png"
+      ],
+      "period": "2020",
+      "category": [
+        "Web",
+        "Logo"
+      ],
+      "cat_search": [
+        "Web/UI",
+        "Logo"
+      ],
+      "description": "東京大学が運営する施設、本郷テックガレージのロゴおよびWebサイトのリニューアルを行った。",
+      "link": [
+        "https://www.hongotechgarage.com/"
+      ],
+      "link_txt": [
+        "HONGO TECH GARAGE"
+      ],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
       "title": "Todai To Texas 2020",
       "cover": "work31.jpg",
       "url": ["/work/work31.jpg", "/work/work31-2.jpg", "/work/work31-3.jpg", "/work/work31-4.jpg", "/work/work31-5.jpg"],
@@ -99,41 +143,24 @@
       "height": 9
     },
     {
-      "title": "biscUiT",
-      "cover": "work6.jpg",
-      "url": ["/work/work6.jpg", "/work/work6-2.jpg", "/work/work6-3.jpg", "/work/work6-4.jpg", "/work/work6-5.jpg", "/work/work6-6.jpg", "/work/work6-7.jpg"],
-      "period": "2015-2018",
-      "category": ["Free Paper"],
-      "cat_search": ["Printing"],
-      "description": "所属していたサークルでは東大女子向けのフリーペーパーを年間２、３冊発行しており、企画から営業、取材、記事執筆、デザインまで全て東大生が行っている。デザイン統括という役職を務め、6-10 人ほどいるデザイン担当へのページの割り振りと最終チェックを任されていた。",
-      "link": ["http://utbiscuit.xxxx.jp/"],
-      "link_txt": ["biscUiT Webサイト"],
-      "display": true,
-      "width": 24,
-      "height": 18
-    },
-    {
-      "title": "成年年齢引下げ告知ポスター",
-      "cover": "work29.jpg",
-      "url": [ "/work/work29.jpg" ],
-      "period": "2020",
-      "category": ["Poster"],
-      "cat_search": ["Printing"],
-      "description": "法務省主催のコンペ応募作品。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "魅る文字",
-      "cover": "work7.jpg",
-      "url": ["/work/work7.jpg", "/work/work7-2.jpg", "/work/work7-3.jpg", "/work/work7-4.jpg"],
-      "period": "2019",
-      "category": ["Free Paper"],
-      "cat_search": ["Printing"],
-      "description": "モリサワの主催する「Moji no ZINE」というワークショップにて、学生メンバー５人でA3で1枚サイズのZINEを作成した。内容はデザイナーの方にインタビューしてフォントに対する想いなどを伺うというもの。主な担当は編集であり，デザインは別のメンバーが行なっている。",
-      "link": ["https://www.cinra.net/report/201909-morisawa_kngsh"],
-      "link_txt": ["CINRA.NETの記事"],
+      "title": "AMPM",
+      "cover": "work12.jpg",
+      "url": [
+        "/work/work12.jpg",
+        "/work/work12-2.gif",
+        "/work/work12-3.gif",
+        "/work/work12-4.gif",
+        "/work/work12-5.gif",
+        "/work/work12-6.gif"
+      ],
+      "period": "2018",
+      "category": [
+        "Animation"
+      ],
+      "cat_search": [
+        "Other"
+      ],
+      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
       "display": true,
       "width": 12,
       "height": 9
@@ -151,30 +178,58 @@
       "height": 9
     },
     {
-      "title": "名刺",
-      "cover": "work28.jpg",
-      "url": ["/work/work28.jpg", "/work/work28-2.jpg"],
+      "title": "苗村研究室 Open House 2020",
+      "cover": "work27.jpg",
+      "url": [
+        "/work/work27.jpg"
+      ],
       "period": "2019",
-      "category": ["Printing"],
-      "cat_search": ["Printing"],
-      "description": "自分の名刺を作りました。",
+      "category": [
+        "Web"
+      ],
+      "cat_search": [
+        "Web/UI"
+      ],
+      "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
+      "link": [
+        "https://nae-lab.org/open/2020/index.php"
+      ],
+      "link_txt": [
+        "苗村研究室 Open House 2020"
+      ],
       "display": true,
       "width": 12,
       "height": 9
     },
     {
-      "title": "苗村研究室 Open House 2020",
-      "cover": "work27.jpg",
-      "url": ["/work/work27.jpg"],
-      "period": "2019",
-      "category": ["Web"],
-      "cat_search": ["Web/UI"],
-      "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
-      "link": ["https://nae-lab.org/open/2020/index.php"],
-      "link_txt": ["苗村研究室 Open House 2020"],
+      "title": "biscUiT",
+      "cover": "work6.jpg",
+      "url": [
+        "/work/work6.jpg",
+        "/work/work6-2.jpg",
+        "/work/work6-3.jpg",
+        "/work/work6-4.jpg",
+        "/work/work6-5.jpg",
+        "/work/work6-6.jpg",
+        "/work/work6-7.jpg"
+      ],
+      "period": "2015-2018",
+      "category": [
+        "Free Paper"
+      ],
+      "cat_search": [
+        "Printing"
+      ],
+      "description": "所属していたサークルでは東大女子向けのフリーペーパーを年間２、３冊発行しており、企画から営業、取材、記事執筆、デザインまで全て東大生が行っている。デザイン統括という役職を務め、6-10 人ほどいるデザイン担当へのページの割り振りと最終チェックを任されていた。",
+      "link": [
+        "http://utbiscuit.xxxx.jp/"
+      ],
+      "link_txt": [
+        "biscUiT Webサイト"
+      ],
       "display": true,
-      "width": 12,
-      "height": 9
+      "width": 24,
+      "height": 18
     },
     {
       "title": "unlock",
@@ -217,13 +272,59 @@
       "height": 9
     },
     {
-      "title": "AMPM",
-      "cover": "work12.jpg",
-      "url": ["/work/work12.jpg", "/work/work12-2.gif", "/work/work12-3.gif", "/work/work12-4.gif", "/work/work12-5.gif", "/work/work12-6.gif"],
-      "period": "2018",
-      "category": ["Animation"],
-      "cat_search": ["Other"],
-      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
+      "title": "魅る文字",
+      "cover": "work7.jpg",
+      "url": [
+        "/work/work7.jpg",
+        "/work/work7-2.jpg",
+        "/work/work7-3.jpg",
+        "/work/work7-4.jpg"
+      ],
+      "period": "2019",
+      "category": [
+        "Free Paper"
+      ],
+      "cat_search": [
+        "Printing"
+      ],
+      "description": "モリサワの主催する「Moji no ZINE」というワークショップにて、学生メンバー５人でA3で1枚サイズのZINEを作成した。内容はデザイナーの方にインタビューしてフォントに対する想いなどを伺うというもの。主な担当は編集であり，デザインは別のメンバーが行なっている。",
+      "link": [
+        "https://www.cinra.net/report/201909-morisawa_kngsh"
+      ],
+      "link_txt": [
+        "CINRA.NETの記事"
+      ],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "title": "名刺",
+      "cover": "work28.jpg",
+      "url": [
+        "/work/work28.jpg",
+        "/work/work28-2.jpg"
+      ],
+      "period": "2019",
+      "category": [
+        "Printing"
+      ],
+      "cat_search": [
+        "Printing"
+      ],
+      "description": "自分の名刺を作りました。",
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "title": "成年年齢引下げ告知ポスター",
+      "cover": "work29.jpg",
+      "url": ["/work/work29.jpg"],
+      "period": "2020",
+      "category": ["Poster"],
+      "cat_search": ["Printing"],
+      "description": "法務省主催のコンペ応募作品。",
       "display": true,
       "width": 12,
       "height": 9
@@ -293,18 +394,6 @@
       "height": 16
     },
     {
-      "title": "sys-seeing",
-      "cover": "work15.jpg",
-      "url": ["/work/work15-2.png"],
-      "period": "2018",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
       "title": "Code for Univ",
       "cover": "work16.jpg",
       "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.jpg"],
@@ -350,6 +439,18 @@
       "category": ["Logo", "Card"],
       "cat_search": ["Logo", "Printing"],
       "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
+      "display": true,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "title": "sys-seeing",
+      "cover": "work15.jpg",
+      "url": ["/work/work15-2.png"],
+      "period": "2018",
+      "category": ["Logo"],
+      "cat_search": ["Logo"],
+      "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
       "display": true,
       "width": 8,
       "height": 8
@@ -417,7 +518,21 @@
       "display": true,
       "width": 8,
       "height": 8
+    },
+    {
+      "title": "Illustration",
+      "cover": "work35.png",
+      "url": ["/work/work35.png", "/work/work35-2.jpg", "/work/work35-3.jpg"],
+      "period": "2020",
+      "category": ["Illustration"],
+      "cat_search": ["Other"],
+      "description": "tumbler上にグラフィックの練習としてイラストや作字を随時投稿しています。",
+      "link": ["https://charon66.tumblr.com/"],
+      "link_txt": ["tumblr"],
+      "display": true,
+      "width": 8,
+      "height": 8
     }
   ],
-  "total": "32"
+  "total": "35"
 }
