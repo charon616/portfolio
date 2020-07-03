@@ -12,6 +12,8 @@
           img.special__link__img(src="~assets/special/book.jpg" alt="book.jpg")
         nuxt-link.special__link(to="/special/self" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
           img.special__link__img(src="~assets/special/self.jpg" alt="self.jpg")
+        nuxt-link.special__link(to="/special/color" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave")
+          img.special__link__img(src="~assets/special/color.png" alt="self.jpg")
         a.special__link(href="https://great-fan-app.herokuapp.com/" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           img.special__link__img(src="~assets/special/fan.jpg" alt="fan.jpg")
 

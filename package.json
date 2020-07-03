@@ -24,6 +24,7 @@
     "flipbook-vue": "^0.8.1",
     "lottie-web": "^5.6.10",
     "mime": "^2.4.6",
+    "node-vibrant": "^3.1.5",
     "nuxt": "^2.13.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-webfontloader": "^1.1.0",
