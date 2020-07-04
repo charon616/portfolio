@@ -30,6 +30,7 @@ import Vibrant from 'node-vibrant';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 
 export default {
+  layout: 'wide',
   components: {
     Vibrant,
     swiper, 
@@ -140,6 +141,8 @@ export default {
 }
 </script>
 <style scoped lang="stylus">
+.container
+  width 100%
 #page-wrap, .textbox, .page-title
   width 100%
   transition .6s all main-transition
