@@ -4,27 +4,26 @@
     .main-content#about
       h2.page-title ABOUT
 
-      .profile-illust
-        img(src="~assets/photo/name.png" alt="photo")
+      //- .profile-illust
+      //-   img(src="~assets/photo/name.png" alt="photo")
       
       .text-box
         h3 KIHO Karin
         h4 キホウ カリン
         p.space Designer | Engineer
-        p 1996.6.16
+        p 1996-
         p.space 東京大学大学院 学際情報学府 学際情報学専攻
-        | 先端表現情報学コース 苗村研究室所属
 
         p.space
-          span 卒業論文
-          |  「ユーザの読み順を考慮したスマートフォンでの雑誌閲覧の負荷を低減する表示手法」
+          //- span 卒業論文
+          //- |  「ユーザの読み順を考慮したスマートフォンでの雑誌閲覧の負荷を低減する表示手法」
 
         p.space
           span Design
           |  グラフィック全般。特にエディトリアル、UI。
         p
           span Programming
-          |  C++、Python、Unity、Webフロント系言語など。
+          |  C++、Python、Unity、Webフロントエンドなど。
         p
           span Research
           |  HCI、視線計測、デザインツールなど。
@@ -36,10 +35,10 @@
 
         p.space
           span.hidden Link
-        a.btn-facebook.space(aria-label="open facebook" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-          font-awesome-icon(:icon="['fab', 'facebook']")
-        a.btn-instagram.space(aria-label="open instagram" href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-          font-awesome-icon(:icon="['fab', 'instagram']")
+        //- a.btn-facebook.space(aria-label="open facebook" style="margin-right: 8px;" href="https://www.facebook.com/karinkiho" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        //-   font-awesome-icon(:icon="['fab', 'facebook']")
+        //- a.btn-instagram.space(aria-label="open instagram" href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+        //-   font-awesome-icon(:icon="['fab', 'instagram']")
         a.btn-pinterest.space(aria-label="open pinterest" href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'pinterest']")
         a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") 
