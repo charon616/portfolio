@@ -178,6 +178,7 @@ export default {
       border-radius 50%
       display block
       margin 16px
+      transition .6s all main-transition
 
 .zone
   display float

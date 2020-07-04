@@ -1,16 +1,13 @@
 <template lang="pug">
 .container
-    .main-content#work
-        h2.page-title WORK
+  .main-content#work
+    h2.page-title WORK
 
-        vue-card-stack.stack(:cards="cards" :stack-width="360" :card-width="280" :maxVisibleCards="5")
-            h1 test
-            h2 test
-            //- template.template(v-slot:card="{ card }")
-            //-     .test(style="width: 100%; height: 100%;" :style="{ background: '#ffffff' }")
-            //-         //- card(:key="`first-${index}`" :item="item" :index="index+1")
-            //-         card(:item="card")
-        
+    vue-card-stack.stack(:cards="cards" :stack-width="480" :card-width="400" :card-height="500" :maxVisibleCards="10")
+      template(v-slot:card="{ card }")
+        div.stack__content(style="width: 100%; height: 100%; background:pink;")
+          img(:src="calcUrl(card.cover)")
+          p {{ card.title }}
 </template>
 
 <script>
@@ -31,38 +28,41 @@ export default {
     mouseleave: function() {
       let stalker = document.getElementById("cursor-stalker");
       stalker.classList.remove("hov_");
+    },
+    calcUrl: function(url){
+      return require("~/assets/work/" + url)
     }
   },
   data() {
     return {
       cards: [
         {
-            title: "推しの情報を集めるwebアプリ",
-            cover: "work34.png",
-            period: "2020",
-            category: ["Web App"],
-            cat_search: ["Web/UI", "Other"]
+          title: "推しの情報を集めるwebアプリ",
+          cover: "work34.png",
+          period: "2020",
+          category: ["Web App"],
+          cat_search: ["Web/UI", "Other"]
         },
         {
-            title: "HONGO TECH GARAGE",
-            cover: "work33.png",
-            period: "2020",
-            category: [ "Web", "Logo" ],
-            cat_search: [ "Web/UI", "Logo" ]
+          title: "HONGO TECH GARAGE",
+          cover: "work33.png",
+          period: "2020",
+          category: [ "Web", "Logo" ],
+          cat_search: [ "Web/UI", "Logo" ]
         },
         {
-            title: "Todai To Texas 2020",
-            cover: "work31.jpg",
-            period: "2020",
-            category: [ "Space", "Web"],
-            cat_search: ["Web/UI", "Other"]
+          title: "Todai To Texas 2020",
+          cover: "work31.jpg",
+          period: "2020",
+          category: [ "Space", "Web"],
+          cat_search: ["Web/UI", "Other"]
         },
         {
-            title: "東京大学制作展アーカイブ",
-            cover: "work30.jpg",
-            period: "2020",
-            category: [ "Booklet"],
-            cat_search: [ "Printing" ]
+          title: "東京大学制作展アーカイブ",
+          cover: "work30.jpg",
+          period: "2020",
+          category: [ "Booklet"],
+          cat_search: [ "Printing" ]
         },
         {
             title: "東京大学制作展2019",
@@ -282,7 +282,7 @@ export default {
         //     cat_search": ["Other"],
         // }
       ]
-    };
+    }
   }
 };
 </script>
@@ -295,5 +295,11 @@ export default {
   width 100%
 
 .stack
-    margin  0 auto
+  color #fff
+  margin  0 auto
+  &__content
+    border-radius 16px
+    padding 8px
+  img
+    width 100%
 </style>
