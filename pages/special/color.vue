@@ -41,15 +41,7 @@ export default {
       clr: [],
       rgbs: [],
       txtclr: "#000",
-      urls: ["/work/work1.jpg", "/work/work2.jpg", "/work/work3.jpg", "/work/work4.jpg",
-            "/work/work5.jpg", "/work/work6.jpg", "/work/work7.jpg", "/work/work8.jpg",
-            "/work/work9.jpg", "/work/work10.jpg", "/work/work11.jpg", "/work/work12.jpg",
-            "/work/work14-2.jpg", "/work/work15-2.png", "/work/work16-2.png", "/work/work17-2.png",
-            "/work/work18-2.png", "/work/work19-2.png", "/work/work20-2.png", "/work/work21-2.png",
-            "/work/work22-2.png", "/work/work23.png", "/work/work24.jpg", "/work/work25.jpg",
-            "/work/work26.png", "/work/work27.jpg", "/work/work28.jpg", "/work/work29.jpg",
-            "/work/work30.jpg", "/work/work31.jpg", "/work/work32.png", "/work/work33.png",
-            "/work/work34.png"],
+      urls: ['https://i.scdn.co/image/ab67616d0000b273c19871d095eb70e94b770d2b', 'https://i.scdn.co/image/ab67616d0000b273c5716278abba6a103ad13aa7', 'https://i.scdn.co/image/ab67616d0000b2737200f2d6b0d0e545d579777a', 'https://i.scdn.co/image/ab67616d0000b273179c168e6a41c4cccf5ff729', 'https://i.scdn.co/image/ab67616d0000b273bd04b16b18f85668ad6521dd', 'https://i.scdn.co/image/ab67616d0000b273f243b66f335b6adceeb8086e', 'https://i.scdn.co/image/ab67616d0000b273c9eb0c8ad063f940bc8e0c59', 'https://i.scdn.co/image/ab67616d0000b273e132c63ecba4b2e7c8c20969', 'https://i.scdn.co/image/ab67616d0000b273ecaa139c5cc7c0bf0be30860', 'https://i.scdn.co/image/ab67616d0000b2730823e0e9d74a78c3f889fa20', 'https://i.scdn.co/image/ab67616d0000b273dd4a6d26627cc697b3f4d8be', 'https://i.scdn.co/image/ab67616d0000b273294229a510d84bea17c67686', 'https://i.scdn.co/image/ab67616d0000b2732c1c2ca69022b02804ee5d96', 'https://i.scdn.co/image/ab67616d0000b273bcaa7b836c692ec994f43831', 'https://i.scdn.co/image/ab67616d0000b2734f37320db40c0fb755d8c71e', 'https://i.scdn.co/image/ab67616d0000b2733481ec62e6bca6a6708e6934', 'https://i.scdn.co/image/ab67616d0000b273217c565f5a8aecb74b5035f9', 'https://i.scdn.co/image/ab67616d0000b273b8785210c437d5a58506827b', 'https://i.scdn.co/image/ab67616d0000b273459f42e97894d7a3031be3a9', 'https://i.scdn.co/image/ab67616d0000b2736a4b681716dacfbc73fe5cd7'],
       swiperOption: {
         loop: true,
         slidesPerView: 1,
@@ -74,19 +66,30 @@ export default {
       for (let i=0; i < val.length; i++){
         let rgb = 'rgb(' + val[i][0] + ',' + val[i][1] + ',' + val[i][2] + ')'
         arr.push(rgb)
-        this.rgbs = arr
       }
+      this.rgbs = arr
 
       const limit_min = 2.0
+      let txtclr = null
 
       for (let j=1; j < val.length; j++){
         let cont = this.calcContrast(val[0], val[j])
         if(cont >= limit_min){
-          this.txtclr = this.rgbs[j]
+          txtclr = this.rgbs[j]
+          this.txtclr = txtclr
           break
         }
-        this.txtclr = "#fff"
       }
+
+      // 代表色を全て探索してコントラストが閾値以上になる色がなければ白か黒にする
+      if(txtclr == null){
+        if(this.calcContrast(val[0], [255, 255, 255]) >= limit_min){
+          this.txtclr = "#fff"
+        }else{
+          this.txtclr = "#000"
+        }
+      }
+
     }
   },
   methods: {
@@ -135,7 +138,7 @@ export default {
       return (brightest + 0.05) / (darkest + 0.05)
     }
   },
-  mounted(){
+  created(){
     this.getcolor(this.urls[0])
   }
 }
@@ -163,6 +166,7 @@ export default {
   justify-content center
   -webkit-align-items center
   align-items center
+  margin-bottom 80px
   .color 
     list-style none
     display flex
@@ -171,14 +175,12 @@ export default {
     justify-content center
     -webkit-align-items center
     align-items center
-    background #fff
-    border-radius 16px
     margin 0 16px
-    padding 16px
     li
       width 40px
       height 40px 
       border-radius 50%
+      border 1px solid #fff
       display block
       margin 16px
       transition .6s all main-transition
@@ -188,7 +190,7 @@ export default {
   .textbox
     width 400px
     height 400px
-    margin 16px 0
+    margin 16px
     float left
     text-align left
 .swiper
