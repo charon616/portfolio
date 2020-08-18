@@ -23,5 +23,17 @@
     "display": true,
     "width": 8,
     "height": 8
+  },
+  {
+    "title": "Illustration",
+    "cover": "work14.jpg",
+    "url": ["/work/work14-2.jpg", "/work/work14-3.jpg", "/work/work14-4.jpg", "/work/work14-5.jpg"],
+    "period": "2018-2019",
+    "category": ["Illustration"],
+    "cat_search": ["Other"],
+    "description": "透明水彩、コピックなど。練習中。",
+    "display": true,
+    "width": 8,
+    "height": 8
   }]
 }

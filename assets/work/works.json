@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "title": "GCLSプレゼンコンペ",
+      "cover": "work36.jpg",
+      "url": ["/work/work36.jpg", "/work/work36-2.jpg"],
+      "period": "2020",
+      "category": ["Poster"],
+      "cat_search": ["Printing", "Web/UI"],
+      "description": "東京大学内のイベント、GCLSプレゼンコンペのポスターデザインおよびバナーデザインを担当した。メインイラストはAdobe Stockから使用。",
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
       "title": "推しの情報を集めるwebアプリ",
       "cover": "work34.png",
       "url": ["/work/work34.png", "/work/work34-2.jpg"],
@@ -318,18 +330,6 @@
       "height": 9
     },
     {
-      "title": "成年年齢引下げ告知ポスター",
-      "cover": "work29.jpg",
-      "url": ["/work/work29.jpg"],
-      "period": "2020",
-      "category": ["Poster"],
-      "cat_search": ["Printing"],
-      "description": "法務省主催のコンペ応募作品。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
       "title": "UmeeT",
       "cover": "work23.jpg",
       "url": ["/work/work23.png", "/work/work23-2.png", "/work/work23-3.png", "/work/work23-4.png"],
@@ -444,18 +444,6 @@
       "height": 8
     },
     {
-      "title": "sys-seeing",
-      "cover": "work15.jpg",
-      "url": ["/work/work15-2.png"],
-      "period": "2018",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "東京大学の文化祭である五月祭の企画展示「sys-seeing」のロゴを作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
       "title": "きたすばる",
       "cover": "work20.jpg",
       "url": ["/work/work20-2.png", "/work/work20-3.png"],
@@ -509,18 +497,6 @@
     },
     {
       "title": "Illustration",
-      "cover": "work14.jpg",
-      "url": ["/work/work14-2.jpg", "/work/work14-3.jpg", "/work/work14-4.jpg", "/work/work14-5.jpg"],
-      "period": "2018-2019",
-      "category": ["Illustration"],
-      "cat_search": ["Other"],
-      "description": "透明水彩、コピックなど。練習中。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "Illustration",
       "cover": "work35.png",
       "url": ["/work/work35.png", "/work/work35-2.jpg", "/work/work35-3.jpg"],
       "period": "2020",
@@ -534,5 +510,5 @@
       "height": 8
     }
   ],
-  "total": "35"
+  "total": "33"
 }
