@@ -2,6 +2,7 @@
   .container
     ._group
       .first-view#first-view
+        #p5Canvas
         //- .jello(v-for="n of 8" :key="n")
         //-   img.first-view__bg(src="/title3.svg" alt="")
         //-   img.first-view__bg(src="/title2.svg" alt="")
@@ -48,10 +49,77 @@ export default {
     card
   },
   mounted() {
+
+    // デバイスの幅を判定
+    let pc = !window.matchMedia('(max-width: 1024px)').matches
+
     const hash = this.$route.hash;
     if (hash && hash.match(/^#.+$/)) {
       this.$scrollTo(hash);
     }
+
+    const script = function (p5) {
+      var speed = 2;
+      var posX = 0;
+
+      let body, rhand, lhand, rfoot, lfoot;
+      let angle = 0.0;
+      let sign = 0.1;
+      let x = 0;
+      let y = 0;
+
+      let drawPart = (im, x, y, ang) => {
+        p5.push();
+        p5.translate(x, y);
+        p5.rotate(ang);
+        p5.image(im, 0, 0)
+        p5.pop();
+      };
+
+      p5.windowResized = _ => {
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+      }
+
+      p5.preload = _ => {
+        body = p5.loadImage('/special/body.png');
+        rhand = p5.loadImage('/special/hand-right.png');
+        lhand = p5.loadImage('/special/hand-left.png');
+        rfoot = p5.loadImage('/special/foot-right.png');
+        lfoot = p5.loadImage('/special/foot-left.png');
+      }
+      p5.setup = _ => {
+        var canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
+        canvas.parent("p5Canvas");
+        p5.imageMode(p5.CENTER);
+      }
+
+      p5.draw = _ => {
+        p5.background(238);
+
+        x = p5.lerp(x, p5.mouseX, 0.05);
+        y = p5.lerp(y, p5.mouseY, 0.05);
+
+        p5.translate(p5.width / 2, p5.height / 2);
+
+        p5.push();
+
+        if(pc){
+          p5.image(body, x / 20 - 70, y / 20 - 20);
+        }else{
+          p5.image(body, x / 20, y / 20);
+        }
+        p5.pop();
+
+        drawPart(rhand, 120 + x / 5, -100 + y / 5, angle);
+        drawPart(lhand, -140 - x / 5, 50 - y / 5, -angle);
+        drawPart(rfoot, 70 + x / 8, 130 + y / 8, angle + .5);
+        drawPart(lfoot, -70 - x / 8, 160 + y / 8, -angle);
+
+        angle += 0.001 * (p5.mouseX - p5.pmouseX)
+      }
+    }
+    const P5 = require('p5')
+    new P5(script)
   },
   watch: {
     preview: function(val) {
@@ -165,6 +233,9 @@ export default {
 
 <style scoped lang="stylus">
 
+#p5Canvas
+  text-align center
+
 .jello {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -251,6 +322,8 @@ export default {
         top 50%
         left 50%
         transform translateX(-50%) translateY(-50%)
+        opacity .5
+        border-radius radius-size
         h1
           font-size 2.4em
           letter-spacing 0.2em

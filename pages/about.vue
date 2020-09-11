@@ -143,6 +143,8 @@ export default {
 
 .container
   background-color bg-color
+  display flex
+  justify-content center
 
 .simple-link
   // display block
@@ -166,7 +168,7 @@ export default {
   margin-top 0
   margin-bottom 64px
   line-height 1.75
-
+  
 .text-box
   font-family 'Lato', 'Source Sans Pro', a-otf-gothic-bbb-pr6n, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif
