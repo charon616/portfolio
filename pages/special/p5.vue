@@ -1,9 +1,6 @@
 <template lang="pug">
 .container
   #page-wrap
-    .main-content#special
-      h2.page-title p5.js
-
     #p5Canvas
 </template>
 
@@ -29,6 +26,10 @@ export default {
                 p5.pop();
             };
 
+            p5.windowResized = _ => {
+              p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+            }
+
             p5.preload = _ => {
                 body = p5.loadImage('/special/body.png');
                 rhand = p5.loadImage('/special/hand-right.png');
@@ -37,7 +38,7 @@ export default {
                 lfoot = p5.loadImage('/special/foot-left.png');
             }
             p5.setup = _ => {
-                var canvas = p5.createCanvas(800, 500)
+                var canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
                 canvas.parent("p5Canvas");
                 p5.imageMode(p5.CENTER);
             }
@@ -71,6 +72,9 @@ export default {
 <style scoped lang="stylus">
 #page-wrap
   margin 0 auto
+
+#p5Canvas
+  text-align center
 
 .plane-txt 
   text-align center
