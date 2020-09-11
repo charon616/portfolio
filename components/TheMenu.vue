@@ -15,7 +15,7 @@
 
     <div class="sm-menu">
       <transition name="fade">
-      <button class="sm-menu__trigger" v-bind:class="{ active: isMenuActive }" v-on:click="clickMenu" aria-label="menu">
+      <button class="sm-menu__trigger" v-bind:class="{ active: isMenuActive }" v-on:click="changeMenu" aria-label="menu">
         <span></span>
         <span></span>
         <span></span>
@@ -23,10 +23,10 @@
       </transition>
       <transition name="fade">
         <div class="sm-menu__items" v-show="isMenuActive">
-          <nuxt-link class="sm-menu__items__item" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
-          <nuxt-link class="sm-menu__items__item" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
-          <nuxt-link class="sm-menu__items__item" to="/about">ABOUT</nuxt-link>
-          <nuxt-link class="sm-menu__items__item" to="/special">SPECIAL</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" @click.native="closeMenu" v-scroll-to="'#first-view'" to="/">TOP</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" @click.native="closeMenu" v-scroll-to="'#work'" to="/#work">WORK</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" @click.native="closeMenu" to="/about">ABOUT</nuxt-link>
+          <nuxt-link class="sm-menu__items__item" @click.native="closeMenu" to="/special">SPECIAL</nuxt-link>
         </div>
       </transition>
     </div>
@@ -35,6 +35,7 @@
 
 <script>
 import VueScrollTo from 'vue-scrollto';
+import { mapState, mapMutations } from 'vuex'
 
 let photos = {
   1: require('~/assets/icon/logo.png'), 
@@ -47,10 +48,16 @@ export default {
       this.scrollToHash()
     }
   },
+  computed: {
+    ...mapState([
+      'isMenuActive'
+    ]),
+    photos() { return photos }
+  },
   methods:{
-    clickMenu: function(){
-      this.$store.commit('changeMenu')
-    },
+    ...mapMutations([
+      'changeMenu', 'closeMenu'
+    ]),
     scrollToHash () {
       const hash=$nuxt.$route.hash
       this.$nextTick(() => {
@@ -65,15 +72,8 @@ export default {
       let stalker = document.getElementById('cursor-stalker');
       stalker.classList.remove('hov_');
     }
-  },
-  computed: {
-    photos() { return photos },
-    isMenuActive () {
-      return this.$store.state.isMenuActive
-    }
   }
 }
- 
 
 </script>
 <style lang="stylus" scoped>
@@ -105,7 +105,7 @@ button
 
   .menu 
     margin-top 120px
-    font-size 'calc(%s / 5)' % side-bar-width
+    font-size 20px
     font-weight bold
 
     &__item 
