@@ -63,6 +63,20 @@
     "height": 9
   },
   {
+    "title": "YAC2018",
+    "cover": "work11.jpg",
+    "url": ["/work/work11.jpg"],
+    "period": "2018",
+    "category": ["Banner"],
+    "cat_search": ["Web/UI"],
+    "description": "コンペ応募作品（採用）。",
+    "link": ["http://ynu.yokohama/yac2018/"],
+    "link_txt": ["YAC2018"],
+    "display": true,
+    "width": 12,
+    "height": 9
+  },
+  {
     "title": "名刺",
     "cover": "work28.jpg",
     "url": [
@@ -82,47 +96,85 @@
     "height": 9
   },
   {
-    "title": "YAC2018",
-    "cover": "work11.jpg",
-    "url": ["/work/work11.jpg"],
-    "period": "2018",
-    "category": ["Banner"],
-    "cat_search": ["Web/UI"],
-    "description": "コンペ応募作品（採用）。",
-    "link": ["http://ynu.yokohama/yac2018/"],
-    "link_txt": ["YAC2018"],
-    "display": true,
-    "width": 12,
-    "height": 9
-  },
-  {
-    "title": "苗村研究室 Open House 2020",
-    "cover": "work27.jpg",
-    "url": [
-      "/work/work27.jpg"
-    ],
-    "period": "2019",
-    "category": [
-      "Web"
-    ],
-    "cat_search": [
-      "Web/UI"
-    ],
-    "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
-    "link": [
-      "https://nae-lab.org/open/2020/index.php"
-    ],
-    "link_txt": [
-      "苗村研究室 Open House 2020"
-    ],
-    "display": true,
-    "width": 12,
-    "height": 9
-  },
-  {
     "title": "東武東上線沿線サミット",
     "cover": "work21.jpg",
     "url": ["/work/work21-2.png", "/work/work21-3.png"],
+    "period": "2019",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "コンペ応募作品。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "Code for Univ",
+    "cover": "work16.jpg",
+    "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.jpg"],
+    "period": "2019",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "Living Roots",
+    "cover": "work19.png",
+    "url": ["/work/work19-2.png", "/work/work19-3.png", "/work/work19-4.jpg"],
+    "period": "2019",
+    "category": ["Logo", "Card"],
+    "cat_search": ["Logo", "Printing"],
+    "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "Illustration",
+    "cover": "work35.png",
+    "url": ["/work/work35.png", "/work/work35-2.jpg", "/work/work35-3.jpg"],
+    "period": "2020",
+    "category": ["Illustration"],
+    "cat_search": ["Other"],
+    "description": "tumbler上にグラフィックの練習としてイラストや作字を随時投稿しています。",
+    "link": ["https://charon66.tumblr.com/"],
+    "link_txt": ["tumblr"],
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "UmeeT",
+    "cover": "work23.jpg",
+    "url": ["/work/work23.png", "/work/work23-2.png", "/work/work23-3.png", "/work/work23-4.png"],
+    "period": "2017",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "東大生が中心となって運営するWEB メディア、「UmeeT」のロゴのリデザインおよび名刺作成を友人の依頼で行った。最終的にはファビコンやノベルティなどに使えるシンボルマークも作成した。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "MindHack",
+    "cover": "work17.png",
+    "url": ["/work/work17-2.png", "/work/work17-3.png"],
+    "period": "2019",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "人生を心理の面からハックするweb メディア、「MindHack」のロゴおよびファビコンを友人の依頼で作成した。",
+    "link": ["https://mindhack-media.jp/"],
+    "link_txt": ["MindHack Webサイト"],
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "きたすばる",
+    "cover": "work20.jpg",
+    "url": ["/work/work20-2.png", "/work/work20-3.png"],
     "period": "2019",
     "category": ["Logo"],
     "cat_search": ["Logo"],

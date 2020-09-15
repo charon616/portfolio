@@ -13,6 +13,34 @@
       "height": 9
     },
     {
+      "title": "東京大学制作展2019",
+      "cover": "work1.jpg",
+      "url": ["/work/work1.jpg", "/work/work1-2.jpg", "/work/work1-3.jpg", "/work/work1-4.jpg"],
+      "period": "2019",
+      "category": ["Poster", "Pamphlet"],
+      "cat_search": ["Printing"],
+      "description": "東京大学制作展2019のメインビジュアル、宣伝用ポスター、ポストカード、当日案内用パンフレットを作成した。全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
+      "link": ["http://www.iiiexhibition.com/"],
+      "link_txt": ["東京大学制作展 2019"],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "title": "東京大学制作展アーカイブ",
+      "cover": "work30.jpg",
+      "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
+      "period": "2020",
+      "category": [ "Booklet"],
+      "cat_search": [ "Printing" ],
+      "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
+      "link": [ "http://www.iiiexhibition.com/" ],
+      "link_txt": [ "東京大学制作展 2019" ],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
       "title": "推しの情報を集めるwebアプリ",
       "cover": "work34.png",
       "url": ["/work/work34.png", "/work/work34-2.jpg"],
@@ -25,6 +53,20 @@
       "display": true,
       "width": 12,
       "height": 9
+    },
+    {
+      "title": "Todai To Texas 2020",
+      "cover": "work31.jpg",
+      "url": ["/work/work31.jpg", "/work/work31-2.jpg", "/work/work31-3.jpg", "/work/work31-4.jpg", "/work/work31-5.jpg"],
+      "period": "2020",
+      "category": [ "Space", "Web"],
+      "cat_search": ["Web/UI", "Other"],
+      "description": "SXSWに東大から出展する6チームのブースデザインをもう1人の共同制作者と担当した。残念ながらコロナウイルスの影響でSXSWの開催が中止になってしまったが、Todai To Texas 2020のアーカイブとして特設サイトを制作・公開。ステッカーも同時に作成した。",
+      "link": ["https://2020.todaitotexas.com/", "http://todaitotexas.com/"],
+      "link_txt": ["Todai To Texas2020特設サイト", "Todai To Texas"],
+      "display": true,
+      "width": 24,
+      "height": 18
     },
     {
       "title": "HONGO TECH GARAGE",
@@ -57,62 +99,6 @@
       "height": 9
     },
     {
-      "title": "Todai To Texas 2020",
-      "cover": "work31.jpg",
-      "url": ["/work/work31.jpg", "/work/work31-2.jpg", "/work/work31-3.jpg", "/work/work31-4.jpg", "/work/work31-5.jpg"],
-      "period": "2020",
-      "category": [ "Space", "Web"],
-      "cat_search": ["Web/UI", "Other"],
-      "description": "SXSWに東大から出展する6チームのブースデザインをもう1人の共同制作者と担当した。残念ながらコロナウイルスの影響でSXSWの開催が中止になってしまったが、Todai To Texas 2020のアーカイブとして特設サイトを制作・公開。ステッカーも同時に作成した。",
-      "link": ["https://2020.todaitotexas.com/", "http://todaitotexas.com/"],
-      "link_txt": ["Todai To Texas2020特設サイト", "Todai To Texas"],
-      "display": true,
-      "width": 24,
-      "height": 18
-    },
-    {
-      "title": "東京大学制作展アーカイブ",
-      "cover": "work30.jpg",
-      "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
-      "period": "2020",
-      "category": [ "Booklet"],
-      "cat_search": [ "Printing" ],
-      "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
-      "link": [ "http://www.iiiexhibition.com/" ],
-      "link_txt": [ "東京大学制作展 2019" ],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "東京大学制作展2019",
-      "cover": "work1.jpg",
-      "url": ["/work/work1.jpg", "/work/work1-2.jpg", "/work/work1-3.jpg", "/work/work1-4.jpg"],
-      "period": "2019",
-      "category": ["Poster", "Pamphlet"],
-      "cat_search": ["Printing"],
-      "description": "東京大学制作展2019のメインビジュアル、宣伝用ポスター、ポストカード、当日案内用パンフレットを作成した。全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
-      "link": ["http://www.iiiexhibition.com/"],
-      "link_txt": ["東京大学制作展 2019"],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "AR-ZINE",
-      "cover": "work2.jpg",
-      "url": ["/work/work2.jpg", "/work/work2-2.jpg", "/work/work1-3.jpg", "/work/work2-3.jpg",  "/work/work2-4.jpg"],
-      "period": "2019",
-      "category": ["AR App"],
-      "cat_search": ["Web/UI"],
-      "description": "東京大学制作展2019にて，当日に来場者に配布するパンフレットにARを用いて追加情報を表示するWebアプリケーションを作成した。A-FrameというWeb VRフレームワーク，8th WallというWeb ARフレームワークを用いている。",
-      "link": ["https://youtu.be/GYU697rQm2o", "https://cover-animation2.glitch.me/"],
-      "link_txt": ["YouTube", "Glitch"],
-      "display": true,
-      "width": 24,
-      "height": 18
-    },
-    {
       "title": "東京大学制作展EXTRA 2019",
       "cover": "work3.jpg",
       "url": ["/work/work3.jpg", "/work/work3-2.jpg", "/work/work3-3.jpg", "/work/work3-4.jpg"],
@@ -141,6 +127,29 @@
       "height": 9
     },
     {
+      "title": "AMPM",
+      "cover": "work12.jpg",
+      "url": [
+        "/work/work12.jpg",
+        "/work/work12-2.gif",
+        "/work/work12-3.gif",
+        "/work/work12-4.gif",
+        "/work/work12-5.gif",
+        "/work/work12-6.gif"
+      ],
+      "period": "2018",
+      "category": [
+        "Animation"
+      ],
+      "cat_search": [
+        "Other"
+      ],
+      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
       "title": "東京大学制作展2017",
       "cover": "work5.jpg",
       "url": ["/work/work5.jpg", "/work/work5-2.jpg"],
@@ -150,6 +159,30 @@
       "description": "東京大学制作展EXTRA 2017 のweb デザイン、第19 回東京大学制作展のweb デザイン（SP 版のみ）に関して、ワイヤーフレームの設計からデザインのラフまでを行った。微調整やコーディングに関しては共同制作者が行っている。",
       "link": ["http://iiiexhibition.com/log/iiiEx2017/"],
       "link_txt": ["東京大学制作展EXTRA 2017"],
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
+      "title": "苗村研究室 Open House 2020",
+      "cover": "work27.jpg",
+      "url": [
+        "/work/work27.jpg"
+      ],
+      "period": "2019",
+      "category": [
+        "Web"
+      ],
+      "cat_search": [
+        "Web/UI"
+      ],
+      "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
+      "link": [
+        "https://nae-lab.org/open/2020/index.php"
+      ],
+      "link_txt": [
+        "苗村研究室 Open House 2020"
+      ],
       "display": true,
       "width": 12,
       "height": 9
@@ -182,60 +215,25 @@
       ],
       "display": true,
       "width": 24,
+      "height": 9
+    },
+    {
+      "title": "AR-ZINE",
+      "cover": "work2-tate.jpg",
+      "url": ["/work/work2.jpg", "/work/work2-2.jpg", "/work/work1-3.jpg", "/work/work2-3.jpg",  "/work/work2-4.jpg"],
+      "period": "2019",
+      "category": ["AR App"],
+      "cat_search": ["Web/UI"],
+      "description": "東京大学制作展2019にて，当日に来場者に配布するパンフレットにARを用いて追加情報を表示するWebアプリケーションを作成した。A-FrameというWeb VRフレームワーク，8th WallというWeb ARフレームワークを用いている。",
+      "link": ["https://youtu.be/GYU697rQm2o", "https://cover-animation2.glitch.me/"],
+      "link_txt": ["YouTube", "Glitch"],
+      "display": true,
+      "width": 12,
       "height": 18
     },
     {
-      "title": "AMPM",
-      "cover": "work12.jpg",
-      "url": [
-        "/work/work12.jpg",
-        "/work/work12-2.gif",
-        "/work/work12-3.gif",
-        "/work/work12-4.gif",
-        "/work/work12-5.gif",
-        "/work/work12-6.gif"
-      ],
-      "period": "2018",
-      "category": [
-        "Animation"
-      ],
-      "cat_search": [
-        "Other"
-      ],
-      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "unlock",
-      "cover": "work9.jpg",
-      "url": ["/work/work9.jpg", "/work/work9-2.png", "/work/work9-3.jpg", "/work/work9-4.png"],
-      "period": "2019",
-      "category": ["UI"],   
-      "cat_search": ["Web/UI"],
-      "description": "DeNAの夏のインターンのUIデザイナーコースにて、学生３人メンター2人のチームで３日間で作成したアプリ「unlock」。お題は「これからの時代に必要なプロのデザイナーを増やすためのサービス」。美大や専門学校出身でない一般の大学生や既卒で他の職に就いている人がデザイナーとして就職するのが困難であるという状況に注目し，実践的なデザイン課題を通して実力をつけ，企業のインターンを斡旋するまでのアプリを提案した。ビジュアル面で主に担当したのはロゴ作成とプレゼン資料作成。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "yumemo",
-      "cover": "work10.jpg",
-      "url": ["/work/work10.jpg", "/work/work10-2.jpg", "/work/work10-3.jpg", "/work/work10-4.jpg", "/work/work10-5.jpg"],
-      "period": "2018",
-      "category": ["UI"],
-      "cat_search": ["Web/UI"],
-      "description": "スポーツ系の部活やサークルに取り組む選手が日々の練習記録をメモするための架空アプリのUI デザイン。株式会社サイバーエージェントのUI デザインインターンにて作成し、構想から提案までを５日間で行った。課題は「メモをするアプリのUI」。",
-      "link": ["https://xd.adobe.com/view/09a39315-0b9b-47e8-4648-5abc373999a9-7f92/"],
-      "link_txt": ["XDプロトタイプ"],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
       "title": "魅る文字",
-      "cover": "work7.jpg",
+      "cover": "work7-tate.jpg",
       "url": [
         "/work/work7.jpg",
         "/work/work7-2.jpg",
@@ -258,16 +256,42 @@
       ],
       "display": true,
       "width": 12,
-      "height": 9
+      "height": 18
     },
     {
-      "title": "UmeeT",
-      "cover": "work23.jpg",
-      "url": ["/work/work23.png", "/work/work23-2.png", "/work/work23-3.png", "/work/work23-4.png"],
-      "period": "2017",
+      "title": "unlock",
+      "cover": "work9-tate.jpg",
+      "url": ["/work/work9.jpg", "/work/work9-2.png", "/work/work9-3.jpg", "/work/work9-4.png"],
+      "period": "2019",
+      "category": ["UI"],   
+      "cat_search": ["Web/UI"],
+      "description": "DeNAの夏のインターンのUIデザイナーコースにて、学生３人メンター2人のチームで３日間で作成したアプリ「unlock」。お題は「これからの時代に必要なプロのデザイナーを増やすためのサービス」。美大や専門学校出身でない一般の大学生や既卒で他の職に就いている人がデザイナーとして就職するのが困難であるという状況に注目し，実践的なデザイン課題を通して実力をつけ，企業のインターンを斡旋するまでのアプリを提案した。ビジュアル面で主に担当したのはロゴ作成とプレゼン資料作成。",
+      "display": true,
+      "width": 12,
+      "height": 18
+    },
+    {
+      "title": "yumemo",
+      "cover": "work10-tate.jpg",
+      "url": ["/work/work10.jpg", "/work/work10-2.jpg", "/work/work10-3.jpg", "/work/work10-4.jpg", "/work/work10-5.jpg"],
+      "period": "2018",
+      "category": ["UI"],
+      "cat_search": ["Web/UI"],
+      "description": "スポーツ系の部活やサークルに取り組む選手が日々の練習記録をメモするための架空アプリのUI デザイン。株式会社サイバーエージェントのUI デザインインターンにて作成し、構想から提案までを５日間で行った。課題は「メモをするアプリのUI」。",
+      "link": ["https://xd.adobe.com/view/09a39315-0b9b-47e8-4648-5abc373999a9-7f92/"],
+      "link_txt": ["XDプロトタイプ"],
+      "display": true,
+      "width": 12,
+      "height": 18
+    },
+    {
+      "title": "ROBOXER",
+      "cover": "work25.jpg",
+      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
+      "period": "2019",
       "category": ["Logo"],
       "cat_search": ["Logo"],
-      "description": "東大生が中心となって運営するWEB メディア、「UmeeT」のロゴのリデザインおよび名刺作成を友人の依頼で行った。最終的にはファビコンやノベルティなどに使えるシンボルマークも作成した。",
+      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
       "display": true,
       "width": 8,
       "height": 8
@@ -285,18 +309,6 @@
       "display": true,
       "width": 16,
       "height": 16
-    },
-    {
-      "title": "ROBOXER",
-      "cover": "work25.jpg",
-      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
     },
     {
       "title": "YANEKARA",
@@ -325,32 +337,6 @@
       "height": 16
     },
     {
-      "title": "Code for Univ",
-      "cover": "work16.jpg",
-      "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.jpg"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "MindHack",
-      "cover": "work17.png",
-      "url": ["/work/work17-2.png", "/work/work17-3.png"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "人生を心理の面からハックするweb メディア、「MindHack」のロゴおよびファビコンを友人の依頼で作成した。",
-      "link": ["https://mindhack-media.jp/"],
-      "link_txt": ["MindHack Webサイト"],
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
       "title": "Rainer",
       "cover": "work18.png",
       "url": ["/work/work18-2.png", "/work/work18-3.png"],
@@ -358,30 +344,6 @@
       "category": ["Logo"],
       "cat_search": ["Logo"],
       "description": "女性向けレインウェアブランド、「Rainer」のロゴを友人の依頼で作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "Living Roots",
-      "cover": "work19.png",
-      "url": ["/work/work19-2.png", "/work/work19-3.png", "/work/work19-4.jpg"],
-      "period": "2019",
-      "category": ["Logo", "Card"],
-      "cat_search": ["Logo", "Printing"],
-      "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "きたすばる",
-      "cover": "work20.jpg",
-      "url": ["/work/work20-2.png", "/work/work20-3.png"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "コンペ応募作品。",
       "display": true,
       "width": 8,
       "height": 8
@@ -399,21 +361,7 @@
       "display": true,
       "width": 8,
       "height": 8
-    },
-    {
-      "title": "Illustration",
-      "cover": "work35.png",
-      "url": ["/work/work35.png", "/work/work35-2.jpg", "/work/work35-3.jpg"],
-      "period": "2020",
-      "category": ["Illustration"],
-      "cat_search": ["Other"],
-      "description": "tumbler上にグラフィックの練習としてイラストや作字を随時投稿しています。",
-      "link": ["https://charon66.tumblr.com/"],
-      "link_txt": ["tumblr"],
-      "display": true,
-      "width": 8,
-      "height": 8
     }
   ],
-  "total": "27"
+  "total": "22"
 }

@@ -169,6 +169,10 @@ export default {
   +tb()
     main-content-width = 100vw;
     width "calc(%s / 2)" % main-content-width
+    height "calc(%s / 8 * 3)" % main-content-width
+    &__img
+      width "calc(%s / 2)" % main-content-width
+      height "calc(%s / 8 * 3)" % main-content-width
     &__caption
       opacity 1
       left 0
@@ -179,6 +183,7 @@ export default {
         transform translateX(0)
   +sp()
     width 100%
+    height auto
     border-radius 0
     a
       justify-content center
@@ -189,6 +194,7 @@ export default {
       padding 0
       margin 8px
     &__img
+      width 100%
       height auto
       border-radius 6px
     &__caption
