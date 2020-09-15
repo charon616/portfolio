@@ -2,6 +2,15 @@
   .container
     ._group
       .first-view#first-view
+        .text
+          .text__content
+            a.btn-twitter.space(aria-label="open twitter" href="https://twitter.com/rin31627234" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+              font-awesome-icon(:icon="['fab', 'twitter']")
+              span  ← デザイン関連のつぶやき
+            br
+            a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+              font-awesome-icon(:icon="['fab', 'tumblr']") 
+              span  ← 日々の創作
         #p5Canvas
         //- .jello(v-for="n of 8" :key="n")
         //-   img.first-view__bg(src="/title3.svg" alt="")
@@ -302,6 +311,26 @@ export default {
       color rgb(237, 168, 179)
       object-fit cover
       overflow hidden
+      .text
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100vh
+        margin 0
+        padding 32px 
+        color sub-color
+        display flex
+        align-items flex-end
+        &__content 
+          position relative
+          left 0
+          bottom 40px
+          a
+            font-size 1.2rem
+            background white
+            span 
+              font-size 1rem
       &__img
         position absolute
         width 400px
@@ -366,6 +395,8 @@ export default {
       +tb()
         margin-left 0
         width 100%
+        .text 
+          display none
       +sp()
         img
           width 100%
@@ -519,4 +550,9 @@ label, input[type='checkbox']
       color sub-color
       font-size 6vw
 
+.btn-twitter
+  btn-sns(#00acee)
+
+.btn-tumbler
+  btn-sns(#35465C)
 </style>

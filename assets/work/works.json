@@ -155,65 +155,6 @@
       "height": 9
     },
     {
-      "title": "AMPM",
-      "cover": "work12.jpg",
-      "url": [
-        "/work/work12.jpg",
-        "/work/work12-2.gif",
-        "/work/work12-3.gif",
-        "/work/work12-4.gif",
-        "/work/work12-5.gif",
-        "/work/work12-6.gif"
-      ],
-      "period": "2018",
-      "category": [
-        "Animation"
-      ],
-      "cat_search": [
-        "Other"
-      ],
-      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "Web Portfolio",
-      "cover": "work8.jpg",
-      "url": ["/work/work8.jpg"],
-      "period": "2019",
-      "category": ["Web"],
-      "cat_search": ["Web/UI"],
-      "description": "大学・大学院在学中に関わった作品等をまとめるためにポートフォリオサイトを作成した（このサイト）。Nuxt.jsというフレームワーク（Vue.js）を使用し，デザインからコーディングまで一貫して行なっている。PC，タブレット，スマホそれぞれでレイアウトを調整して見やすくなるようUIを工夫している。構成はNetlify（ホスティング）+Nuxt.js（Webアプリフレームワーク）+Pug（HTMLテンプレートエンジン）+stylus（CSSプリプロセッサ）など。",
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "苗村研究室 Open House 2020",
-      "cover": "work27.jpg",
-      "url": [
-        "/work/work27.jpg"
-      ],
-      "period": "2019",
-      "category": [
-        "Web"
-      ],
-      "cat_search": [
-        "Web/UI"
-      ],
-      "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
-      "link": [
-        "https://nae-lab.org/open/2020/index.php"
-      ],
-      "link_txt": [
-        "苗村研究室 Open House 2020"
-      ],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
       "title": "biscUiT",
       "cover": "work6.jpg",
       "url": [
@@ -244,6 +185,29 @@
       "height": 18
     },
     {
+      "title": "AMPM",
+      "cover": "work12.jpg",
+      "url": [
+        "/work/work12.jpg",
+        "/work/work12-2.gif",
+        "/work/work12-3.gif",
+        "/work/work12-4.gif",
+        "/work/work12-5.gif",
+        "/work/work12-6.gif"
+      ],
+      "period": "2018",
+      "category": [
+        "Animation"
+      ],
+      "cat_search": [
+        "Other"
+      ],
+      "description": "東京大学五月祭の工学部システム創成学科PSI コース学術展示にて展示。小惑星探査とは何か、小惑星探査になぜシステム創成学科が関わっているのかを説明するアニメーション。内容と絵コンテ・ナレーション以外の全てのイラスト・動画制作を担当している。時間は4 分半。ページ上の動画（GIF）はフレームレートを下げたもの。",
+      "display": true,
+      "width": 12,
+      "height": 9
+    },
+    {
       "title": "unlock",
       "cover": "work9.jpg",
       "url": ["/work/work9.jpg", "/work/work9-2.png", "/work/work9-3.jpg", "/work/work9-4.png"],
@@ -265,20 +229,6 @@
       "description": "スポーツ系の部活やサークルに取り組む選手が日々の練習記録をメモするための架空アプリのUI デザイン。株式会社サイバーエージェントのUI デザインインターンにて作成し、構想から提案までを５日間で行った。課題は「メモをするアプリのUI」。",
       "link": ["https://xd.adobe.com/view/09a39315-0b9b-47e8-4648-5abc373999a9-7f92/"],
       "link_txt": ["XDプロトタイプ"],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "YAC2018",
-      "cover": "work11.jpg",
-      "url": ["/work/work11.jpg"],
-      "period": "2018",
-      "category": ["Banner"],
-      "cat_search": ["Web/UI"],
-      "description": "コンペ応募作品（採用）。",
-      "link": ["http://ynu.yokohama/yac2018/"],
-      "link_txt": ["YAC2018"],
       "display": true,
       "width": 12,
       "height": 9
@@ -306,25 +256,6 @@
       "link_txt": [
         "CINRA.NETの記事"
       ],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "名刺",
-      "cover": "work28.jpg",
-      "url": [
-        "/work/work28.jpg",
-        "/work/work28-2.jpg"
-      ],
-      "period": "2019",
-      "category": [
-        "Printing"
-      ],
-      "cat_search": [
-        "Printing"
-      ],
-      "description": "自分の名刺を作りました。",
       "display": true,
       "width": 12,
       "height": 9
@@ -456,18 +387,6 @@
       "height": 8
     },
     {
-      "title": "東武東上線沿線サミット",
-      "cover": "work21.jpg",
-      "url": ["/work/work21-2.png", "/work/work21-3.png"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "コンペ応募作品。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
       "title": "周南工場夜景",
       "cover": "work22.jpg",
       "url": ["/work/work22-2.png", "/work/work22-3.png"],
@@ -477,20 +396,6 @@
       "description": "コンペ応募作品。134作品の応募のうち最終候補5案に残る。",
       "link": ["https://www.city.shunan.lg.jp/site/kanko/45167.html"],
       "link_txt": ["コンペ結果 Webサイト"],
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "GIF",
-      "cover": "work13.jpg",
-      "url": ["/work/work13.gif", "/work/work13-2.gif", "/work/work13-3.gif", "/work/work13-4.gif", "/work/work13-5.gif", "/work/work13-6.gif", "/work/work13-7.gif", "/work/work13-8.gif"],
-      "period": "2018",
-      "category": ["GIF Animation"],
-      "cat_search": ["Other"],
-      "description": "2018年の11月に動画制作を勉強しようと思い立ち、「1日１個GIF作成」を目標に20個ほどのGIFアニメを作成した。実験的に手書きやデジタル作画、3DCGなど色々な手法を試している。",
-      "link": ["https://gifmagazine.net/users/71554/profile?locale=ja"],
-      "link_txt": ["GIF MAGAZINE"],
       "display": true,
       "width": 8,
       "height": 8
@@ -510,5 +415,5 @@
       "height": 8
     }
   ],
-  "total": "33"
+  "total": "27"
 }

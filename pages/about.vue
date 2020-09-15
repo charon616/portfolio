@@ -39,6 +39,8 @@
         //-   font-awesome-icon(:icon="['fab', 'facebook']")
         //- a.btn-instagram.space(aria-label="open instagram" href="https://www.instagram.com/june_giraffe/?hl=ja" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
         //-   font-awesome-icon(:icon="['fab', 'instagram']")
+        a.btn-twitter.space(aria-label="open twitter" href="https://twitter.com/rin31627234" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
+          font-awesome-icon(:icon="['fab', 'twitter']")
         a.btn-pinterest.space(aria-label="open pinterest" href="https://pin.it/z3obxmhah4juvm" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
           font-awesome-icon(:icon="['fab', 'pinterest']")
         a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") 
@@ -209,6 +211,9 @@ btn-sns(arg)
 .btn-instagram
   btn-sns(#CF2E92)
   margin-left 4px
+
+.btn-twitter
+  btn-sns(#00acee)
 
 .btn-facebook
   btn-sns(#1877f2)
