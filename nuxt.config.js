@@ -69,6 +69,10 @@ export default {
     {
       src: "~plugins/persistedstate.js",
       ssr: false
+    },
+    {
+      src: "~plugins/color.js",
+      ssr: false
     }
   ],
   /*

@@ -6,7 +6,7 @@
       "url": ["/work/work36.jpg", "/work/work36-2.jpg"],
       "period": "2020",
       "category": ["Poster"],
-      "cat_search": ["Printing", "Web/UI"],
+      "cat_search": ["Printing"],
       "description": "東京大学内のイベント、GCLSプレゼンコンペのポスターデザインおよびバナーデザインを担当した。メインイラストはAdobe Stockから使用。",
       "display": true,
       "width": 12,
@@ -22,34 +22,6 @@
       "description": "東京大学制作展2019のメインビジュアル、宣伝用ポスター、ポストカード、当日案内用パンフレットを作成した。全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
       "link": ["http://www.iiiexhibition.com/"],
       "link_txt": ["東京大学制作展 2019"],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "東京大学制作展アーカイブ",
-      "cover": "work30.jpg",
-      "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
-      "period": "2020",
-      "category": [ "Booklet"],
-      "cat_search": [ "Printing" ],
-      "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
-      "link": [ "http://www.iiiexhibition.com/" ],
-      "link_txt": [ "東京大学制作展 2019" ],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "推しの情報を集めるwebアプリ",
-      "cover": "work34.png",
-      "url": ["/work/work34.png", "/work/work34-2.jpg"],
-      "period": "2020",
-      "category": ["Web App"],
-      "cat_search": ["Web/UI", "Other"],
-      "description": "バックエンドの勉強として作成。構成はFlask(Python) + Vue.js + bulma + Heroku。Twitter、Youtube APIや各種ホームページからスクレイピングして収集した情報をまとめただけのもの。",
-      "link": ["https://great-fan-app.herokuapp.com/"],
-      "link_txt": ["作成したアプリ"],
       "display": true,
       "width": 12,
       "height": 9
@@ -150,44 +122,6 @@
       "height": 9
     },
     {
-      "title": "東京大学制作展2017",
-      "cover": "work5.jpg",
-      "url": ["/work/work5.jpg", "/work/work5-2.jpg"],
-      "period": "2017",
-      "category": ["Web"],
-      "cat_search": ["Web/UI"],
-      "description": "東京大学制作展EXTRA 2017 のweb デザイン、第19 回東京大学制作展のweb デザイン（SP 版のみ）に関して、ワイヤーフレームの設計からデザインのラフまでを行った。微調整やコーディングに関しては共同制作者が行っている。",
-      "link": ["http://iiiexhibition.com/log/iiiEx2017/"],
-      "link_txt": ["東京大学制作展EXTRA 2017"],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
-      "title": "苗村研究室 Open House 2020",
-      "cover": "work27.jpg",
-      "url": [
-        "/work/work27.jpg"
-      ],
-      "period": "2019",
-      "category": [
-        "Web"
-      ],
-      "cat_search": [
-        "Web/UI"
-      ],
-      "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
-      "link": [
-        "https://nae-lab.org/open/2020/index.php"
-      ],
-      "link_txt": [
-        "苗村研究室 Open House 2020"
-      ],
-      "display": true,
-      "width": 12,
-      "height": 9
-    },
-    {
       "title": "biscUiT",
       "cover": "work6.jpg",
       "url": [
@@ -223,7 +157,7 @@
       "url": ["/work/work2.jpg", "/work/work2-2.jpg", "/work/work1-3.jpg", "/work/work2-3.jpg",  "/work/work2-4.jpg"],
       "period": "2019",
       "category": ["AR App"],
-      "cat_search": ["Web/UI"],
+      "cat_search": ["Web/UI", "Other"],
       "description": "東京大学制作展2019にて，当日に来場者に配布するパンフレットにARを用いて追加情報を表示するWebアプリケーションを作成した。A-FrameというWeb VRフレームワーク，8th WallというWeb ARフレームワークを用いている。",
       "link": ["https://youtu.be/GYU697rQm2o", "https://cover-animation2.glitch.me/"],
       "link_txt": ["YouTube", "Glitch"],
@@ -285,16 +219,16 @@
       "height": 18
     },
     {
-      "title": "ROBOXER",
-      "cover": "work25.jpg",
-      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
-      "period": "2019",
+      "title": "YANEKARA",
+      "cover": "work32.png",
+      "url": ["/work/work32.png", "/work/work32-2.png", "/work/work32-3.png"],
+      "period": "2020",
       "category": ["Logo"],
       "cat_search": ["Logo"],
-      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
+      "description": "太陽光パネルで得た電気を効率よく企業や家庭で利用するため電気自動車を蓄電池として利用するプロジェクト、「Yanekara」のロゴを作成した。2人での共同制作である。",
       "display": true,
-      "width": 8,
-      "height": 8
+      "width": 12,
+      "height": 12
     },
     {
       "title": "Syrinx",
@@ -307,20 +241,20 @@
       "link": ["http://syrinx.community/"],
       "link_txt": ["Syrinx Webサイト"],
       "display": true,
-      "width": 16,
-      "height": 16
+      "width": 12,
+      "height": 12
     },
     {
-      "title": "YANEKARA",
-      "cover": "work32.png",
-      "url": ["/work/work32.png", "/work/work32-2.png", "/work/work32-3.png"],
-      "period": "2020",
+      "title": "ROBOXER",
+      "cover": "work25.jpg",
+      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
+      "period": "2019",
       "category": ["Logo"],
       "cat_search": ["Logo"],
-      "description": "太陽光パネルで得た電気を効率よく企業や家庭で利用するため電気自動車を蓄電池として利用するプロジェクト、「Yanekara」のロゴを作成した。2人での共同制作である。",
+      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
       "display": true,
-      "width": 8,
-      "height": 8
+      "width": 12,
+      "height": 12
     },
     {
       "title": "OUR Shurijo",
@@ -333,35 +267,9 @@
       "link": ["https://www.our-shurijo.org/"],
       "link_txt": ["OUR Shurijo Webサイト"],
       "display": true,
-      "width": 16,
-      "height": 16
-    },
-    {
-      "title": "Rainer",
-      "cover": "work18.png",
-      "url": ["/work/work18-2.png", "/work/work18-3.png"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "女性向けレインウェアブランド、「Rainer」のロゴを友人の依頼で作成した。",
-      "display": true,
-      "width": 8,
-      "height": 8
-    },
-    {
-      "title": "周南工場夜景",
-      "cover": "work22.jpg",
-      "url": ["/work/work22-2.png", "/work/work22-3.png"],
-      "period": "2019",
-      "category": ["Logo"],
-      "cat_search": ["Logo"],
-      "description": "コンペ応募作品。134作品の応募のうち最終候補5案に残る。",
-      "link": ["https://www.city.shunan.lg.jp/site/kanko/45167.html"],
-      "link_txt": ["コンペ結果 Webサイト"],
-      "display": true,
-      "width": 8,
-      "height": 8
+      "width": 12,
+      "height": 12
     }
   ],
-  "total": "22"
+  "total": "16"
 }

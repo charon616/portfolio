@@ -55,9 +55,9 @@ export default {
   height 8vmin
 
   border-radius radius-size
-  border 2px solid rgba(46, 255, 192, 1)
+  border 2px solid rgba(cursor-color, 1)
   box-sizing border-box
-  background-color rgba(46, 255, 192, 1)
+  background-color rgba(cursor-color, 1)
   color sub-color
 
   z-index 90

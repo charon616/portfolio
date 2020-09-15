@@ -128,8 +128,7 @@ button
         top 0
         left 0
         text-align center
-        background-color sub-color
-        background-color rgba(90, 50, 246, 0.2)
+        background-color rgba(sub-color, 0.2)
         opacity 0
         display block
         -webkit-transform translateX(10%)

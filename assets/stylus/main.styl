@@ -1,3 +1,4 @@
+@charset "utf-8"
 @import '_variables'
 
 sp()
@@ -34,8 +35,7 @@ body
   cursor none
 
 *::selection
-  background accent-color
-  background rgba(46, 255, 192, 1)
+  background cursor-color
 
 .page-enter-active
   transition opacity .3s ease-out
@@ -106,6 +106,7 @@ body
   background sub-color !important
 
 .page-title 
+  color sub-color
   height 10vh
   text-align center
   font-size 1.5em

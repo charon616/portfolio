@@ -36,8 +36,7 @@ body{
 }
 
 *::selection{
-  background: $accent-color;
-  background: rgba(46, 255, 192, 1);
+  background: $cursor-color;
   // color: #fff;
 }
 

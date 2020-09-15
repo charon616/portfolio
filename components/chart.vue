@@ -5,11 +5,13 @@ export default {
   props: ['name', 'score', 'color'],
   data(){
     return {
+      clr: this.$colors.sub
     }
   },
   mounted () {
     let txt = this.name;
-    let color = this.color;
+    // let color = this.color;
+    let color = this.clr
     this.addPlugin({
       afterDraw(chart, go) {
         let ctx = chart.ctx
@@ -22,9 +24,8 @@ export default {
         }
         let fontStyle = 'bold';
         let fontFamily = 'Lato';
-        ctx.fillStyle = '#6332f6';
+        ctx.fillStyle = color;
         ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
-
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
 
@@ -37,8 +38,8 @@ export default {
         datasets: [
           {
             data: [this.score, 100-this.score],
-            backgroundColor: ['#6332f6', '#EEEEEE'],
-            hoverBackgroundColor: ['#6332f6', '#EEEEEE'],
+            backgroundColor: [this.clr, '#EEEEEE'],
+            hoverBackgroundColor: [this.clr, '#EEEEEE'],
             hoverBorderColor: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)'],
             hoverBorderWidth: [0, 0],
             borderColor: 'transparent'

@@ -1,30 +1,8 @@
 <template lang="pug">
   .container
     ._group
-      .first-view#first-view
-        .text
-          .text__content
-            a.btn-twitter.space(aria-label="open twitter" href="https://twitter.com/rin31627234" target="_blank" rel="noopener noreferrer" role="button" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-              font-awesome-icon(:icon="['fab', 'twitter']")
-              span  ← デザイン関連のつぶやき
-            br
-            a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
-              font-awesome-icon(:icon="['fab', 'tumblr']") 
-              span  ← 日々の創作
-        #p5Canvas
-        //- .jello(v-for="n of 8" :key="n")
-        //-   img.first-view__bg(src="/title3.svg" alt="")
-        //-   img.first-view__bg(src="/title2.svg" alt="")
-        transition(name="slide-fade" appear)
-          .first-view__txt
-            transition(name="slide-fade2" appear)
-              h1 KIHO Karin
-        transition(name="slide-fade3" appear)
-          nuxt-link.down-button(aria-label="down" @mouseover.native="mouseover" @mouseleave.native="mouseleave" v-scroll-to="'#work'" to) Scroll
-            span
-
       .main-content#work
-        h2.page-title WORK
+        h2.page-title ARCHIVE
 
         ._category-nav
           ul.category_list
@@ -41,7 +19,7 @@
           card(v-for="(item, index) in items" :key="`first-${index}`" :item="item" :index="index+1")
 
         .button-container
-          nuxt-link.works__button(:to="{ name: 'work-id', params: { id: '01' } }" @mouseover.native="mouseover" @mouseleave.native="mouseleave") View All →
+          nuxt-link.works__button(:to="{ name: 'workarchive-id', params: { id: '01' } }" @mouseover.native="mouseover" @mouseleave.native="mouseleave") View All →
 
         PagetopComponent(@mouseover.native="mouseover" @mouseleave.native="mouseleave")
         
@@ -49,8 +27,8 @@
 
 <script>
 import PagetopComponent from "~/components/PagetopComponent.vue";
-import card from "~/components/card.vue";
-import jsonfile from "~/assets/work/works.json";
+import card from "~/components/cardarchive.vue";
+import jsonfile from "~/assets/work/archive.json";
 
 export default {
   components: {
@@ -58,8 +36,6 @@ export default {
     card
   },
   mounted() {
-
-    let color = this.$colors.main
 
     // デバイスの幅を判定
     let pc = !window.matchMedia('(max-width: 1024px)').matches
@@ -105,7 +81,7 @@ export default {
       }
 
       p5.draw = _ => {
-        p5.background(color);
+        p5.background(238);
 
         x = p5.lerp(x, p5.mouseX, 0.05);
         y = p5.lerp(y, p5.mouseY, 0.05);
@@ -303,110 +279,7 @@ export default {
   margin-bottom 20vh
   ._group
     width 100%
-    .first-view
-      position absolute
-      left 0
-      top 0
-      width 100%
-      height 100vh
-      z-index 0
-      color rgb(237, 168, 179)
-      object-fit cover
-      overflow hidden
-      .text
-        position absolute
-        top 0
-        left 0
-        width 100%
-        height 100vh
-        margin 0
-        padding 32px 
-        color sub-color
-        display flex
-        align-items flex-end
-        &__content 
-          position relative
-          left 0
-          bottom 40px
-          a
-            font-size 1.2rem
-            background white
-            span 
-              font-size 1rem
-      &__img
-        position absolute
-        width 400px
-        height auto
-        top 50%
-        left 50%
-        transform translateX(-50%) translateY(-50%)
-      &__bg
-        width 100%
-        height auto
-        transform rotateZ(-10deg) translateY(-50%)
-      &__txt
-        color white
-        background-color sub-color
-        padding 24px 48px
-        text-align center
-        position absolute
-        top 50%
-        left 50%
-        transform translateX(-50%) translateY(-50%)
-        opacity .5
-        border-radius radius-size
-        h1
-          font-size 2.4em
-          letter-spacing 0.2em
-        p
-          font-size 1.2em
-      .down-button
-        position absolute
-        bottom 20px
-        left 50%
-        z-index 2
-        display inline-block
-        -webkit-transform translate(-50%, -50%)
-        transform translate(-50%, -50%)
-        text-decoration none
-        font-weight bold
-        letter-spacing .1em
-        padding 70px 32px 8px
-        color sub-color
-        span
-          position absolute
-          top 0
-          left 50%
-          width 24px
-          height 24px
-          margin-left -12px
-          border-left 1px solid sub-color
-          border-bottom 1px solid sub-color
-          -webkit-transform rotate(-45deg)
-          transform rotate(-45deg)
-          -webkit-animation sdb 1.5s infinite
-          animation sdb 1.5s infinite
-          box-sizing border-box
-        +sp()
-          background-color rgba(0, 0, 0, 0)
-          color sub-color
-          span
-            border-left 1px solid sub-color
-            border-bottom 1px solid sub-color
-      +tb()
-        margin-left 0
-        width 100%
-        .text 
-          display none
-      +sp()
-        img
-          width 100%
-        &__bg
-          display none
-        &__txt
-          font-size 0.4em
     .main-content
-      margin-top 100vh
       margin-bottom 20vh
       .page-title
         padding 48px 1.2em

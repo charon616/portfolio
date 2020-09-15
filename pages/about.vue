@@ -85,7 +85,7 @@ export default {
         },
         {
           name: "Ae",
-          score: 30,
+          score: 25,
           color: "#5600E0"
         },
         {
@@ -100,17 +100,17 @@ export default {
         },
         {
           name: "C++",
-          score: 60,
+          score: 40,
           color: "#164477"
         },
         {
           name: "Web",
-          score: 45,
+          score: 55,
           color: "#9FC40C"
         },
         {
           name: "Drawing",
-          score: 40,
+          score: 30,
           color: "#6D4E3B"
         }
       ]

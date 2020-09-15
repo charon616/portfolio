@@ -48,7 +48,7 @@ export default {
   pointer-events none
   &__main
     border-radius 50%
-    background-color rgba(46, 255, 192, 1)
+    background-color rgba(cursor-color, 1)
     position fixed
     top -6px 
     left -6px

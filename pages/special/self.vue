@@ -6,23 +6,23 @@
       .self
         kinesis-container
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="出身地は？" textSizeFront="1.6em" back="宮崎生まれ、茨城育ち" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="出身地は？" textSizeFront="1.6em" back="宮崎生まれ、茨城育ち" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="最近読んだ本" textSizeFront="1.6em" back="『82年生まれ、キム・ジヨン』" textSizeBack="1.6em" colorTextFront="#6332f6" imgBack="https://images-fe.ssl-images-amazon.com/images/I/41Thb8BtEcL.jpg")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="最近読んだ本" textSizeFront="1.6em" back="『82年生まれ、キム・ジヨン』" textSizeBack="1.6em" :colorTextFront="clr" imgBack="https://images-fe.ssl-images-amazon.com/images/I/41Thb8BtEcL.jpg")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="好きなデザイナー" textSizeFront="1.6em" back="寄藤文平さん、川谷康久さん" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="好きなデザイナー" textSizeFront="1.6em" back="寄藤文平さん、川谷康久さん" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="おすすめのマンガ" textSizeFront="1.6em" back="『青野くんに触りたいから死にたい』、『社畜と幽霊』" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="おすすめのマンガ" textSizeFront="1.6em" back="『青野くんに触りたいから死にたい』、『社畜と幽霊』" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="好きな映画" textSizeFront="1.6em" back="ピンポン、Les Miserables" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="好きな映画" textSizeFront="1.6em" back="ピンポン、Les Miserables" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="行ってみたい国" textSizeFront="1.6em" back="ドイツ、オーストラリア" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="行ってみたい国" textSizeFront="1.6em" back="ドイツ、オーストラリア" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="好きな雑誌" textSizeFront="1.6em" back="WIRED、GISELe" textSizeBack="1.6em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="好きな雑誌" textSizeFront="1.6em" back="WIRED、GISELe" textSizeBack="1.6em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="よく使うアプリ" textSizeFront="1.6em" back="Spotify、Nike Run Club" textSizeBack="1.2em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="よく使うアプリ" textSizeFront="1.6em" back="Spotify、Nike Run Club" textSizeBack="1.2em" :colorTextFront="clr")
             kinesis-element.card(:strength="5" type="depth")
-                vue-flashcard.flashcard__info(headerFront="" headerBack="" colorBack="#6332f6" front="感動したPV" textSizeFront="1.6em" back="記念撮影、お気に召すまま、東京喰種:re" textSizeBack="1.2em" colorTextFront="#6332f6")
+                vue-flashcard.flashcard__info(headerFront="" headerBack="" :colorBack="clr" front="感動したPV" textSizeFront="1.6em" back="記念撮影、お気に召すまま、東京喰種:re" textSizeBack="1.2em" :colorTextFront="clr")
 
         nuxt-link.link-button(aria-label="special" to="/special" v-on:mouseover.native="mouseover" v-on:mouseleave.native="mouseleave") ←　戻る
 
@@ -33,6 +33,11 @@ import vueFlashcard from 'vue-flashcard';
 
 export default {
     layout: 'wide',
+    data () {
+        return {
+            clr: this.$colors.sub
+        }
+    },
     components: {
         KinesisContainer, 
         KinesisElement,
