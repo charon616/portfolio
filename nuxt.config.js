@@ -1,6 +1,6 @@
 
 export default {
-  mode: "spa",
+  ssr: false,
   /*
    ** Headers of the page
    */
@@ -35,7 +35,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ["~/assets/scss/main.scss", "swiper/dist/css/swiper.css"],
+  css: ["~/assets/scss/main.scss", "swiper/css/swiper.css"],
   /*
    ** Plugins to load before mounting the App
    */
@@ -78,7 +78,13 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@aceforth/nuxt-optimized-images'
+  ],
+  optimizedImages: {
+    optimizeImages: true
+  },
   /*
    ** Nuxt.js modules
    */
@@ -110,14 +116,6 @@ export default {
   },
   loading: {
     color: '#6332f6'
-  },
-  router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return {
-        x: 0,
-        y: 0
-      }
-    }
   },
   styleResources: {
     stylus: [

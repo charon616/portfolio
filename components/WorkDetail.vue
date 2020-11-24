@@ -35,13 +35,13 @@
   </div>
 </template>
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 export default {
   props: ['item', 'url', 'id', 'total'],
   components: {
-    swiper, 
-    swiperSlide
+    Swiper, 
+    SwiperSlide
   },
   data() {
     return {

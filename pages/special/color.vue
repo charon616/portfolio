@@ -27,14 +27,14 @@
 </template>
 <script>
 import Vibrant from 'node-vibrant';
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 
 export default {
   layout: 'wide',
   components: {
     Vibrant,
-    swiper, 
-    swiperSlide
+    Swiper, 
+    SwiperSlide
   },
   data(){
     return{
@@ -113,7 +113,7 @@ export default {
         });
     },
     urlchange: function(){
-      let idx = this.getActiveIndex(this.$refs.mySwiper.swiper)
+      let idx = this.getActiveIndex(this.$refs.mySwiper.$swiper)
       this.getcolor(this.urls[idx])
     },
     getActiveIndex: (swiper) =>{
