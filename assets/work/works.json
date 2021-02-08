@@ -229,12 +229,38 @@
       "link": ["https://yanekara.jp/"],
       "link_txt": ["YANEKARA Webサイト"],
       "display": true,
-      "width": 12,
-      "height": 12
+      "width": 8,
+      "height": 8
+    },
+    {
+      "title": "UmeeT",
+      "cover": "work23.png",
+      "url": ["/work/work23.png", "/work/work23-2.png", "/work/work23-3.png", "/work/work23-4.png"],
+      "period": "2017",
+      "category": ["Logo"],
+      "cat_search": ["Logo"],
+      "description": "東大生が中心となって運営するWEB メディア、「UmeeT」のロゴのリデザインおよび名刺作成を友人の依頼で行った。最終的にはファビコンやノベルティなどに使えるシンボルマークも作成した。",
+      "link": ["https://todai-umeet.com/"],
+      "link_txt": ["UmeeT Webサイト"],
+      "display": true,
+      "width": 8,
+      "height": 8
+    },
+    {
+      "title": "ROBOXER",
+      "cover": "work25.png",
+      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
+      "period": "2019",
+      "category": ["Logo"],
+      "cat_search": ["Logo"],
+      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
+      "display": true,
+      "width": 8,
+      "height": 8
     },
     {
       "title": "Syrinx",
-      "cover": "work24.jpg",
+      "cover": "work24.png",
       "url": ["/work/work24.jpg", "/work/work24-2.png", "/work/work24-3.jpg", "/work/work24-4.jpg"],
       "period": "2019",
       "category": ["Logo", "Web"],
@@ -243,24 +269,26 @@
       "link": ["http://syrinx.community/"],
       "link_txt": ["Syrinx Webサイト"],
       "display": true,
-      "width": 12,
-      "height": 12
+      "width": 8,
+      "height": 8
     },
     {
-      "title": "ROBOXER",
-      "cover": "work25.jpg",
-      "url": ["/work/work25.jpg", "/work/work25-2.jpg"],
+      "title": "周南工場夜景",
+      "cover": "work22.png",
+      "url": ["/work/work22-2.png", "/work/work22-3.png"],
       "period": "2019",
       "category": ["Logo"],
       "cat_search": ["Logo"],
-      "description": "「Todai to TEXAS 2020」の参加プロジェクト、「ROBOXER」のロゴおよびバナー等を作成した。",
+      "description": "コンペ応募作品。134作品の応募のうち最終候補5案に残る。",
+      "link": ["https://www.city.shunan.lg.jp/site/kanko/45167.html"],
+      "link_txt": ["コンペ結果 Webサイト"],
       "display": true,
-      "width": 12,
-      "height": 12
+      "width": 8,
+      "height": 8
     },
     {
       "title": "OUR Shurijo",
-      "cover": "work26.jpg",
+      "cover": "work26.png",
       "url": ["/work/work26.png", "/work/work26-2.png", "/work/work26-3.png", "/work/work26-4.png"],
       "period": "2019",
       "category": ["Logo"],
@@ -269,9 +297,9 @@
       "link": ["https://www.our-shurijo.org/"],
       "link_txt": ["OUR Shurijo Webサイト"],
       "display": true,
-      "width": 12,
-      "height": 12
+      "width": 8,
+      "height": 8
     }
   ],
-  "total": "16"
+  "total": "18"
 }

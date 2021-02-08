@@ -117,11 +117,11 @@ export default {
     &__title
       font-size 0.8em
       letter-spacing 0.08em
-      transform translateX(-50%)
+      transform translateX(-10%)
       transition transform 0.4s main-transition0.2s
     &__category
       left -32px
-      transform translateX(-50%)
+      transform translateX(-10%)
       font-size 0.8em
       transition transform 0.4s main-transition 0.1s
       span + span
@@ -155,16 +155,16 @@ export default {
   &:hover
     .card__caption
       opacity 1
-      transition opacity 0.7s main-transition
+      transition opacity 0.3s main-transition
       &__title
         transform translateX(0)
-        transition 0.7s main-transition 0.2s
+        transition 0.2s main-transition 0.1s
       span
         transform translateX(0)
-        transition 0.7s main-transition 0.3s
+        transition 0.2s main-transition 0.2s
     .card__img
       transform translate3d(0, 8px, 0) scale(1.1)
-      transition 0.7s main-transition
+      transition 0.2s main-transition
 
   +tb()
     main-content-width = 100vw;
