@@ -459,11 +459,11 @@ export default {
       &:nth-child({num}) label
         background-image url("~assets/icon/cat_" + num + ".svg")
   +sp()
-    margin 16px 2vw 32px
+    margin 16px 8px 32px
     li
-      width "calc((%s - 12vw)/6)" % main-content-width
-      height "calc((%s - 12vw)/6)" % main-content-width
-      margin 2vw
+      width "calc((%s - 16px)/6)" % main-content-width
+      height "calc((%s - 16px)/6)" % main-content-width
+      margin 8px 12px
       label
         span
           letter-spacing .1em

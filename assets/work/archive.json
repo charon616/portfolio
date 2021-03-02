@@ -43,30 +43,6 @@
     "height": 9
   },
   {
-    "title": "苗村研究室 Open House 2020",
-    "cover": "work27.jpg",
-    "url": [
-      "/work/work27.jpg"
-    ],
-    "period": "2019",
-    "category": [
-      "Web"
-    ],
-    "cat_search": [
-      "Web/UI"
-    ],
-    "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
-    "link": [
-      "https://nae-lab.org/open/2020/index.php"
-    ],
-    "link_txt": [
-      "苗村研究室 Open House 2020"
-    ],
-    "display": true,
-    "width": 12,
-    "height": 9
-  },
-  {
     "title": "成年年齢引下げ告知ポスター",
     "cover": "work29.jpg",
     "url": [ "/work/work29.jpg" ],
@@ -162,42 +138,6 @@
     "height": 9
   },
   {
-    "title": "東武東上線沿線サミット",
-    "cover": "work21.jpg",
-    "url": ["/work/work21-2.png", "/work/work21-3.png"],
-    "period": "2019",
-    "category": ["Logo"],
-    "cat_search": ["Logo"],
-    "description": "コンペ応募作品。",
-    "display": true,
-    "width": 8,
-    "height": 8
-  },
-  {
-    "title": "Code for Univ",
-    "cover": "work16.jpg",
-    "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.jpg"],
-    "period": "2019",
-    "category": ["Logo"],
-    "cat_search": ["Logo"],
-    "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
-    "display": true,
-    "width": 8,
-    "height": 8
-  },
-  {
-    "title": "Living Roots",
-    "cover": "work19.png",
-    "url": ["/work/work19-2.png", "/work/work19-3.png", "/work/work19-4.jpg"],
-    "period": "2019",
-    "category": ["Logo", "Card"],
-    "cat_search": ["Logo", "Printing"],
-    "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
-    "display": true,
-    "width": 8,
-    "height": 8
-  },
-  {
     "title": "Illustration",
     "cover": "work35.png",
     "url": ["/work/work35.png", "/work/work35-2.jpg", "/work/work35-3.jpg"],
@@ -248,7 +188,43 @@
     "display": true,
     "width": 8,
     "height": 8
+  },
+  {
+    "title": "東武東上線沿線サミット",
+    "cover": "work21.jpg",
+    "url": ["/work/work21-2.png", "/work/work21-3.png"],
+    "period": "2019",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "コンペ応募作品。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "Code for Univ",
+    "cover": "work16.jpg",
+    "url": ["/work/work16-2.png", "/work/work16-3.png", "/work/work16-4.jpg"],
+    "period": "2019",
+    "category": ["Logo"],
+    "cat_search": ["Logo"],
+    "description": "東京大学の学生や教員と行政が一体となってテクノロジーを用いた課題解決を行うコミュニティ、「Code for Univ」のロゴを友人の依頼で作成した。",
+    "display": true,
+    "width": 8,
+    "height": 8
+  },
+  {
+    "title": "Living Roots",
+    "cover": "work19.png",
+    "url": ["/work/work19-2.png", "/work/work19-3.png", "/work/work19-4.jpg"],
+    "period": "2019",
+    "category": ["Logo", "Card"],
+    "cat_search": ["Logo", "Printing"],
+    "description": "IT系ベンチャー、「Living Roots」のロゴを友人の依頼で制作した。また、同会社が経営する八百屋のショップカードも作成。",
+    "display": true,
+    "width": 8,
+    "height": 8
   }
 ],
-  "total": "18"
+  "total": "17"
 }

@@ -10,7 +10,7 @@
         span.card__caption__category
             span(v-for="(cat, id) in item.category" :key="id") {{cat}}
         span.card__caption__period {{ item.period }}
-    span.card__new(v-if="item.period == 2020")
+    span.card__new(v-if="item.period == 2021")
     
 </template>
 <script>
@@ -185,29 +185,37 @@ export default {
     width 100%
     height auto
     border-radius 0
+    padding 8px 0
     a
       justify-content center
       align-items center
-      padding 8px
+      padding 4px 16px
+      flex-direction column
     picture
-      width 40%
+      width 100%
       padding 0
       margin 8px
     &__img
       width 100%
       height auto
+      max-height calc(100vw - 16px)
+      object-fit cover
+      aspect-ratio 4/3
       border-radius 6px
     &__caption
-      width 60%
+      width 100%
       position relative
       background-color rgba(0, 0, 0, 0)
-      padding 8px
+      padding 0
       margin 0
       left 0
       opacity 1
       border-radius 0
-      font-size 20px
       display block
+      &__title
+        font-size 22px
+      span
+        font-size 18px
     &:hover
       .work__caption
         background-color rgba(0, 0, 0, 0)
