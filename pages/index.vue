@@ -49,7 +49,9 @@
 
 <script>
 import PagetopComponent from "~/components/PagetopComponent.vue";
-import card from "~/components/card.vue";
+// import card from "~/components/card.vue";
+const card = () => import('~/components/card.vue')
+
 import jsonfile from "~/assets/work/works.json";
 
 export default {
