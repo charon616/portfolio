@@ -1,18 +1,28 @@
 {
 "items": [
   {
-    "title": "東京大学制作展アーカイブ",
-    "cover": "work30.jpg",
-    "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
-    "period": "2020",
-    "category": [ "Booklet"],
-    "cat_search": [ "Printing" ],
-    "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
-    "link": [ "http://www.iiiexhibition.com/" ],
-    "link_txt": [ "東京大学制作展 2019" ],
+    "title": "苗村研究室 Open House 2020",
+    "cover": "work27.jpg",
+    "url": [
+      "/work/work27.jpg"
+    ],
+    "period": "2019",
+    "category": [
+      "Web"
+    ],
+    "cat_search": [
+      "Web/UI"
+    ],
+    "description": "所属する研究室で毎年行なっているオープンハウスのWebサイト更新およびタブレット・スマホ対応を担当した。PHPを用いている。",
+    "link": [
+      "https://nae-lab.org/open/2020/index.php"
+    ],
+    "link_txt": [
+      "苗村研究室 Open House 2020"
+    ],
     "display": true,
-    "width": 12,
-    "height": 9
+    "width": 8,
+    "height": 6
   },
   {
     "title": "推しの情報を集めるwebアプリ",
@@ -27,6 +37,34 @@
     "display": true,
     "width": 12,
     "height": 9
+  },
+  {
+    "title": "東京大学制作展アーカイブ",
+    "cover": "work30.jpg",
+    "url": ["/work/work30.jpg", "/work/work30-2.jpg", "/work/work30-3.jpg", "/work/work30-4.jpg", "/work/work30-5.jpg", "/work/work30-6.jpg" ],
+    "period": "2020",
+    "category": [ "Booklet"],
+    "cat_search": [ "Printing" ],
+    "description": "東京大学制作展2019の記録となるアーカイブ冊子のうち、作品ページ以外のデザインを担当した。",
+    "link": [ "http://www.iiiexhibition.com/" ],
+    "link_txt": [ "東京大学制作展 2019" ],
+    "display": true,
+    "width": 12,
+    "height": 9
+  },
+  {
+    "title": "東京大学制作展EXTRA 2019",
+    "cover": "work3.jpg",
+    "url": ["/work/work3.jpg", "/work/work3-2.jpg", "/work/work3-3.jpg", "/work/work3-4.jpg"],
+    "period": "2019",
+    "category": ["Poster"],
+    "cat_search": ["Printing"],
+    "description": "東京大学制作展EXTRA 2019のメインビジュアル、宣伝用フライヤー、宣伝用ポスター、当日案内用看板を作成した。メインビジュアルに関しては共同制作者が手のイメージを3Dモデリングした後の色調補正を担当。ロゴ作成も共同制作者が行なっており，全部で４人のデザインチームで展示に関わる様々なグラフィックの制作を進めた。",
+    "link": ["http://iiiexhibition.com/log/iiiEx2019/"],
+    "link_txt": ["東京大学制作展EXTRA 2019"],
+    "display": true,
+    "width": 8,
+    "height": 6
   },
   {
     "title": "東京大学制作展2017",
@@ -226,5 +264,5 @@
     "height": 8
   }
 ],
-  "total": "17"
+  "total": "19"
 }

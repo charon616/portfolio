@@ -12,7 +12,9 @@
         h4 キホウ カリン
         p.space Designer | Engineer
         p 1996-
-        p.space 東京大学大学院 学際情報学府 学際情報学専攻
+        p.space 2019 東京大学工学部 システム創成学科 卒
+        p 2021 東京大学大学院 学際情報学府 学際情報学専攻 卒
+        p 2021- インハウスデザイナー
 
         p.space
           //- span 卒業論文
@@ -23,10 +25,7 @@
           |  グラフィック全般。特にエディトリアル、UI。
         p
           span Programming
-          |  C++、Python、Unity、Webフロントエンドなど。
-        p
-          span Research
-          |  HCI、視線計測、デザインツールなど。
+          |  Webフロントエンド、Python、Unityなど。
 
         p.space
           span.hidden Skill
@@ -50,7 +49,7 @@
         
         p.space 
           span Contact
-          |  karinkiho616 [at] g.ecc.u-tokyo.ac.jp
+          |  tokikake.k16 [at] gmail.com
 
 </template>
 <script>
