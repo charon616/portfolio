@@ -26,11 +26,14 @@ export default {
 
   data() {
     return {
-      info: jsonfile.items[Number(this.$route.params.id)-1],
-      total: jsonfile.total
+      info: jsonfile.items[Number(this.$route.params.id)-1]
     }
   },
-
+  computed: {
+    total: function () {
+      return jsonfile.items.length
+    }
+  },
   created() {
     let stalker = document.getElementById('cursor-stalker');
     if(stalker==null){

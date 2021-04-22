@@ -22,10 +22,15 @@
 
         p.space
           span Design
-          |  グラフィック全般。特にエディトリアル、UI。
+          |  グラフィック全般。特にWeb/UI、エディトリアル。
         p
           span Programming
           |  Webフロントエンド、Python、Unityなど。
+        p
+          span Research
+          |  （学会発表）
+        p - 木方 夏麟, 阪口 紗季, 苗村 健: "掲示場所の色環境を考慮したポスターデザインの配色提案手法の評価", HCGシンポジウム2020, A-2-4 (2020.12). 【学生優秀インタラクティブ発表賞受賞 (2020.12.17)】
+        p - 木方 夏麟, 阪口 紗季, 苗村 健: "掲示場所の色環境を考慮したポスターデザインの配色提案", NICOGRAPH2020, S-8 (2020.11).
 
         p.space
           span.hidden Skill
@@ -46,6 +51,7 @@
           font-awesome-icon(:icon="['fab', 'tumblr']")
         a.simple-link(aria-label="open gifmagazine" href="https://gifmagazine.net/users/71554/profile?locale=ja" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") GIF MAGAZINE
         a.simple-link(aria-label="open booklog" href="https://booklog.jp/users/tsukune6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") ブクログ 
+        a.simple-link(aria-label="open note" href="https://note.com/charon6" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave") note
         
         p.space 
           span Contact

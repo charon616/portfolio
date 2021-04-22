@@ -10,7 +10,7 @@
             br
             a.btn-tumbler.space(aria-label="open tumbler" href="https://charon66.tumblr.com/" role="button" target="_blank" rel="noopener noreferrer" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave")
               font-awesome-icon(:icon="['fab', 'tumblr']") 
-              span  ← 日々の創作
+              span  ← 落書き
         #p5Canvas
         //- .jello(v-for="n of 8" :key="n")
         //-   img.first-view__bg(src="/title3.svg" alt="")
