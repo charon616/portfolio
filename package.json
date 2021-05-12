@@ -21,7 +21,7 @@
     "@types/swiper": "^5.4.1",
     "@vue/composition-api": "^0.3.4",
     "axios": "^0.21.1",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "eslint": "^7.14.0",
     "flipbook-vue": "^0.8.1",
     "lottie-web": "^5.7.3",
