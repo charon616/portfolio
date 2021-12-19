@@ -55,7 +55,7 @@
         
         p.space 
           span Contact
-          |  tokikake.k16 [at] gmail.com
+          |  kiho.karin [at] gmail.com
 
 </template>
 <script>
